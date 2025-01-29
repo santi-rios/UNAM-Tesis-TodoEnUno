@@ -3,27 +3,23 @@ title: Unam-quarto Template
 format:
   unam-quarto-pdf:
     keep-tex: true  
-  unam-quarto-html: default
+  # unam-quarto-html: default
 author:
-  - name: Sarah Malloc
-    affiliations:
-      - name: An Organization
-        department: The Department
-        address: 1 Main St
-        city: Boston
-        country: USA
-        postal-code: 02210-1022
-      - A second affilication
-    orcid: 0000-0000-0000-0000
-    email: sm@example.org
-    url: https://example.org/
-  - name: Eliza Dealloc
-    affiliations:
-      - Another Affiliation
+  - id: string
+    number: number
+    name:
+      given: string
+      family: string
+      literal: string
 abstract: |
   This document is a template demonstrating the Unam-quarto format.
 keywords: [template, demo]
 bibliography: bibliography.bib  
+# fontsize: "9pt"
+# classoption:
+#  - twocolumn
+#  - twoside
+# documentclass: "unam-quarto"
 ---
 
 ## Introduction {#sec-intro}

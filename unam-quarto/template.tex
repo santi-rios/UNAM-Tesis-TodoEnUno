@@ -4,9 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  letterpaper,
-  DIV=11,
-  numbers=noendperiod]{scrartcl}
+]{article}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -78,8 +76,6 @@
 \def\fps@figure{htbp}
 \makeatother
 
-% TODO: Add custom LaTeX header directives here
-\KOMAoption{captions}{tableheading}
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -130,7 +126,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Unam-quarto Template},
-  pdfauthor={Sarah Malloc; Eliza Dealloc},
+  pdfauthor={string},
   pdfkeywords={template, demo},
   colorlinks=true,
   linkcolor={blue},
@@ -140,9 +136,9 @@
   pdfcreator={LaTeX via pandoc}}
 
 \title{Unam-quarto Template}
-\author{Sarah Malloc \and Eliza Dealloc}
-\date{}
 
+  \author{string}{%
+  
 \begin{document}
 \maketitle
 \begin{abstract}

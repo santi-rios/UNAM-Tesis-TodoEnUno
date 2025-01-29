@@ -9,7 +9,16 @@ contributes:
       filters:
         - unam-quarto.lua
     pdf:
+      # documentclass: unam-quarto
+      # template: template.tex
       include-in-header: header.tex
+      # format-resources:
+      #   - unam-quarto.cls
+      template-partials: 
+        - "partials/title.tex"
+        - "partials/_affilation.tex"
+      #   - "partials/doc-class.tex"
+        # - partials/before-body.tex
     html:
       css: styles.css
 
