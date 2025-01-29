@@ -13,6 +13,8 @@ author:
       literal: string
 abstract: |
   This document is a template demonstrating the Unam-quarto format.
+# acknowledgements: |
+#   We thank the Quarto team for their support in creating this template.
 keywords: [template, demo]
 bibliography: bibliography.bib  
 # fontsize: "9pt"
@@ -24,6 +26,18 @@ bibliography: bibliography.bib
 
 ## Introduction {#sec-intro}
 
-*TODO* Create a template that demonstrates the appearance, formatting, layout, and functionality of your format. Learn more about journal formats at <https://quarto.org/docs/journals/>.
+*TODO* Create a template that demonstrates the appearance, formatting, layout, and functionality of your format. Learn more about journal formats at <https://quarto.org/docs/journals/>. [@CameronTrivedi2013].
+
+> In Quarto, we can do these by setting the fig-env command to figure* or SCfigure*
+
+```r
+#| label: fig-side
+#| fig-cap: "This legend would be placed at the side of the figure, rather than below it."
+#| fig-env: "SCfigure*"
+#| echo: false
+# tell it the options as comments with a | and a space, as above.
+# set echo: false to avoid printing this text
+knitr::include_graphics('figs/frog.pdf')
+```
 
 
