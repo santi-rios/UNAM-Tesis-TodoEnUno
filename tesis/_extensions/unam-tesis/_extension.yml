@@ -1,0 +1,15 @@
+
+pdf:
+  include-in-header: header.tex
+  template-partials:
+    - "partials/doc-class.tex"
+
+
+runningauthor: "One, Two, and Three"
+significance: |
+  Authors must submit a 120-word maximum statement about the significance of their research paper written at a level understandable to an undergraduate educated scientist outside their field of speciality. The primary goal of the significance statement is to explain the relevance of the work in broad context to a broad readership. The significance statement appears in the paper itself and is required for all research papers.
+author_contributions: "Please provide details of author contributions here."
+conflict_of_interest: "Please declare any competing interests here."
+keywords: [template, demo]
+acknowledgements: | 
+  Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.
