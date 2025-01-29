@@ -1,17 +1,16 @@
 {
-    "name": "Thesis Development Container",
-    "build": {
-      "dockerfile": "Dockerfile"
-    },
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "extensions": [
-      "quarto.quarto",
-      "RDebugger.r-debugger",
-      "Ikuyadeu.r",
-      "REditorSupport.r-lsp"
-    ],
-    "forwardPorts": [8787],
-    "remoteUser": "rstudio"
-  }
+  "name": "Quarto Thesis",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "quarto.path": "/usr/local/bin/quarto"
+  },
+  "extensions": [
+    "quarto.quarto",
+    "reditorsupport.r",
+    "REditorSupport.r-lsp"
+  ],
+  "forwardPorts": [],
+  "remoteUser": "rstudio"
+}
