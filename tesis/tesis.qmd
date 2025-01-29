@@ -1,8 +1,12 @@
 ---
-title: "Tesis"
-format: "html"
+format:
+  pdf:
+    template: mytemplate.tex
+    template-partials:
+      - title.tex
+bibliography: referencias.bib
 ---
 
 ## Test
 
-ipsum lorem
+ipsum lorem [@guo2020].
