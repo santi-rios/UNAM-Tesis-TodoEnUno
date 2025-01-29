@@ -1,16 +1,17 @@
 {
-    "name": "Tesis Quarto-UNAM",
+    "name": "Thesis Development Container",
     "build": {
       "dockerfile": "Dockerfile"
     },
     "settings": {
-      "quarto.path": "/usr/local/bin/quarto"
+      "terminal.integrated.shell.linux": "/bin/bash"
     },
     "extensions": [
       "quarto.quarto",
-      "reditorsupport.r",
+      "RDebugger.r-debugger",
+      "Ikuyadeu.r",
       "REditorSupport.r-lsp"
     ],
-    "forwardPorts": [],
+    "forwardPorts": [8787],
     "remoteUser": "rstudio"
   }

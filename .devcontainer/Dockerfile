@@ -1,27 +1,44 @@
-# Base image (Ubuntu with R and LaTeX dependencies)
-FROM rocker/verse:4.3.1
+# Use the rocker/rstudio base image
+FROM rocker/rstudio:latest
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    sudo \
+    pandoc \
+    pandoc-citeproc \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libgit2-dev \
+    wget \
+    curl \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install Quarto
-ARG QUARTO_VERSION=1.4.549
-RUN wget -O quarto.deb "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb" && \
-    dpkg -i quarto.deb && \
-    rm quarto.deb
+RUN wget https://quarto.org/download/latest/quarto-linux-amd64.deb
+RUN dpkg -i quarto-linux-amd64.deb
+RUN rm quarto-linux-amd64.deb
 
-# Install LaTeX packages (adjust to your university's requirements)
-RUN tlmgr install \
-    microtype \
-    babel \
-    geometry \
-    fancyhdr \
-    sectsty \
-    setspace \
-    tocloft \
-    xcolor \
-    hyperref \
-    bookmark
+# Install TinyTeX (LaTeX distribution)
+RUN /bin/bash -c "wget -qO- 'https://yihui.org/tinytex/install-bin-unix.sh' | sh"
+ENV PATH="/root/bin:${PATH}"
+ENV PATH="/root/.TinyTeX/bin/linux/x86_64-linuxmusl:${PATH}"
 
-# Install R packages (if needed)
-RUN Rscript -e "install.packages(c('rmarkdown', 'knitr', 'bookdown', 'tidyverse'))"
+# Install additional LaTeX packages (as needed)
+RUN tlmgr install needed-package-1 needed-package-2
 
-# Clean up
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+# Install R packages required for your thesis
+RUN Rscript -e "install.packages(c('tidyverse', 'bookdown', 'yourpackage'), repos='https://cloud.r-project.org')"
+
+# Expose ports (if necessary)
+EXPOSE 8787
+
+# Set working directory
+WORKDIR /home/rstudio
+
+# Copy your thesis project into the container (optional)
+# COPY . /home/rstudio/your-thesis-project
+
+# Set default command
+CMD ["bash"]
