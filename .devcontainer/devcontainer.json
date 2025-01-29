@@ -1,0 +1,16 @@
+{
+    "name": "Tesis Quarto-UNAM",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "settings": {
+      "quarto.path": "/usr/local/bin/quarto"
+    },
+    "extensions": [
+      "quarto.quarto",
+      "reditorsupport.r",
+      "REditorSupport.r-lsp"
+    ],
+    "forwardPorts": [],
+    "remoteUser": "rstudio"
+  }
