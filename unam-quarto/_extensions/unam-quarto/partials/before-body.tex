@@ -71,6 +71,34 @@
 \begin{center}
     \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
 \end{center}
+
+%----------------------------------------------------------------------------------------
+%	AGRADECIMIENTOS INSTITUCIONALES
+%----------------------------------------------------------------------------------------
+% \renewcommand{\acknowledgementname}{Agradecimientos Institucionales} % CAMBIAR NOMBRE A Agradecimientos
+$if(tesis.agradecimientos-institucionales)$
+
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+
+% \begin{center}
+%     \includegraphics[width=5cm]{Figures/unamposgrado.png}\\[0.1cm] % Logo UNAM
+% \end{center}
+
+$if(tesis.agradecimientos-institucionales.text)$
+$tesis.agradecimientos-institucionales.text$
+$else$
+\input{"$tesis.agradecimientos-institucionales$"}
+$endif$
+\end{acknowledgements}
+
+$endif$
+
+\newpage
+\begin{center}
+    \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página en blanco.}}}
+\end{center}
+
 %----------------------------------------------------------------------------------------
 %	tesis CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------

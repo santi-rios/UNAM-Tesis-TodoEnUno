@@ -41,6 +41,7 @@ tesis:
   # university: Universidad Nacional Autónoma de México
   # group: Biología Animal Experimental
   logo: figuras/unam.png
+  agradecimientos-institucionales: "preambulo/agradecimientos_institucionales.tex"
 ---
 
 ## Introduction {#sec-intro}
