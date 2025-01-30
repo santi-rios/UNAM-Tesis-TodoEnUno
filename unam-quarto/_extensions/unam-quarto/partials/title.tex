@@ -2,20 +2,88 @@ $if(title)$
 \title{$title$}
 $endif$
 
+% \programa{$tesis.programa$}
 
-$for(by-author)$
-  \author{$by-author.name.literal$}{%
-  $if(by-author.affiliations)$
-    $for(by-author.affiliations)$
-      $if(by-author.affiliations.name)$
-         $by-author.affiliations.name$
-      $endif$
-  }{%
-      $if(by-author.note)$
-          $by-author.note.text$
-      $endif$
-  }
-    $endfor$
-  $endif$
-$endfor$
+% $if(tesis.facultad)$
+% \facultad{$tesis.facultad$} % Nombre de la facultad
+% $endif$
+
+% $if(tesis.departmento)$
+% \departmento{$tesis.departmento$} % Nombre del departamento
+% $else$
+% \departmento{}
+% $endif$
+
+% $if(tesis.grado)$
+% \grado{$tesis.grado$}
+% $endif$
+
+% $if(tesis.supervisor.name)$
+% \supervisor{$tesis.supervisor.name$}
+% $endif$
+
+% $if(tesis.supervisor.faculty)$
+% \supervisorfac{$tesis.supervisor.faculty$}
+% $endif$
+
+% $if(tesis.examiner.name)$
+% \examiner{$tesis.examiner.name$}
+% $endif$
+
+% $if(tesis.examinertwo.name)$
+% \examinertwo{$tesis.examinertwo.name$}
+% $endif$
+
+% $if(tesis.examiner.faculty)$
+% \examinerfac{$tesis.examiner.faculty$}
+% $endif$
+
+% $if(tesis.examinertwo.faculty)$
+% \examinertwofac{$tesis.examinertwo.faculty$}
+% $endif$
+
+
+
+% $if(author)$
+% \author{$author$}
+% $endif$
+
+
+
+% $if(tesis.version)$
+% \versiontesis{$tesis.version$}
+% $endif$
+
+% $if(tesis.university)$
+% \university{$tesis.university$} % Nombre de la universidad
+% $else$
+% \university{}
+% $endif$
+
+
+
+% $if(tesis.group)$
+% \group{$tesis.group$} % Nombre del grupo de investigación
+% $else$
+% \group{}
+% $endif$
+
+
+% \setcounter{tocdepth}{$if(toc-depth)$$toc-depth$$else$3$endif$} % The depth to which the document sections are printed to the table of contents
+
+% $for(by-author)$
+%   \author{$by-author.name.literal$}{%
+%   $if(by-author.affiliations)$
+%     $for(by-author.affiliations)$
+%       $if(by-author.affiliations.name)$
+%          $by-author.affiliations.name$
+%       $endif$
+%   }{%
+%       $if(by-author.note)$
+%           $by-author.note.text$
+%       $endif$
+%   }
+%     $endfor$
+%   $endif$
+% $endfor$
 

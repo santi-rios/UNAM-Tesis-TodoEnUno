@@ -1,7 +1,7 @@
 
 % \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
-\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\pagestyle{plain} % Default to the plain heading style until the tesis style is called for the body content
 
 %----------------------------------------------------------------------------------------
 %	PORTADA
@@ -13,17 +13,17 @@
         \vspace*{-1.5cm} % Ajusta este valor conforme sea necesario
         
         % Logo de la UNAM
-        % \includegraphics[width=3.5cm]{$if(thesis.logo)$ $thesis.logo$ $endif$}\\[0.5cm]
+        \includegraphics[width=3.5cm]{$if(tesis.logo)$ $tesis.logo$ $endif$}\\[0.5cm]
         
         % Nombre de la Universidad
         {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
         
         % Programa de posgrado
-        % {\large \textbf{\MakeUppercase{\gradoname}}}\\[0.3cm]
+        {\large \textbf{\MakeUppercase{$tesis.programa$}}}\\[0.3cm]
         
         % Facultad y área
-        % {\large \MakeUppercase{\facname}}\\[0.2cm]
-        % {\large \MakeUppercase{\deptname}}\\[1cm]
+        {\large \MakeUppercase{$tesis.facultad$}}\\[0.2cm]
+        {\large \MakeUppercase{$tesis.departmento$}}\\[1cm]
         
         % Título de la tesis
         {\Large \textbf{\title}}\\[1cm]
@@ -33,27 +33,27 @@
         
         % Texto de grado
         {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.3cm]
-        % {\Large \textbf{\degreename}}\\[1cm]
+        {\Large \textbf{$tesis.grado$}}\\[1cm]
         
         % Autor
         {\large PRESENTA:}\\[0.3cm]
-        % {\LARGE \textbf{\authorname}}\\[1.0cm]
+        {\LARGE \textbf{$tesis.nombre$}}\\[1.0cm]
         
         % Tutor y comité
         {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
-        % {\small \supname}\\
-        % {\small \supfac}\\[0.5cm]
+        {\small $if(tesis.supervisor.name)$ $tesis.supervisor.name$ $endif$}\\
+        {\small $if(tesis.supervisor.faculty)$ $tesis.supervisor.faculty$ $endif$}\\[0.5cm]
         
         {\small \textbf{COMITÉ TUTOR:}}\\
-        % {\small \examname}\\
-        % {\small \examfac}\\[0.3cm]
-        % {\small \examnametwo}\\
-        % {\small \examfactwo}\\[1cm]
+        {\small $if(tesis.sinodales.uno)$ $tesis.sinodales.uno$ $endif$}\\
+        {\small $if(tesis.sinodales.unofacultad)$ $tesis.sinodales.unofacultad$ $endif$}\\[0.3cm]
+        {\small $if(tesis.sinodales.dos)$ $tesis.sinodales.dos$ $endif$}\\
+        {\small $if(tesis.sinodales.dosfacultad)$ $tesis.sinodales.dosfacultad$ $endif$}\\[1cm]
         
         % Lugar y fecha
         % \vfill
         % $if(book.date)$
-        % {\small \textbf{{$thesis.lugar$} \hfill {$book.date$}}}\\
+        % {\small \textbf{{$tesis.lugar$} \hfill {$book.date$}}}\\
         % $endif$
         
     \end{center}
@@ -71,5 +71,12 @@
 \begin{center}
     \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
 \end{center}
+%----------------------------------------------------------------------------------------
+%	tesis CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+% \usepackage[main=spanish,english]{babel}
+% \selectlanguage{spanish}
+% \usepackage[spanish,mexico]{babel}
+% \mainmatter % Begin numeric (1,2,3...) page numbering
 
-
+% \pagestyle{review} % thesis, thesisSimple, review

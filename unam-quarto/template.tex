@@ -149,8 +149,58 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle=true]{csquotes}
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes} % insertar comentarios y notas
 % \usepackage[disable]{todonotes} # descomentar si quieres QUITAR notas y comentarios
+
+% \usepackage{acro}
+% \ac \Ac acronym first time
+% \acs \Acs short form
+% \acl \Acl longform
+
+% \acsetup{
+% 	make-links = true 
+% 	}
+
+% \DeclareAcronym{5-ht}{
+%     short = 5-HT,
+%     long = Serotonina
+% }
+
+% \DeclareAcronym{5-htp}{
+%     short = 5-HTP,
+%     long = 5-Hidroxitriptófano
+% }
+
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+% Márgenes para impresión
+% \geometry{
+% 	headheight=4ex,
+% 	includehead,
+% 	includefoot
+% }
+
+% Márgenes para web
+% \geometry{
+%     left=2.5cm,
+%     right=2.5cm,
+%     top=2.5cm,
+%     bottom=2.5cm
+% }
+
+
+% \raggedbottom
+
+% \AtBeginDocument{
+% \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+% \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+% \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+% }
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -212,14 +262,45 @@
 
 \title{Unam-quarto Template}
 
+% \programa{Posgrado en Ciencias Biológicas}
 
-  \author{string}{%
-  
+% % \facultad{Facultad de Ciencias} % Nombre de la facultad
+% 
+% % \departmento{Biología Experimental} % Nombre del departamento
+% 
+% % \grado{MAESTRO EN CIENCIAS BIOLÓGICAS}
+% 
+% % \supervisor{Dr.~Narcissus}
+% 
+% % \supervisorfac{Thespiae in Boeotia}
+% 
+% 
+% 
+% 
+% 
+
+
+% % \author{string}
+% 
+
+
+% 
+% % \university{}
+% 
+
+
+% % \group{}
+% 
+
+% \setcounter{tocdepth}{3} % The depth to which the document sections are printed to the table of contents
+
+% %   \author{string}{%
+%   % 
 \begin{document}
 
 % \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
-\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\pagestyle{plain} % Default to the plain heading style until the tesis style is called for the body content
 
 %----------------------------------------------------------------------------------------
 %	PORTADA
@@ -231,17 +312,18 @@
         \vspace*{-1.5cm} % Ajusta este valor conforme sea necesario
         
         % Logo de la UNAM
-        % \includegraphics[width=3.5cm]{}\\[0.5cm]
+        \includegraphics[width=3.5cm]{ figuras/unam.png }\\[0.5cm]
         
         % Nombre de la Universidad
         {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
         
         % Programa de posgrado
-        % {\large \textbf{\MakeUppercase{\gradoname}}}\\[0.3cm]
+        {\large \textbf{\MakeUppercase{Posgrado en Ciencias
+Biológicas}}}\\[0.3cm]
         
         % Facultad y área
-        % {\large \MakeUppercase{\facname}}\\[0.2cm]
-        % {\large \MakeUppercase{\deptname}}\\[1cm]
+        {\large \MakeUppercase{Facultad de Ciencias}}\\[0.2cm]
+        {\large \MakeUppercase{Biología Experimental}}\\[1cm]
         
         % Título de la tesis
         {\Large \textbf{\title}}\\[1cm]
@@ -251,22 +333,22 @@
         
         % Texto de grado
         {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.3cm]
-        % {\Large \textbf{\degreename}}\\[1cm]
+        {\Large \textbf{MAESTRO EN CIENCIAS BIOLÓGICAS}}\\[1cm]
         
         % Autor
         {\large PRESENTA:}\\[0.3cm]
-        % {\LARGE \textbf{\authorname}}\\[1.0cm]
+        {\LARGE \textbf{Santiago García-Rios}}\\[1.0cm]
         
         % Tutor y comité
         {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
-        % {\small \supname}\\
-        % {\small \supfac}\\[0.5cm]
+        {\small  Dr.~Narcissus }\\
+        {\small  Thespiae in Boeotia }\\[0.5cm]
         
         {\small \textbf{COMITÉ TUTOR:}}\\
-        % {\small \examname}\\
-        % {\small \examfac}\\[0.3cm]
-        % {\small \examnametwo}\\
-        % {\small \examfactwo}\\[1cm]
+        {\small  Dr.~Socrates }\\
+        {\small  Academy of Athens }\\[0.3cm]
+        {\small  Dr.~Plato }\\
+        {\small  Academy of Athens }\\[1cm]
         
         % Lugar y fecha
         % \vfill
@@ -286,8 +368,15 @@
 \begin{center}
     \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
 \end{center}
+%----------------------------------------------------------------------------------------
+%	tesis CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+% \usepackage[main=spanish,english]{babel}
+% \selectlanguage{spanish}
+% \usepackage[spanish,mexico]{babel}
+% \mainmatter % Begin numeric (1,2,3...) page numbering
 
-
+% \pagestyle{review} % thesis, thesisSimple, review
 \renewcommand*\contentsname{Table of contents}
 {
 \hypersetup{linkcolor=}
@@ -348,6 +437,261 @@ i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all confl
 \end{Shaded}
 
 \includegraphics{template_files/figure-pdf/unnamed-chunk-2-1.pdf}
+
+\subsection{Introducción}\label{introducciuxf3n}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Comenzar con una oración de tópico
+  (\href{https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)}{pirámide
+  invertida})
+\item[$\square$]
+  Revisión concisa de literatura pertinente
+\end{itemize}
+
+\href{https://writingcenter.gmu.edu/writing-resources/imrad/imrad-reports-introductions}{Ver
+más}
+
+\subsubsection{Tables}\label{tables}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
+\InformationTok{\#| label: tbl{-}cars}
+\InformationTok{\#| tbl{-}cap: This is my caption.}
+\InformationTok{knitr::kable(head(mtcars))}
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{\#\textbar{}} is what sets up our cross-references and you
+can then reference the table as \texttt{@tbl-cars}. Note in order for
+table numbering to work in Quarto, you \textbf{must} label your tables
+with the \texttt{tbl-} prefix.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(mtcars))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2609}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0725}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0580}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0725}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0580}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0725}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0870}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0870}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0435}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0435}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0725}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0725}}@{}}
+
+\caption{\label{tbl-cars}This is my caption.}
+
+\tabularnewline
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+mpg
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+cyl
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+disp
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+hp
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+drat
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+wt
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+qsec
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+vs
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+am
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+gear
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+carb
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mazda RX4 & 21.0 & 6 & 160 & 110 & 3.90 & 2.620 & 16.46 & 0 & 1 & 4 &
+4 \\
+Mazda RX4 Wag & 21.0 & 6 & 160 & 110 & 3.90 & 2.875 & 17.02 & 0 & 1 & 4
+& 4 \\
+Datsun 710 & 22.8 & 4 & 108 & 93 & 3.85 & 2.320 & 18.61 & 1 & 1 & 4 &
+1 \\
+Hornet 4 Drive & 21.4 & 6 & 258 & 110 & 3.08 & 3.215 & 19.44 & 1 & 0 & 3
+& 1 \\
+Hornet Sportabout & 18.7 & 8 & 360 & 175 & 3.15 & 3.440 & 17.02 & 0 & 0
+& 3 & 2 \\
+Valiant & 18.1 & 6 & 225 & 105 & 2.76 & 3.460 & 20.22 & 1 & 0 & 3 & 1 \\
+
+\end{longtable}
+
+This is Table~\ref{tbl-cars}.
+
+See the Quarto manual for full examples and instructions.
+
+\subsubsection{Figures}\label{figures}
+
+Again we write in Quarto (markdown) not \LaTeX{} for our figures. You
+can write in \LaTeX{} if you really want but it would only be
+interpreted for the PDF output.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
+\InformationTok{\#| label: fig{-}cars}
+\InformationTok{\#| fig{-}cap: This is my caption.}
+\InformationTok{plot(mtcars[,1:4])}
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{\#\textbar{}} is what sets up our cross-references and you
+can then reference the table as \texttt{@fig-cars}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(mtcars[,}\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{template_files/figure-pdf/fig-cars-1.pdf}
+
+}
+
+\caption{\label{fig-cars}This is my caption.}
+
+\end{figure}%
+
+This is Figure~\ref{fig-cars}.
+
+See the Quarto manual for full examples and instructions.
+
+\subsection{Objetivos e hipótesis}\label{objetivos-e-hipuxf3tesis}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  pregunta de investigación
+\item[$\square$]
+  objetivos de la investigación
+\item[$\square$]
+  hipótesis a probar
+\end{itemize}
+
+\subsection{Antecedentes}\label{antecedentes}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Incluir suficiente literatura para entender la razón y contexto del
+  estudio.
+\item[$\square$]
+  Explicar el enfoque experimental.
+\item[$\square$]
+  Explicar cómo los animales y modelos se usaron para explorar los
+  objetivos científicos.
+\item[$\square$]
+  Si es relevante, explicar el impacto en la salud humana.
+\item[$\square$]
+  Comienza por explicar por qué es importante la investigación
+\item[$\square$]
+  Seguir por explicar el estado actual de la investigación
+\item[$\square$]
+  Seguir de hoyos o oproblemas en el campo.
+\item[$\square$]
+  Finalmente explicar cómo el estudio busca una solución a este
+  problema.
+\end{itemize}
+
+\subsection{Metodolodía}\label{metodoloduxeda}
+
+\emph{Metodología}: Este término es más amplio y no solo describe los
+procedimientos específicos utilizados en el experimento, sino también
+las bases teóricas que justifican esos métodos. Incluye una discusión
+sobre por qué ciertos métodos son apropiados para la investigación en
+cuestión. Si tu sección describe tanto el ``cómo'' (los pasos y
+procedimientos) como el ``por qué'' (la justificación de la elección de
+esos métodos).
+
+\emph{Diseño Experimental}: Este término se refiere específicamente al
+plan estructural de la investigación, cómo se organizan los
+experimentos, qué variables se controlan, cómo se asignan los sujetos a
+diferentes grupos, etc. Es más específico que ``Método'' y se centra en
+la planificación del experimento en sí.
+
+\emph{Método}: Es un término más específico y directo. Se enfoca en los
+pasos concretos y técnicas empleadas en la investigación, sin
+necesariamente entrar en detalles sobre la justificación teórica de esos
+métodos.
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Escribir en pasado, con voz pasiva (\emph{Daniel cocinó una tortilla},
+  \emph{Una tortilla fue cocinada por Danie}, \emph{Daniel la cocinó},
+  \emph{América fue colonizada en 1492}, \emph{Se reparan automóviles
+  /Se espera la renuncia del mandatario}), en contraste de voz activa
+  (\emph{El presidente pronunció un largo discurso}, \emph{Varios
+  millones visitan Barcelona cada año})
+\end{itemize}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4516}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5484}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Voz Activa}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Voz Pasiva}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+El presidente pronunció un largo discurso & Un largo discurso fue
+pronunciado por el presidente \\
+Varios millones visitan Barcelona cada año & Barcelona es visitada cada
+año por varios millones \\
+Mi madre horneó una tarta de chocolate & Una tarta de chocolate fue
+horneada por mi madre \\
+Unos ladrones atracaron el banco & El banco fue atracado por unos
+ladrone \\
+\end{longtable}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+\textbf{Verbo Activo} & \textbf{Verbo Pasivo} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Escribe & Es escrito \\
+Escribió & Fue escrito \\
+Escribirá & Será escrito \\
+Escriba & Sea escrito \\
+Han escrito & Han sido escritos \\
+\end{longtable}
+
+Animales - {[} {]} cuidado y monitoreo - {[} {]} Aprovación de comité de
+ética - {[} {]} Intervenciones y pasos utilizados para reducir dolor,
+sufrimiento y distrés. - {[} {]} Cómo se obtuvo el tamaño de la muestra
+a priori. -
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}

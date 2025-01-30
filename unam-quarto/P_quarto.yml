@@ -1,0 +1,129 @@
+# project:
+#   type: book
+#   output-dir: .
+
+# section-title-appendices: "Apéndices"
+# lang: es
+# language: _language-es.yml
+# keep-tex: true
+
+book:
+  title: Caracterización de los efectos de la Fluoxetina sobre el aprendizaje espacial y la flexibilidad cognitiva en un modelo de estrés crónico en ratón
+  date: Diciembre, 2024
+  author:
+    name: Santiago García Ríos 
+    url: https://github.com/santi-rios
+  downloads: [pdf]
+  # Debe tener un resumen de los objetivos, sujetos experimentales, cepa, sexo, métodos clave, principales hallazgos y conclusiones.
+  # Una o dos oraciones sobre el propósito e importancia;
+  # una o dos oraciones sobre los métodos
+  # unas oraciones sobre los hallazgos más importantes
+  # una o dos oraciones sobre las implicaciones de los hallazgos
+  # Ver más: https://writingcenter.gmu.edu/writing-resources/imrad/abstracts-in-scientific-research-papers-imrad
+  abstract: |
+    El estrés y la serotonina están íntimamente relacionados con la función hipocampal, una estructura fundamental para la formación de memorias episódicas y la regulación emocional. Por otro lado, el estrés crónico altera diversos aspectos de la dinámica hipocampal y reduce la disponibilidad de serotonina en áreas que regulan distintos aspectos emocionales, entre ellas el hipocampo. Adicionalmente, el estrés crónico puede ocasionar alteraciones cognitivas, como dificultad en adaptar conductas en respuesta a las contingencias ambientales cambiantes (flexibilidad cognitiva). 
+    
+    Utilizando un modelo de estrés crónico moderado impredecible en ratones macho y hembra de la cruza C57BL6 x BALBc, evaluamos el impacto del estrés sobre la flexibilidad cognitiva mediante la tarea de laberinto acuático de Morris. laberinto acuático de Morris. Observamos que el estrés crónico indujo deficiencias en la flexibilidad cognitiva, evidenciadas por un peor rendimiento en la tarea de aprendizaje revera del laberinto, así como un aprendizaje más lento cuando se cambió la localización de la plataforma. Sin embargo, la administración de fluoxetina, un inhibidor de la recaptura de serotonina, revirtió los efectos negativos del estrés sobre la flexibilidad cognitiva.
+    
+    Nuestros hallazgos sugieren que la fluoxetina puede ser una herramienta terapéutica efectiva para contrarrestar los efectos negativos del estrés crónico al promover la flexibilidad cognitiva.   
+  chapters:
+    - index.qmd
+    # - Chapters/1Introduccion.qmd # si se des-comenta, aparece doble
+    - Chapters/3Antecedentes.qmd
+    - Chapters/planteamiento_problema.qmd
+    - Chapters/2Objetivos.qmd
+    - Chapters/4metodos.qmd
+    - Chapters/5Resultados.qmd
+    - Chapters/6Discusion.qmd
+    - Chapters/7Conclusion.qmd
+    - references.qmd
+  appendices:
+    - Appendices/AppendixA.qmd
+    - Appendices/AppendixB.qmd
+
+  site-url: https://github.com/santi-rios/UNAM-Tesis_Quarto
+  repo-url: https://github.com/santi-rios/UNAM-Tesis_Quarto
+  repo-actions: [edit, source, issue]
+  search: true
+ # (default is "Figure")
+
+thesis:
+  version: "2.0" # revisada por comité tutoral
+  lugar: Ciudad Universitaria, CD.MX.
+  supervisor: 
+    name: Dr. Alonso Martínez Canabal
+    url: https://quarto.org/
+    faculty: Facultad de Ciencias, UNAM
+  examiner: 
+    name: Dr. Jean-Pascal Morin
+    faculty: Facultad de Medicina, UNAM
+  examinertwo: 
+    name: Dra. Maria de la Luz Navarro Angulo
+    faculty: Facultad de Medicina, UNAM
+  degree-name: MAESTRO EN CIENCIAS BIOLÓGICAS
+  university: Universidad Nacional Autónoma de México
+  programa: Posgrado en Ciencias Biológicas
+  department: Biología Experimental
+  group: Biología Animal Experimental
+  faculty: Facultad de Ciencias
+  acknowledgements: "Frontmatter/acknowledgements.tex"
+  agradecimientos: "Frontmatter/agradecimientos.tex"
+  declaration: "Frontmatter/declaration.tex"
+  quotation:
+    text: I want to thank me for believing in me, I want to thank me for doing all this hard work. I want to thank me for trying to do more right than wrong. I want to thank me for just being me at all times.
+    attribution: Snoop Dogg
+  abbreviations: "Frontmatter/abbreviations.tex"
+  symbols: "Frontmatter/symbols.tex"
+  dedication: "Frontmatter/dedication.tex"
+  logo: images/logo_unam.png
+  logo-height: "3cm"
+
+bibliography: [zotero.bib]
+csl: apa-no-ampersand-old.csl
+
+execute:
+  echo: false
+  message: false
+  warning: false
+  code-overflow: wrap
+  cache: false
+
+crossref:
+  tbl-prefix: "**Tabla**"
+  fig-prefix: "**Fig**"
+  sec-prefix: "**Apartado**"
+
+# include-in-header: 
+#     text: |
+#       \usepackage{tocloft}
+#       \renewcommand{\cftchapfont}{\sffamily\Large}
+#       \renewcommand{\cftsecfont}{\sffamily}
+#       \newcommand{\cftappendixname}{Apéndices}
+
+# urlcolor changes the url color in the body of the PDF
+# linkcolor changes color of internal links (like to figures)
+# toclinkcolor changes color of toc, lof and lot links
+format:
+  quarto-thesis-pdf: 
+    urlcolor: red
+    toclinkcolor: black
+    toc-depth: 3
+    classoption: ["11pt"] # singlespacing" with "onehalfspacing" or "doublespacing" liststotoc
+  docx:
+    reference-doc: CDC_Template.docx
+    abstract-title: Resumen
+    toc: true
+    number-sections: true
+    link-citations: true
+    highlight-style: github
+    lang: es 
+
+# filters:
+#   - acronyms
+
+# acronyms:
+#   keys:
+#     - shortname: qmd
+#       longname: Quarto documents
+#     - shortname: YAML
+#       longname: YAML Ain't Markup Language

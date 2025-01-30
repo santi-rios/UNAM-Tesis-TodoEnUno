@@ -8,7 +8,7 @@ author:
   - id: string
     number: number
     name:
-      given: string
+      given: Santiago García-Rios
       family: string
       literal: string
 abstract: |
@@ -22,6 +22,25 @@ bibliography: bibliography.bib
 #  - twocolumn
 #  - twoside
 # documentclass: "unam-quarto"
+tesis:
+  # version: "2.0" # Revisada por comité tutoral
+  nombre: Santiago García-Rios
+  programa: Posgrado en Ciencias Biológicas
+  facultad: Facultad de Ciencias
+  departmento: Biología Experimental
+  grado: MAESTRO EN CIENCIAS BIOLÓGICAS
+  # lugar: Ciudad Universitaria, CD.MX.
+  supervisor: 
+    name: Dr. Narcissus
+    faculty: Thespiae in Boeotia
+  sinodales: 
+    uno: Dr. Socrates
+    unofacultad: Academy of Athens
+    dos: Dr. Plato
+    dosfacultad: Academy of Athens
+  # university: Universidad Nacional Autónoma de México
+  # group: Biología Animal Experimental
+  logo: figuras/unam.png
 ---
 
 ## Introduction {#sec-intro}
@@ -54,3 +73,106 @@ ggplot(df, aes(x, y)) +
 Will only appear in HTML.
 
 :::
+
+## Introducción
+
+- [ ] Comenzar con una oración de tópico ([pirámide invertida](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)))
+- [ ] Revisión concisa de literatura pertinente
+
+[Ver más](https://writingcenter.gmu.edu/writing-resources/imrad/imrad-reports-introductions)
+
+### Tables
+
+```{{r}}
+#| label: tbl-cars
+#| tbl-cap: This is my caption.
+knitr::kable(head(mtcars))
+```
+
+The `#|` is what sets up our cross-references and you can then reference the table as `@tbl-cars`. Note in order for table numbering to work in Quarto, you **must** label your tables with the `tbl-` prefix.
+
+
+```{r}
+#| label: tbl-cars
+#| tbl-cap: This is my caption.
+knitr::kable(head(mtcars))
+```
+
+This is @tbl-cars.
+
+See the Quarto manual for full examples and instructions.
+
+
+### Figures
+
+Again we write in Quarto (markdown) not \LaTeX{} for our figures. You can write in \LaTeX{} if you really want but it would only be interpreted for the PDF output.
+
+    ```{{r}}
+    #| label: fig-cars
+    #| fig-cap: This is my caption.
+    plot(mtcars[,1:4])
+    ```
+
+The `#|` is what sets up our cross-references and you can then reference the table as `@fig-cars`.
+
+
+```{r}
+#| label: fig-cars
+#| fig-cap: This is my caption.
+plot(mtcars[,1:4])
+```
+
+This is @fig-cars.
+
+See the Quarto manual for full examples and instructions.
+
+## Objetivos e hipótesis 
+
+
+- [ ] pregunta de investigación
+- [ ] objetivos de la investigación
+- [ ] hipótesis a probar 
+
+## Antecedentes
+
+- [ ] Incluir suficiente literatura para entender la razón y contexto del estudio.
+- [ ] Explicar el enfoque experimental.
+- [ ] Explicar cómo los animales y modelos se usaron para explorar los objetivos científicos.
+- [ ] Si es relevante, explicar el impacto en la salud humana. 
+- [ ] Comienza por explicar por qué es importante la investigación
+- [ ] Seguir por explicar el estado actual de la investigación
+- [ ] Seguir de hoyos o oproblemas en el campo.
+- [ ] Finalmente explicar cómo el estudio busca una solución a este problema. 
+
+## Metodolodía
+
+
+*Metodología*: Este término es más amplio y no solo describe los procedimientos específicos utilizados en el experimento, sino también las bases teóricas que justifican esos métodos. Incluye una discusión sobre por qué ciertos métodos son apropiados para la investigación en cuestión. Si tu sección describe tanto el "cómo" (los pasos y procedimientos) como el "por qué" (la justificación de la elección de esos métodos).
+
+*Diseño Experimental*: Este término se refiere específicamente al plan estructural de la investigación, cómo se organizan los experimentos, qué variables se controlan, cómo se asignan los sujetos a diferentes grupos, etc. Es más específico que "Método" y se centra en la planificación del experimento en sí.
+
+*Método*: Es un término más específico y directo. Se enfoca en los pasos concretos y técnicas empleadas en la investigación, sin necesariamente entrar en detalles sobre la justificación teórica de esos métodos.
+
+- [ ] Escribir en pasado, con voz pasiva (*Daniel cocinó una tortilla*, *Una tortilla fue cocinada por Danie*, *Daniel la cocinó*, *América fue colonizada en 1492*, *Se reparan automóviles /Se espera la renuncia del mandatario*), en contraste de voz activa (*El presidente pronunció un largo discurso*, *Varios millones visitan Barcelona cada año*)
+
+| **Voz Activa**                             | **Voz Pasiva**                                      |
+| ------------------------------------------ | --------------------------------------------------- |
+| El presidente pronunció un largo discurso  | Un largo discurso fue pronunciado por el presidente |
+| Varios millones visitan Barcelona cada año | Barcelona es visitada cada año por varios millones  |
+| Mi madre horneó una tarta de chocolate     | Una tarta de chocolate fue horneada por mi madre    |
+| Unos ladrones atracaron el banco           | El banco fue atracado por unos ladrone              |
+
+| **Verbo Activo** | **Verbo Pasivo**  |
+| ---------------- | ----------------- |
+| Escribe          | Es escrito        |
+| Escribió         | Fue escrito       |
+| Escribirá        | Será escrito      |
+| Escriba          | Sea escrito       |
+| Han escrito      | Han sido escritos |
+
+Animales
+- [ ] cuidado y monitoreo
+- [ ] Aprovación de comité de ética
+- [ ] Intervenciones y pasos utilizados para reducir dolor, sufrimiento y distrés.
+- [ ] Cómo se obtuvo el tamaño de la muestra a priori. 
+-

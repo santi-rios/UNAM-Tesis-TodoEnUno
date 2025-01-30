@@ -12,10 +12,10 @@ contributes:
       # documentclass: unam-quarto
       # template: template.tex
       # include-in-header: header.tex
-      # format-resources:
-      #   - unam-quarto.cls
+      format-resources:
+        - unam-quarto.cls
       template-partials: 
-        - "partials/title.tex"
+        - partials/title.tex
         - partials/before-body.tex
         # - "partials/_affiliation.tex"
         # - "partials/before-bib.tex"
