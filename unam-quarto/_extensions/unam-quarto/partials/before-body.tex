@@ -1,15 +1,75 @@
-$if(title)$
-\maketitle
-$endif$
 
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
+% \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
-\dates{This manuscript was compiled on \today}
-\doi{\url{www.pnas.org/cgi/doi/10.1073/pnas.XXXXXXXXXX}}
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
 
-\thispagestyle{firststyle}
-\ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
+%----------------------------------------------------------------------------------------
+%	PORTADA
+%----------------------------------------------------------------------------------------
+
+% Primera portada
+\begin{titlepage}
+    \begin{center}
+        \vspace*{-1.5cm} % Ajusta este valor conforme sea necesario
+        
+        % Logo de la UNAM
+        % \includegraphics[width=3.5cm]{$if(thesis.logo)$ $thesis.logo$ $endif$}\\[0.5cm]
+        
+        % Nombre de la Universidad
+        {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
+        
+        % Programa de posgrado
+        % {\large \textbf{\MakeUppercase{\gradoname}}}\\[0.3cm]
+        
+        % Facultad y área
+        % {\large \MakeUppercase{\facname}}\\[0.2cm]
+        % {\large \MakeUppercase{\deptname}}\\[1cm]
+        
+        % Título de la tesis
+        {\Large \textbf{\title}}\\[1cm]
+        
+        % Texto "Tesis"
+        {\LARGE \textbf{T E S I S}}\\[0.5cm]
+        
+        % Texto de grado
+        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.3cm]
+        % {\Large \textbf{\degreename}}\\[1cm]
+        
+        % Autor
+        {\large PRESENTA:}\\[0.3cm]
+        % {\LARGE \textbf{\authorname}}\\[1.0cm]
+        
+        % Tutor y comité
+        {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
+        % {\small \supname}\\
+        % {\small \supfac}\\[0.5cm]
+        
+        {\small \textbf{COMITÉ TUTOR:}}\\
+        % {\small \examname}\\
+        % {\small \examfac}\\[0.3cm]
+        % {\small \examnametwo}\\
+        % {\small \examfactwo}\\[1cm]
+        
+        % Lugar y fecha
+        % \vfill
+        % $if(book.date)$
+        % {\small \textbf{{$thesis.lugar$} \hfill {$book.date$}}}\\
+        % $endif$
+        
+    \end{center}
+\end{titlepage}
+
+
+% Primera página de \missingfigure
+\newpage
+\begin{center}
+    \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página reservada para Derechos de Autor por parte de la Dirección de Bibliotecas.}}}
+\end{center}
+
+% Tercera página de \missingfigure
+\newpage
+\begin{center}
+    \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
+\end{center}
+
+

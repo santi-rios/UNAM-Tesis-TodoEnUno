@@ -149,6 +149,8 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
+\usepackage[colorinlistoftodos, textsize=tiny]{todonotes} % insertar comentarios y notas
+% \usepackage[disable]{todonotes} # descomentar si quieres QUITAR notas y comentarios
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -210,13 +212,81 @@
 
 \title{Unam-quarto Template}
 
+
   \author{string}{%
   
 \begin{document}
-\maketitle
-\begin{abstract}
-This document is a template demonstrating the Unam-quarto format.
-\end{abstract}
+
+% \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	PORTADA
+%----------------------------------------------------------------------------------------
+
+% Primera portada
+\begin{titlepage}
+    \begin{center}
+        \vspace*{-1.5cm} % Ajusta este valor conforme sea necesario
+        
+        % Logo de la UNAM
+        % \includegraphics[width=3.5cm]{}\\[0.5cm]
+        
+        % Nombre de la Universidad
+        {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
+        
+        % Programa de posgrado
+        % {\large \textbf{\MakeUppercase{\gradoname}}}\\[0.3cm]
+        
+        % Facultad y área
+        % {\large \MakeUppercase{\facname}}\\[0.2cm]
+        % {\large \MakeUppercase{\deptname}}\\[1cm]
+        
+        % Título de la tesis
+        {\Large \textbf{\title}}\\[1cm]
+        
+        % Texto "Tesis"
+        {\LARGE \textbf{T E S I S}}\\[0.5cm]
+        
+        % Texto de grado
+        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.3cm]
+        % {\Large \textbf{\degreename}}\\[1cm]
+        
+        % Autor
+        {\large PRESENTA:}\\[0.3cm]
+        % {\LARGE \textbf{\authorname}}\\[1.0cm]
+        
+        % Tutor y comité
+        {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
+        % {\small \supname}\\
+        % {\small \supfac}\\[0.5cm]
+        
+        {\small \textbf{COMITÉ TUTOR:}}\\
+        % {\small \examname}\\
+        % {\small \examfac}\\[0.3cm]
+        % {\small \examnametwo}\\
+        % {\small \examfactwo}\\[1cm]
+        
+        % Lugar y fecha
+        % \vfill
+        %         
+    \end{center}
+\end{titlepage}
+
+
+% Primera página de \missingfigure
+\newpage
+\begin{center}
+    \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página reservada para Derechos de Autor por parte de la Dirección de Bibliotecas.}}}
+\end{center}
+
+% Tercera página de \missingfigure
+\newpage
+\begin{center}
+    \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
+\end{center}
+
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -236,17 +306,48 @@ In Quarto, we can do these by setting the fig-env command to figure* or
 SCfigure*
 \end{quote}
 
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=2.67in,height=\textheight]{figuras/unam.png}
+
+}
+
+\caption{\label{fig-side}This legend would be placed at the side of the
+figure, rather than below it.}
+
+\end{figure}%
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\#| label: fig{-}side}
-\CommentTok{\#| fig{-}cap: "This legend would be placed at the side of the figure, rather than below it."}
-\CommentTok{\#| fig{-}env: "SCfigure*"}
-\CommentTok{\#| echo: false}
-\CommentTok{\# tell it the options as comments with a | and a space, as above.}
-\CommentTok{\# set echo: false to avoid printing this text}
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{\textquotesingle{}figs/frog.pdf\textquotesingle{}}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+-- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
+v dplyr     1.1.3     v readr     2.1.4
+v forcats   1.0.0     v stringr   1.5.0
+v ggplot2   3.4.4     v tibble    3.2.1
+v lubridate 1.9.3     v tidyr     1.3.0
+v purrr     1.0.2     
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(}\AttributeTok{x =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{, }\AttributeTok{y =} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{10}\NormalTok{))}
+
+\FunctionTok{ggplot}\NormalTok{(df, }\FunctionTok{aes}\NormalTok{(x, y)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{template_files/figure-pdf/unnamed-chunk-2-1.pdf}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}

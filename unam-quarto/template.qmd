@@ -3,8 +3,8 @@ title: Unam-quarto Template
 format:
   unam-quarto-pdf:
     keep-tex: true  
-  # unam-quarto-html: default
-author:
+  # unam'-quarto-html: default
+author: 
   - id: string
     number: number
     name:
@@ -13,8 +13,8 @@ author:
       literal: string
 abstract: |
   This document is a template demonstrating the Unam-quarto format.
-# acknowledgements: |
-#   We thank the Quarto team for their support in creating this template.
+acknowledgements: |
+  We thank the Quarto team for their support in creating this template.
 keywords: [template, demo]
 bibliography: bibliography.bib  
 # fontsize: "9pt"
@@ -30,14 +30,27 @@ bibliography: bibliography.bib
 
 > In Quarto, we can do these by setting the fig-env command to figure* or SCfigure*
 
-```r
+``` {r}
 #| label: fig-side
 #| fig-cap: "This legend would be placed at the side of the figure, rather than below it."
-#| fig-env: "SCfigure*"
 #| echo: false
 # tell it the options as comments with a | and a space, as above.
 # set echo: false to avoid printing this text
-knitr::include_graphics('figs/frog.pdf')
+# fig-env: "SCfigure*"
+knitr::include_graphics('figuras/unam.png')
 ```
 
+``` {r}
+library(tidyverse)
 
+df <- tibble(x = 1:10, y = rnorm(10))
+
+ggplot(df, aes(x, y)) +
+  geom_point()
+```
+
+::: {.content-visible when-format="html"}
+
+Will only appear in HTML.
+
+:::
