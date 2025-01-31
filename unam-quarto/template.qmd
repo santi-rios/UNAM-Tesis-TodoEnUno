@@ -58,49 +58,74 @@ execute:
 #   sec-prefix: "**Apartado**"
 ---
 
-## Introduction {#sec-intro}
+## Introducción {#sec-intro}
 
 ::: {.callout-tip}
 
-- [ ] Comenzar con una oración de tópico ([pirámide invertida](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)))
-- [ ] Revisión concisa de literatura pertinente
+i. **Establecer el territorio de investigación:**  
+   - Describir el estado actual del conocimiento sobre el tema.  
+   - Mostrar la relevancia o importancia del área de estudio.  
+   - Revisar investigaciones previas en el campo.  
+   **Ejemplos:**  
+   - “La evidencia sugiere que X es uno de los factores más relevantes para...”  
+   - “Investigaciones previas han demostrado que...”  
 
-[Ver más](https://writingcenter.gmu.edu/writing-resources/imrad/imrad-reports-introductions)
+i. **Identificar un nicho:**  
+   - Motivar la realización del estudio destacando aspectos no abordados o problemáticos.  
+   - Esto puede incluir:  
+     a) Señalar errores o limitaciones en investigaciones anteriores.  
+     b) Resaltar vacíos en el campo.  
+     c) Plantear preguntas sin respuesta.  
+     d) Proponer contribuciones novedosas.  
+   **Ejemplos:**  
+   - “El análisis de Smith no considera...”  
+   - “Hasta ahora, los estudios sobre X no han abordado...”  
+
+i. **Ocupar el nicho:**  
+   - Explicar cómo la investigación aborda el problema identificado.  
+   - Definir objetivos, hipótesis o preguntas de investigación.  
+   - Resaltar el valor y la novedad del estudio.  
+   - Describir la estructura del artículo.  
+   **Ejemplos:**  
+   - “El propósito de esta investigación es explorar la relación entre...”  
+   - “Este estudio proporciona nuevas perspectivas sobre...”  
+   - “El artículo se divide en cuatro secciones...”  
+
+Estilo narrativo: Expositivo y conciso. Evita detalles técnicos profundos.
+
+Gramática: Usa presente para hechos establecidos (ej.: "La plasticidad neuronal es fundamental para...") y pasado para mencionar hallazgos previos (ej.: "Estudios demostraron que...").
+
 :::
 
+En este trabajo investigamos el impacto del narcisismo encubierto en la práctica científica. Este tipo de narcisismo se manifiesta a menudo como una aparente obsesión por la perfección, aunque en realidad suele traducirse en un sabotaje pasivo-agresivo del método científico. Analizaremos cómo el narcisismo encubierto, disfrazado de falsa modestia, socava los pilares fundamentales de la ciencia: el pensamiento flexible, la crítica constructiva y la humildad intelectual. Después de todo, la frase "Soy muy brillante, pero el mundo está contra mí" suele significar "Soy insufrible con los demás".
 
-¿Qué pasa cuando mezclas a alguien que piensa que es Ramón y Cajal con la necesidad de probar que su hipótesis favorita es un la única correcta? **Spoiler**: caos epistemológico. Exploraremos cómo el ***narcisismo encubierto***, disfrazado de falsa modestia, corroe los pilares de la ciencia: pensamiento flexible, crítica constructiva y humildad intelectual. Porque, admitámoslo, la frase "*Soy muy brillante, pero el mundo está contra mi*" suele significar "*Soy insufrible con los demás*".
-
-Imagina a esa persona que publica "Ugh, odio ser tan inteligente en un mundo de idiotas" en facebook mientras bebe un vino de oro y escucha "mejor música que la tuya". Bienvenido al ***narcisismo encubierto***: el arte de disfrazar la autoimportancia bajo un manto de falsa modestia. Aquí exploraremos cómo el cerebro de estos individuos convierte la autocrítica en un *humblebrag* (autoelogio disfrazado de queja) y por qué sus neuronas parecen organizar un festival de cine en su honor.
+Para ilustrar mejor el fenómeno, pensemos en esa persona que publica "Ugh, odio ser tan inteligente en un mundo de idiotas" en Facebook mientras bebe vino de una botella que parece arte contemporáneo y escucha "mejor música que la tuya". Este es el narcisismo encubierto en acción: el arte de disfrazar la autoimportancia bajo el manto de la falsa modestia. Exploraremos cómo el cerebro de estos individuos transforma la autocrítica en un humblebrag (autoelogio disfrazado de queja) y por qué sus redes neuronales parecen estar organizando un festival de cine en su propio honor.
 
 ### Ejemplos de Narcisismo Encubierto
 
 En general, el narcisismo encubierto se caracteriza por una combinación de victimización, autoimagen grandiosa y sabotaje pasivo-agresivo (@tbl-actitudes).
 
-|   Actitud Narcisista Encubierta   |            Consecuencias en Ciencia/Medios           |
+|   Actitud Narcisista              |            Consecuencias                             |
 |:---------------------------------:|:----------------------------------------------------:|
 | "Sufro por ser tan bueno en esto" |   Rechazo a metodologías rigurosas (ej: Theranos).   |
 |     "Las críticas son envidia"    |         Cámaras de eco que perpetúan errores.        |
 |        Autoimagen de mártir       |        Sabotaje de colaboraciones científicas.       |
 |    Manipulación pasivo-agresiva   | Desinformación pública (ej: Goop, teorías sin base). |
 
-: Actitudes y Consecuencias {#tbl-actitudes}
+: Actitudes y Consecuencias del Narcisista {#tbl-actitudes}
 
-A continuación, algunos ejemplos de narcisismo encubierto:
+::: {.callout}
+### Chuck McGill (Better Call Saul), caso de estudio
 
-***Chuck McGill (Better Call Saul)*** (@fig-chuck):
+**Superioridad y grandiosidad**: Chuck (@fig-chuck) se creía intelectualmente superior a los demás, especialmente a su hermano Jimmy. Menospreciaba los logros de Jimmy y lo consideraba moralmente inferior como un mecanismo de defensa para proteger su autoimagen. Su narcisismo encubierto lo llevó a la ruina personal y profesional.
 
-Actitudes narcisistas encubiertas:
+**Necesidad de admiración**: Aunque no lo demostraba abiertamente, Chuck necesitaba la validación y admiración de los demás. Su ego se alimentaba de ser reconocido como un abogado brillante y exitoso.
 
-> "Soy el mártir de la ética": Se presenta como guardián de la ley, pero en realidad desprecia a Jimmy por amenazar su autoimagen de "hombre superior".
-> Victimización crónica: "Mi electrosensibilidad me hace sufrir" (traducción: Necesito controlar cada situación).
-> Sabotaje pasivo-agresivo: Usa tácticas legales "correctas" para destruir a Jimmy, mientras se cree moralmente intachable.
+**Manipulación**: Chuck utilizaba su posición para manipular a los demás y conseguir lo que quería. Era un maestro en el arte de la manipulación emocional, haciendo sentir culpables a quienes lo rodeaban.
 
-Consecuencias:
+**Resentimiento**: Chuck sentía un profundo resentimiento hacia Jimmy por su éxito y carisma naturales. Este resentimiento lo consumía y lo llevaba a sabotear los logros de su hermano.
 
-> Destruye su relación familiar.
-> Pierde credibilidad al revelarse su hipocresía.
-> Su rigidez mental lo lleva al aislamiento y deterioro mental.
+**Victimización**: A pesar de ser el victimario, Chuck se presentaba como la víctima. Utilizaba su falsa enfermedad (hipersensibilidad electromagnética) para manipular a los demás y obtener simpatía.
 
 ``` {r}
 #| label: fig-chuck
@@ -109,43 +134,55 @@ Consecuencias:
 knitr::include_graphics('figuras/chuck.png')
 ```
 
-***Elon Musk***:
+:::
 
-Actitudes:
+::: {.callout-important}
+### Narcisista Encubierto vs. Narcisista Evidente
 
-> "El mundo no está listo para mi genio": Desestima críticas a sus proyectos (ej: Hyperloop, Twitter/X) como "envidia".
+En la @tbl-comparacion, se presentan las diferencias clave entre el narcisista encubierto y el narcisista evidente. Mientras que el narcisista evidente muestra abiertamente su grandiosidad y necesidad de admiración, el narcisista encubierto lo hace de manera más sutil, a través de la victimización y la manipulación pasiva.
 
-> Victimización pública: "Me atacan por pensar diferente" (cuando expertos señalan fallos técnicos).
+```{r}
+#| label: tbl-comparacion
+#| tbl-cap: Comparación entre el narcisista encubierto y el narcisista evidente.
 
-***Elizabeth Holmes (Theranos)***:
+# Crear un dataframe con los datos
+datos <- data.frame(
+  Tipo = c("Narcisista Encubierto", "Narcisista Evidente"),
+  Caracteristicas = c("Falsa modestia, victimización, manipulación pasiva", "Grandiosidad, necesidad de admiración, manipulación activa"),
+  Ejemplos = c("Chuck McGill (Better Call Saul), 'Soy muy brillante, pero el mundo está contra mí'", "Donald Trump, 'Soy el mejor presidente de la historia, nadie lo hace mejor que yo'")
+)
 
-Actitudes:
-
-> Victimización tecnológica: "La industria me odia por innovar" (cuando ocultaba fallos técnicos).
-
-> Autoimagen de "elegida": Voz impostada y narrativa de underdog para encubrir fraude.
-
-Consecuencias:
-
-> Colapso de Theranos y desconfianza en startups de salud.
-
-> Condena por fraude (su incapacidad de aceptar críticas la llevó a ignorar evidencias).
-
-
-
-### Tables
-
-```{{r}}
-#| label: tbl-cars
-#| tbl-cap: This is my caption.
-knitr::kable(head(mtcars))
+# Imprimir la tabla
+knitr::kable(datos)
 ```
+:::
 
-The `#|` is what sets up our cross-references and you can then reference the table as `@tbl-cars`. Note in order for table numbering to work in Quarto, you **must** label your tables with the `tbl-` prefix.
+## Antecedentes
 
+::: {.callout-tip}
 
+Contenido: Revisión crítica de estudios previos, identificando vacíos o contradicciones que tu trabajo abordará.
+
+Estilo narrativo: Analítico y comparativo. Usa conectores como "Sin embargo...", "A diferencia de...".
+
+Gramática: Tiempos pasados para referirte a investigaciones previas (ej.: "X et al. (2020) observaron que..."). 
+:::
+
+[@IAyNarcisismo2024; @NeurosisEnPijama2023; @DopaminaYSelfies2019; @NeuroFilter2020; @DejaDeLeer2021; @SelfieCerebral2022; @FreudRecargado2023]
+
+[@EgoLab2023; @CienciaToxica2024; @AlgorithmShade2024; @PopperLlorón2022]
+
+[@McGillCaseStudy; @HolmesFraude2021]
 
 ## Planteamiento del problema
+
+::: {.callout-tip}
+Contenido: Formula la pregunta de investigación de manera clara y específica. Ejemplo: "¿Cómo afecta la exposición a estrés crónico a la neurogénesis en el hipocampo?".
+
+Estilo narrativo: Directo y enfocado. Evita ambigüedades.
+
+Gramática: Usa interrogativas directas o frases declarati>vas (ej.: "Se desconoce si...").
+:::
 
 > ¿Cómo afecta el narcisismo encubierto a la práctica científica? Estos individuos suelen:
 
@@ -160,6 +197,16 @@ La neurociencia sugiere que sus cerebros podrían tener áreas hiperactivas en l
 
 ## Justificación
 
+::: {.callout-tip}
+Justificación
+
+Contenido: Explica por qué el problema es relevante científicamente, clínicamente o socialmente. Incluye posibles aplicaciones.
+
+Estilo narrativo: Persuasivo. Destaca el impacto potencial (ej.: "Este estudio podría mejorar estrategias para...").
+
+Gramática: Usa futuro hipotético ("podría contribuir a...") y presente para realidades establecidas ("El estrés es un problema de salud pública").
+:::
+
 Estudiar esto es urgente porque:
 
 - La ciencia no es un monólogo, pero el narcisista encubierto la trata como su TED Talk personal.
@@ -169,24 +216,23 @@ Estudiar esto es urgente porque:
 - Diseñar apps que detecten mensajes pasivo-agresivos en redes sociales ("NeuroFilter: ¿Seguro que quieres publicar eso?").
 - Salvar a la humanidad de conversaciones que empiezan con "Soy demasiado empático, es mi maldición"
 
-## Antecedentes
 
-- [ ] Incluir suficiente literatura para entender la razón y contexto del estudio.
-- [ ] Explicar el enfoque experimental.
-- [ ] Explicar cómo los animales y modelos se usaron para explorar los objetivos científicos.
-- [ ] Si es relevante, explicar el impacto en la salud humana. 
-- [ ] Comienza por explicar por qué es importante la investigación
-- [ ] Seguir por explicar el estado actual de la investigación
-- [ ] Seguir de hoyos o oproblemas en el campo.
-- [ ] Finalmente explicar cómo el estudio busca una solución a este problema. 
-
-[@IAyNarcisismo2024; @NeurosisEnPijama2023; @DopaminaYSelfies2019; @NeuroFilter2020; @DejaDeLeer2021; @SelfieCerebral2022; @FreudRecargado2023]
-
-[@EgoLab2023; @CienciaToxica2024; @AlgorithmShade2024; @PopperLlorón2022]
-
-[@McGillCaseStudy; @HolmesFraude2021]
 
 ## Objetivos 
+
+::: {.callout-tip}
+5. Objetivos
+
+    Contenido:
+
+        Objetivo general: Amplio y alineado con el problema.
+
+        Objetivos específicos: Medibles y secuenciales.
+
+    Estilo narrativo: Imperativo o infinitivo (ej.: "Determinar...", "Analizar...").
+
+    Gramática: Verbos de acción claros (evita "estudiar" si es vago; usa "cuantificar", "comparar")
+:::
 
 i. Correlacionar puntuaciones de narcisismo encubierto con resistencia a la revisión por pares.
 
@@ -200,6 +246,73 @@ v. Medir la actividad de la dopamina cuando alguien les dice "Wow, eres tan aut�
 
 ## Hipótesis
 
+::: {.callout-tip}
+    Contenido: Propuesta verificable que responde al problema. Ejemplo: "La deprivación de sueño reduce la densidad sináptica en la corteza prefrontal".
+
+    Estilo narrativo: Afirmativo y basado en teoría. Usa condicionales si es exploratorio (ej.: "Se hipotetiza que...").
+
+    Gramática: Presente o futuro simple (ej.: "Los ratones expuestos mostrarán...").
+
+Hipótesis: No formularla como pregunta ni incluir metodología
+
+Es un error común formular la **hipótesis** como una **pregunta** porque, por definición, una hipótesis es una **afirmación o proposición** que se plantea como una posible respuesta a la pregunta de investigación. La hipótesis no es la pregunta en sí, sino una **predicción fundamentada** que se deriva de la teoría y los antecedentes, y que será sometida a prueba mediante la investigación. A continuación, te explico con más detalle por qué es importante evitar este error:
+
+---
+
+### **1. La hipótesis es una afirmación, no una pregunta**
+- **Razón científica**: La hipótesis debe ser una declaración que pueda ser **verificada o refutada** empíricamente. Si se formula como pregunta, no cumple con este requisito, ya que una pregunta no puede ser probada directamente.  
+  - **Correcto**: *"La exposición a luz azul antes de dormir reduce la calidad del sueño en adultos jóvenes."*  
+  - **Incorrecto**: *"¿La exposición a luz azul antes de dormir reduce la calidad del sueño en adultos jóvenes?"*  
+
+- **Razón narrativa**: La pregunta corresponde al **planteamiento del problema**, no a la hipótesis. La hipótesis es el siguiente paso lógico, donde propones una respuesta tentativa basada en la teoría y los antecedentes.
+
+---
+
+### **2. La hipótesis debe ser clara y específica**
+- Al formularla como pregunta, se pierde la claridad y precisión que requiere una hipótesis científica. Una hipótesis bien formulada debe incluir las **variables** involucradas y la **relación esperada** entre ellas.  
+  - **Correcto**: *"El aumento en los niveles de cortisol está asociado con una disminución en el volumen del hipocampo."*  
+  - **Incorrecto**: *"¿El aumento en los niveles de cortisol está asociado con una disminución en el volumen del hipocampo?"*  
+
+---
+
+### **3. La hipótesis guía el diseño metodológico**
+- Una hipótesis clara y afirmativa permite diseñar métodos específicos para probarla. Si es una pregunta, no queda claro qué se está poniendo a prueba.  
+  - **Ejemplo**: Si la hipótesis es *"El estrés crónico reduce la neurogénesis en el hipocampo"*, puedes diseñar un experimento para medir la neurogénesis en sujetos con y sin estrés. Si es una pregunta, no sabes qué relación estás evaluando.
+
+---
+
+### **4. La hipótesis refleja el enfoque teórico**
+- La hipótesis debe estar basada en la teoría y los antecedentes. Al formularla como afirmación, demuestras que has analizado la literatura y propones una predicción fundamentada. Si es una pregunta, no se evidencia este proceso.  
+  - **Correcto**: *"Basado en estudios previos, se hipotetiza que la deprivación de sueño altera la conectividad funcional en la red neuronal por defecto."*  
+  - **Incorrecto**: *"¿La deprivación de sueño altera la conectividad funcional en la red neuronal por defecto?"*  
+
+---
+
+### **5. Coherencia con el método científico**
+- El método científico implica **observar, plantear preguntas, formular hipótesis, predecir y probar**. La hipótesis es una **predicción**, no una pregunta. Si la hipótesis se formula como pregunta, se rompe la lógica del proceso científico.  
+  - **Ejemplo**:  
+    - **Pregunta de investigación**: *"¿Cómo afecta el ejercicio aeróbico a la memoria de trabajo?"*  
+    - **Hipótesis**: *"El ejercicio aeróbico mejora el rendimiento en tareas de memoria de trabajo."*  
+
+---
+
+### **Consejos para formular una hipótesis correctamente**
+1. **Basarse en la teoría**: Usa los antecedentes para justificar tu predicción.  
+2. **Ser específica**: Incluye las variables y la relación esperada entre ellas.  
+3. **Ser comprobable**: Asegúrate de que pueda ser validada o refutada con datos.  
+4. **Usar afirmaciones claras**: Evita preguntas, ambigüedades o lenguaje vago.  
+
+---
+
+### **Ejemplo de flujo correcto**
+1. **Pregunta de investigación**: *"¿Cómo afecta la meditación mindfulness a la actividad de la amígdala en personas con ansiedad?"*  
+2. **Hipótesis**: *"La práctica de meditación mindfulness reduce la actividad de la amígdala en personas con ansiedad."*  
+
+---
+
+En resumen, formular la hipótesis como una pregunta es un error porque desdibuja su función como **predicción comprobable** y rompe la estructura lógica del método científico. Una hipótesis bien formulada debe ser una **afirmación clara, específica y basada en teoría** que guíe tu investigación. ¡Espero que esta explicación te sea útil para tu tesis! 😊
+:::
+
 Proponemos que el narcisista encubierto:
 
 - Distorsiona el método científico para validar su autoimagen, convirtiendo hipótesis en horóscopos académicos ("Los datos no coinciden, pero mi intuición es un don").
@@ -208,13 +321,30 @@ Proponemos que el narcisista encubierto:
 
 ## Metodolodía
 
+>Los sujetos negaron todos los resultados, diciendo "Yo solo estoy aquí para ayudar a la ciencia" (clásico).
+
+::: {.callout-tip}
+Contenido: Detalla diseño experimental, sujetos/muestras, técnicas (ej.: fMRI, PCR), análisis estadístico y ética.
+
+Estilo narrativo: Descriptivo y replicable. Usa pasiva para objetividad (ej.: "Se utilizó un diseño doble ciego...").
+
+Gramática: Pasado si el estudio ya se realizó; presente si es una propuesta
+:::
+
+::: {.callout-note}
+### Términos Importantes
+
 *Metodología*: Este término es más amplio y no solo describe los procedimientos específicos utilizados en el experimento, sino también las bases teóricas que justifican esos métodos. Incluye una discusión sobre por qué ciertos métodos son apropiados para la investigación en cuestión. Si tu sección describe tanto el "cómo" (los pasos y procedimientos) como el "por qué" (la justificación de la elección de esos métodos).
 
 *Diseño Experimental*: Este término se refiere específicamente al plan estructural de la investigación, cómo se organizan los experimentos, qué variables se controlan, cómo se asignan los sujetos a diferentes grupos, etc. Es más específico que "Método" y se centra en la planificación del experimento en sí.
 
 *Método*: Es un término más específico y directo. Se enfoca en los pasos concretos y técnicas empleadas en la investigación, sin necesariamente entrar en detalles sobre la justificación teórica de esos métodos.
+:::
 
-- [ ] Escribir en pasado, con voz pasiva (*Daniel cocinó una tortilla*, *Una tortilla fue cocinada por Danie*, *Daniel la cocinó*, *América fue colonizada en 1492*, *Se reparan automóviles /Se espera la renuncia del mandatario*), en contraste de voz activa (*El presidente pronunció un largo discurso*, *Varios millones visitan Barcelona cada año*)
+::: {.callout-caution}
+### Voz Pasiva en Metodología
+
+Escribir en pasado, con voz pasiva (*Daniel cocinó una tortilla*, *Una tortilla fue cocinada por Danie*, *Daniel la cocinó*, *América fue colonizada en 1492*, *Se reparan automóviles /Se espera la renuncia del mandatario*), en contraste de voz activa (*El presidente pronunció un largo discurso*, *Varios millones visitan Barcelona cada año*)
 
 | **Voz Activa**                             | **Voz Pasiva**                                      |
 | ------------------------------------------ | --------------------------------------------------- |
@@ -222,6 +352,8 @@ Proponemos que el narcisista encubierto:
 | Varios millones visitan Barcelona cada año | Barcelona es visitada cada año por varios millones  |
 | Mi madre horneó una tarta de chocolate     | Una tarta de chocolate fue horneada por mi madre    |
 | Unos ladrones atracaron el banco           | El banco fue atracado por unos ladrone              |
+
+: Ejemplos de Voz Activa y Pasiva {#tbl-voz}
 
 | **Verbo Activo** | **Verbo Pasivo**  |
 | ---------------- | ----------------- |
@@ -231,14 +363,34 @@ Proponemos que el narcisista encubierto:
 | Escriba          | Sea escrito       |
 | Han escrito      | Han sido escritos |
 
-### Animales
+: Verbos en Voz Activa y Pasiva {#tbl-verbos}
 
-- [ ] cuidado y monitoreo
-- [ ] Aprovación de comité de ética
-- [ ] Intervenciones y pasos utilizados para reducir dolor, sufrimiento y distrés.
-- [ ] Cómo se obtuvo el tamaño de la muestra a priori. 
+:::
 
-## Resultados y discusión
+::: {.callout-tip}
+### Animales de Laboratorio
+Reportar el uso de animales de laboratorio, incluyendo:
+
+- Especie, cepa y número de animales
+- Cuidado y monitoreo
+- Aprovación de comité de ética
+- Intervenciones y pasos utilizados para reducir dolor, sufrimiento y distrés.
+- Cómo se obtuvo el tamaño de la muestra a priori.
+
+:::
+ 
+
+## Resultados 
+
+::: {.callout-tip}
+Contenido: Datos crudos (tablas, gráficos) sin interpretación. Responde a cada objetivo.
+
+Estilo narrativo: Neutral y factual. Ejemplo: "El grupo experimental mostró un 20% menos de...".
+
+Gramática: Pasado (ej.: "Se observó una correlación significativa...").
+
+Resultados vs. Discusión: No mezclar descripción de datos con interpretación
+:::
 
 ### Scores de Narcisismo Encubierto correlacionan con rechazo a críticas
 
@@ -361,13 +513,32 @@ ggplot(datos, aes(x = Grupo, y = Calidad_Cientifica, fill = Grupo)) +
 
 El ANOVA y el gráfico sugieren que las personas con narcisismo encubierto tienden a tener una calidad científica significativamente menor que aquellas sin narcisismo. Esto respalda tu hipótesis de que el narcisismo encubierto es incompatible con la buena ciencia, ya que afecta negativamente la capacidad de colaborar, aceptar críticas y mantener estándares rigurosos.
 
-### Nota
+## Discusión
 
-Los sujetos negaron todos los resultados, diciendo "Yo solo estoy aquí para ayudar a la ciencia" (clásico).
+::: {.callout-tip}
+    Contenido: Interpreta resultados, contrasta con antecedentes, explica limitaciones y sugiere futuras investigaciones.
+
+    Estilo narrativo: Crítico y reflexivo. Usa comparaciones (ej.: "A diferencia de X, nuestros hallazgos sugieren...").
+
+    Gramática: Presente para teorías aceptadas (ej.: "Estos datos apoyan la hipótesis de que...").
+:::
+
+
 
 ## Conclusión
+
+::: {.callout-tip}
+Contenido: Síntesis de hallazgos clave y su relevancia. No repitas resultados.
+
+Estilo narrativo: Conciso y enfocado en contribuciones.
+
+Gramática: Presente perfecto o presente (ej.: "Este estudio demuestra que...")
+
+Conclusión: No introducir nuevos datos o ideas no discutidas previamente.
+:::
 
 El narcisismo encubierto es el virus silencioso de la mala ciencia: convierte la duda en herejía, la colaboración en competencia, y los journals en diarios íntimos con DOI. La solución no es expulsarlos, sino mandarlos a un retiro espiritual con Carl Sagan de fondo ("El universo no gira en torno a ti, Karen"). Propuesta: incluir tests de narcisismo en las convocatorias de financiamiento. Cof cof.
 
 Confirmamos que el narcisismo encubierto es como el ajo en las recetas: todos creen que no lo usan, pero se huele a kilómetros. La neurociencia sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero con suficiente humor y memes, quizá podamos salvarlos (o al menos reírnos en el proceso). Propuesta final: un bot de Twitter que responda "Ok, Sigmund Freud" a sus hilos existenciales.
 
+## Referencias
