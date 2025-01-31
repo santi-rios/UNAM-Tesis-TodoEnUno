@@ -26,7 +26,7 @@
         {\large \MakeUppercase{$tesis.departmento$}}\\[1cm]
         
         % Título de la tesis
-        {\Large \textbf{\title}}\\[1cm]
+        {\Large \textbf{$title$}}\\[1cm]
         
         % Texto "Tesis"
         {\LARGE \textbf{T E S I S}}\\[0.5cm]
@@ -76,7 +76,8 @@
 \newpage
 % \begin{agradecimientos}
     \begin{center}
-        \includegraphics[width=3.5cm]{$if(tesis.logo)$ $tesis.logo$ $endif$}\\[0.5cm]
+        {\large \textbf{Agradecimientos Institucionales}}\\[0.3cm]
+        \includegraphics[width=3.5cm]{$if(tesis.logoB)$ $tesis.logoB$ $endif$}\\[0.5cm]
         Este trabajo de Maestría se realizó gracias al Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México (UNAM) y al financiamiento otorgado por el Consejo Nacional de Ciencia y Tecnología (CONACyT) a través de la beca al CVU 1191018 y al proyecto PAPIIT IA205723.
 
         Deseo expresar mi más sincero agradecimiento a la Universidad Nacional Autónoma de México por haberme recibido nuevamente como parte de su comunidad estudiantil. 
@@ -89,9 +90,13 @@
     \end{center}
 % \end{agradecimientos}
 
+
+
+
 \newpage
 % \begin{agradecimientos}
     \begin{center}
+        {\large \textbf{Agradecimientos Personales}}\\[0.3cm]
         Lleno de sinapsis agotadas y neuronas al borde del colapso, es momento de agradecer a quienes hicieron posible que esta tesis sobre vea la luz.
 
         A mi familia, que aún no entiende del todo qué es lo que hago, pero siempre me apoyó incondicionalmente. 
@@ -110,6 +115,24 @@
 \end{center}
 
 % \renewcommand*\contentsname{Tabla de contenidos}
-\tableofcontents
+\newpage
+% \tableofcontents
+
+$if(tesis.agradecimientos)$
+\input{"$tesis.agradecimientos$"}
+$endif$
 
 \newpage
+\tableofcontents
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+% \usepackage[main=spanish,english]{babel}
+% \selectlanguage{spanish}
+% \usepackage[spanish,mexico]{babel}
+% \mainmatter % Begin numeric (1,2,3...) page numbering
+
+
+% \pagestyle{review} % thesis, thesisSimple, review
+% \pagestyle{reviewdigital} % thesis, thesisSimple, review

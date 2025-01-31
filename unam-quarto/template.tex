@@ -262,8 +262,8 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Unam-quarto Template}
-
+% % \title{Unam-quarto Template}
+% 
 % \programa{Posgrado en Ciencias Biológicas}
 
 % % \facultad{Facultad de Ciencias} % Nombre de la facultad
@@ -330,7 +330,7 @@ Biológicas}}}\\[0.3cm]
         {\large \MakeUppercase{Biología Experimental}}\\[1cm]
         
         % Título de la tesis
-        {\Large \textbf{\title}}\\[1cm]
+        {\Large \textbf{Unam-quarto Template}}\\[1cm]
         
         % Texto "Tesis"
         {\LARGE \textbf{T E S I S}}\\[0.5cm]
@@ -377,7 +377,8 @@ Biológicas}}}\\[0.3cm]
 \newpage
 % \begin{agradecimientos}
     \begin{center}
-        \includegraphics[width=3.5cm]{ figuras/unam.png }\\[0.5cm]
+        {\large \textbf{Agradecimientos Institucionales}}\\[0.3cm]
+        \includegraphics[width=3.5cm]{ figuras/unamposgrado.png }\\[0.5cm]
         Este trabajo de Maestría se realizó gracias al Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México (UNAM) y al financiamiento otorgado por el Consejo Nacional de Ciencia y Tecnología (CONACyT) a través de la beca al CVU 1191018 y al proyecto PAPIIT IA205723.
 
         Deseo expresar mi más sincero agradecimiento a la Universidad Nacional Autónoma de México por haberme recibido nuevamente como parte de su comunidad estudiantil. 
@@ -390,9 +391,13 @@ Biológicas}}}\\[0.3cm]
     \end{center}
 % \end{agradecimientos}
 
+
+
+
 \newpage
 % \begin{agradecimientos}
     \begin{center}
+        {\large \textbf{Agradecimientos Personales}}\\[0.3cm]
         Lleno de sinapsis agotadas y neuronas al borde del colapso, es momento de agradecer a quienes hicieron posible que esta tesis sobre vea la luz.
 
         A mi familia, que aún no entiende del todo qué es lo que hago, pero siempre me apoyó incondicionalmente. 
@@ -411,9 +416,25 @@ Biológicas}}}\\[0.3cm]
 \end{center}
 
 % \renewcommand*\contentsname{Tabla de contenidos}
-\tableofcontents
+\newpage
+% \tableofcontents
+
+\input{"preambulo/agradecimientos\_institucionales.tex"}
 
 \newpage
+\tableofcontents
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+% \usepackage[main=spanish,english]{babel}
+% \selectlanguage{spanish}
+% \usepackage[spanish,mexico]{babel}
+% \mainmatter % Begin numeric (1,2,3...) page numbering
+
+
+% \pagestyle{review} % thesis, thesisSimple, review
+% \pagestyle{reviewdigital} % thesis, thesisSimple, review
 \renewcommand*\contentsname{Table of contents}
 {
 \hypersetup{linkcolor=}
