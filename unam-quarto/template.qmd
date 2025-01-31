@@ -1,5 +1,5 @@
 ---
-title: Unam-quarto Template
+title: El Narcisista Encubierto en el Laboratorio Cuando el Soy Solo un Perfeccionista Sabotea el Método Científico
 format:
   unam-quarto-pdf:
     keep-tex: true  
@@ -57,47 +57,76 @@ execute:
 #   sec-prefix: "**Apartado**"
 ---
 
-## El Narcisista que Llevas Dentro (Aunque Digas que No): Cuando el Cerebro se Cree el Protagonista de una Telenovela
-
 ## Introduction {#sec-intro}
-
-Imagina a esa persona que publica "Ugh, odio ser tan perfeccionista" en LinkedIn mientras bebe un latte de oro. Bienvenido al narcisismo encubierto: el arte de disfrazar la autoimportancia bajo un manto de falsa modestia. Aquí exploraremos cómo el cerebro de estos individuos convierte la autocrítica en un humblebrag (autoelogio disfrazado de queja) y por qué sus neuronas parecen organizar un festival de cine en su honor.
-
-*TODO* Create a template that demonstrates the appearance, formatting, layout, and functionality of your format. Learn more about journal formats at <https://quarto.org/docs/journals/>. [@CameronTrivedi2013].
-
-> In Quarto, we can do these by setting the fig-env command to figure* or SCfigure*
-
-``` {r}
-#| label: fig-side
-#| fig-cap: "This legend would be placed at the side of the figure, rather than below it."
-#| echo: false
-# tell it the options as comments with a | and a space, as above.
-# set echo: false to avoid printing this text
-# fig-env: "SCfigure*"
-knitr::include_graphics('figuras/unam.png')
-```
-
-``` {r}
-library(tidyverse)
-
-df <- tibble(x = 1:10, y = rnorm(10))
-
-ggplot(df, aes(x, y)) +
-  geom_point()
-```
-
-::: {.content-visible when-format="html"}
-
-Will only appear in HTML.
-
-:::
-
-## Introducción
 
 - [ ] Comenzar con una oración de tópico ([pirámide invertida](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)))
 - [ ] Revisión concisa de literatura pertinente
 
 [Ver más](https://writingcenter.gmu.edu/writing-resources/imrad/imrad-reports-introductions)
+
+¿Qué pasa cuando mezclas a alguien que piensa que es Ramón y Cajal con la necesidad de probar que su hipótesis favorita es un la única correcta? **Spoiler**: caos epistemológico. Exploraremos cómo el ***narcisismo encubierto***, disfrazado de falsa modestia, corroe los pilares de la ciencia: pensamiento flexible, crítica constructiva y humildad intelectual. Porque, admitámoslo, la frase "*Soy muy brillante, pero el mundo está contra mi*" suele significar "*Soy insufrible con los demás*".
+
+Imagina a esa persona que publica "Ugh, odio ser tan inteligente en un mundo de idiotas" en facebook mientras bebe un vino de oro y escucha "mejor música que la tuya". Bienvenido al ***narcisismo encubierto***: el arte de disfrazar la autoimportancia bajo un manto de falsa modestia. Aquí exploraremos cómo el cerebro de estos individuos convierte la autocrítica en un *humblebrag* (autoelogio disfrazado de queja) y por qué sus neuronas parecen organizar un festival de cine en su honor.
+
+### Ejemplos de Narcisismo Encubierto
+
+En general, el narcisismo encubierto se caracteriza por una combinación de victimización, autoimagen grandiosa y sabotaje pasivo-agresivo (@tbl-actitudes).
+
+|   Actitud Narcisista Encubierta   |            Consecuencias en Ciencia/Medios           |
+|:---------------------------------:|:----------------------------------------------------:|
+| "Sufro por ser tan bueno en esto" |   Rechazo a metodologías rigurosas (ej: Theranos).   |
+|     "Las críticas son envidia"    |         Cámaras de eco que perpetúan errores.        |
+|        Autoimagen de mártir       |        Sabotaje de colaboraciones científicas.       |
+|    Manipulación pasivo-agresiva   | Desinformación pública (ej: Goop, teorías sin base). |
+
+: Actitudes y Consecuencias {#tbl-actitudes}
+
+A continuación, algunos ejemplos de narcisismo encubierto:
+
+***Chuck McGill (Better Call Saul)*** (@fig-chuck):
+
+Actitudes narcisistas encubiertas:
+
+> "Soy el mártir de la ética": Se presenta como guardián de la ley, pero en realidad desprecia a Jimmy por amenazar su autoimagen de "hombre superior".
+> Victimización crónica: "Mi electrosensibilidad me hace sufrir" (traducción: Necesito controlar cada situación).
+> Sabotaje pasivo-agresivo: Usa tácticas legales "correctas" para destruir a Jimmy, mientras se cree moralmente intachable.
+
+Consecuencias:
+
+> Destruye su relación familiar.
+> Pierde credibilidad al revelarse su hipocresía.
+> Su rigidez mental lo lleva al aislamiento y deterioro mental.
+
+``` {r}
+#| label: fig-chuck
+#| fig-cap: "Chuck McGill fingiendo una enfermedad para obtener validación de otras personas."
+
+knitr::include_graphics('figuras/chuck.png')
+```
+
+***Elon Musk***:
+
+Actitudes:
+
+> "El mundo no está listo para mi genio": Desestima críticas a sus proyectos (ej: Hyperloop, Twitter/X) como "envidia".
+
+> Victimización pública: "Me atacan por pensar diferente" (cuando expertos señalan fallos técnicos).
+
+***Elizabeth Holmes (Theranos)***:
+
+Actitudes:
+
+> Victimización tecnológica: "La industria me odia por innovar" (cuando ocultaba fallos técnicos).
+
+> Autoimagen de "elegida": Voz impostada y narrativa de underdog para encubrir fraude.
+
+Consecuencias:
+
+> Colapso de Theranos y desconfianza en startups de salud.
+
+> Condena por fraude (su incapacidad de aceptar críticas la llevó a ignorar evidencias).
+
+
 
 ### Tables
 
@@ -110,41 +139,15 @@ knitr::kable(head(mtcars))
 The `#|` is what sets up our cross-references and you can then reference the table as `@tbl-cars`. Note in order for table numbering to work in Quarto, you **must** label your tables with the `tbl-` prefix.
 
 
-```{r}
-#| label: tbl-cars
-#| tbl-cap: This is my caption.
-knitr::kable(head(mtcars))
-```
-
-This is @tbl-cars.
-
-See the Quarto manual for full examples and instructions.
-
-
-### Figures
-
-Again we write in Quarto (markdown) not \LaTeX{} for our figures. You can write in \LaTeX{} if you really want but it would only be interpreted for the PDF output.
-
-    ```{{r}}
-    #| label: fig-cars
-    #| fig-cap: This is my caption.
-    plot(mtcars[,1:4])
-    ```
-
-The `#|` is what sets up our cross-references and you can then reference the table as `@fig-cars`.
-
-
-```{r}
-#| label: fig-cars
-#| fig-cap: This is my caption.
-plot(mtcars[,1:4])
-```
-
-This is @fig-cars.
-
-See the Quarto manual for full examples and instructions.
 
 ## Planteamiento del problema
+
+> ¿Cómo afecta el narcisismo encubierto a la práctica científica? Estos individuos suelen:
+
+- Descartar críticas como "envidia académica".
+- Adulterar datos para que coincidan con su "brillante intuición".
+- Desacreditar colegas con frases como "Su metodología es... interesante" (traducción: "Odio que tenga razón").
+- ¿Es posible hacer ciencia rigurosa cuando tu cerebro interpreta "revisión por pares" como "ataque personal"?
 
 > ¿Cómo detectar a un narcisista encubierto antes de que te invite a su monólogo sobre lo "difícil que es ser tan inteligente y sensible"? 
 
@@ -152,12 +155,13 @@ La neurociencia sugiere que sus cerebros podrían tener áreas hiperactivas en l
 
 ## Justificación
 
-Estudiar esto es crucial para:
+Estudiar esto es urgente porque:
 
+- La ciencia no es un monólogo, pero el narcisista encubierto la trata como su TED Talk personal.
+- El sesgo de confirmación se vuelve dogma cuando el investigador cree que "mi teoría es tan obvia que hasta mi perro la entiende".
+- La reputación de la ciencia se daña cuando los papers incluyen "Agradezco a nadie, porque yo lo hice todo" en la sección de acknowledgments.
 - Evitar que la palabra "humildad" sea secuestrada por narcisistas.
-
 - Diseñar apps que detecten mensajes pasivo-agresivos en redes sociales ("NeuroFilter: ¿Seguro que quieres publicar eso?").
-
 - Salvar a la humanidad de conversaciones que empiezan con "Soy demasiado empático, es mi maldición"
 
 ## Antecedentes
@@ -173,23 +177,31 @@ Estudiar esto es crucial para:
 
 [@IAyNarcisismo2024; @NeurosisEnPijama2023; @DopaminaYSelfies2019; @NeuroFilter2020; @DejaDeLeer2021; @SelfieCerebral2022; @FreudRecargado2023]
 
-## Objetivos e hipótesis 
+[@EgoLab2023; @CienciaToxica2024; @AlgorithmShade2024; @PopperLlorón2022]
 
+[@McGillCaseStudy; @HolmesFraude2021]
 
-- [ ] pregunta de investigación
-- [ ] objetivos de la investigación
-- [ ] hipótesis a probar 
+## Objetivos 
 
-- Usar fMRI para encontrar la "zona del humblebrag" en el cerebro.
+i. Correlacionar puntuaciones de narcisismo encubierto con resistencia a la revisión por pares.
 
-- Medir la actividad de la dopamina cuando alguien les dice "Wow, eres tan auténtico".
+ii. Cuantificar la frecuencia de frases pasivo-agresivas en correos de rechazo a colaboradores ("Lamento que no hayas entendido mi genialidad").
 
-- Crear un test basado en cuántas veces revisan su perfil de Tinder en una hora.
+iii. Demostrar que su corteza prefrontal prioriza "proteger mi ego" sobre "aceptar evidencia" mediante fMRI durante discusiones académicas.
 
-> Proponemos que el narcisista encubierto tiene un circuito neuronal que convierte la autocrítica en combustible para su ego, como un Tamagotchi que solo come cumplidos indirectos. Su cerebro procesa el "No soy nada especial" como "Soy el mesías de la modestia".
+iv. Desarrollar un algoritmo que detecte narcisismo encubierto en reviews anónimos (pista: busca la palabra "claramente" seguida de un insulto elegante).
+
+v. Medir la actividad de la dopamina cuando alguien les dice "Wow, eres tan auténtico".
+
+## Hipótesis
+
+Proponemos que el narcisista encubierto:
+
+- Distorsiona el método científico para validar su autoimagen, convirtiendo hipótesis en horóscopos académicos ("Los datos no coinciden, pero mi intuición es un don").
+- Usa la sección de conflicto de intereses para listar enemigos.
+- Su actividad cerebral al recibir críticas se asemeja a la de alguien viendo arder su trofeo de kindergarten.
 
 ## Metodolodía
-
 
 *Metodología*: Este término es más amplio y no solo describe los procedimientos específicos utilizados en el experimento, sino también las bases teóricas que justifican esos métodos. Incluye una discusión sobre por qué ciertos métodos son apropiados para la investigación en cuestión. Si tu sección describe tanto el "cómo" (los pasos y procedimientos) como el "por qué" (la justificación de la elección de esos métodos).
 
@@ -214,7 +226,8 @@ Estudiar esto es crucial para:
 | Escriba          | Sea escrito       |
 | Han escrito      | Han sido escritos |
 
-Animales
+### Animales
+
 - [ ] cuidado y monitoreo
 - [ ] Aprovación de comité de ética
 - [ ] Intervenciones y pasos utilizados para reducir dolor, sufrimiento y distrés.
@@ -222,15 +235,27 @@ Animales
 
 ## Resultados y discusión
 
-    MRI Funcional: Su corteza prefrontal se ilumina al escribir "Soy un desastre" (traducción neuronal: "Soy un desastre... ¡PERO MÍRENME ARREGLARLO!").
+### Scores de Narcisismo Encubierto correlacionan con rechazo a críticas
 
-    Dopamina: Sube un 300% al recibir comentarios como "Eres tan real, odio a los falsos".
+A mayor narcisismo encubierto, menor citación de colegas en papers `(r = -0.99, p < 0.001)`.
 
-    Correlación: A mayor uso de hashtags como #VidaSencilla, mayor actividad en la ínsula (área de la autopercepción dramática).
+Nivel de narcisismo vs. Número de veces que dice 'La literatura está equivocada'.
 
-Nota: Los sujetos negaron todos los resultados, diciendo "Yo solo estoy aquí para ayudar a la ciencia" (clásico).
+### Activación cerebral en fMRI
+
+La amígdala se activa un 250% más al escuchar "Tu muestra es muy pequeña" vs. "Tu teoría revolucionó la ciencia".
+
+### Análisis de texto
+
+El 90% de sus emails incluyen "Con todo respeto..." seguido de un "Pero esto es basura" disfrazado de citas de Popper.
+
+### Nota
+
+Los sujetos negaron todos los resultados, diciendo "Yo solo estoy aquí para ayudar a la ciencia" (clásico).
 
 ## Conclusión
+
+El narcisismo encubierto es el virus silencioso de la mala ciencia: convierte la duda en herejía, la colaboración en competencia, y los journals en diarios íntimos con DOI. La solución no es expulsarlos, sino mandarlos a un retiro espiritual con Carl Sagan de fondo ("El universo no gira en torno a ti, Karen"). Propuesta: incluir tests de narcisismo en las convocatorias de financiamiento. Cof cof.
 
 Confirmamos que el narcisismo encubierto es como el ajo en las recetas: todos creen que no lo usan, pero se huele a kilómetros. La neurociencia sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero con suficiente humor y memes, quizá podamos salvarlos (o al menos reírnos en el proceso). Propuesta final: un bot de Twitter que responda "Ok, Sigmund Freud" a sus hilos existenciales.
 
