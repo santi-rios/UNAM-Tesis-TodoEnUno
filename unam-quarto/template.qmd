@@ -41,7 +41,19 @@ tesis:
   # university: Universidad Nacional Autónoma de México
   # group: Biología Animal Experimental
   logo: figuras/unam.png
+  # lang: es
+  toc: false # controlado por latex
   # agradecimientos: "preambulo/agradecimientos_institucionales.tex"
+execute:
+  echo: false
+  message: false
+  warning: false
+  code-overflow: wrap
+  cache: false
+# crossref:
+#   tbl-prefix: "**Tabla**"
+#   fig-prefix: "**Fig**"
+#   sec-prefix: "**Apartado**"
 ---
 
 ## El Narcisista que Llevas Dentro (Aunque Digas que No): Cuando el Cerebro se Cree el Protagonista de una Telenovela

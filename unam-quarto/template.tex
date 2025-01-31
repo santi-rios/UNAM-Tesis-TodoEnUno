@@ -149,9 +149,11 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage[autostyle=true]{csquotes}
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes} % insertar comentarios y notas
+\usepackage[spanish]{babel}
 % \usepackage[disable]{todonotes} # descomentar si quieres QUITAR notas y comentarios
 
 % \usepackage{acro}
@@ -388,11 +390,30 @@ Biológicas}}}\\[0.3cm]
     \end{center}
 % \end{agradecimientos}
 
+\newpage
+% \begin{agradecimientos}
+    \begin{center}
+        Lleno de sinapsis agotadas y neuronas al borde del colapso, es momento de agradecer a quienes hicieron posible que esta tesis sobre vea la luz.
+
+        A mi familia, que aún no entiende del todo qué es lo que hago, pero siempre me apoyó incondicionalmente. 
+
+    \end{center}
+
+\newpage
+% \begin{agradecimientos}
+    \begin{center}
+        Para Cami y Reni por ser mis compañeras de vida y de tesis. Por ser mi apoyo incondicional, mi motivación y mi inspiración. Por ser mis críticas más duras y mis mayores fans. Por ser mis mejores amigas y mis compañeras de tesis. Por ser mis hermanas y mis cómplices. Por ser mis confidentes y mis consejeras. Por ser mis compañeras de piso y mis compañeras de tesis. Por ser mis compañeras de via
+    \end{center}
 
 \newpage
 \begin{center}
     \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página en blanco.}}}
 \end{center}
+
+% \renewcommand*\contentsname{Tabla de contenidos}
+\tableofcontents
+
+\newpage
 \renewcommand*\contentsname{Table of contents}
 {
 \hypersetup{linkcolor=}
@@ -436,34 +457,6 @@ figure, rather than below it.}
 
 \end{figure}%
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
--- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
-v dplyr     1.1.3     v readr     2.1.4
-v forcats   1.0.0     v stringr   1.5.0
-v ggplot2   3.4.4     v tibble    3.2.1
-v lubridate 1.9.3     v tidyr     1.3.0
-v purrr     1.0.2     
--- Conflicts ------------------------------------------ tidyverse_conflicts() --
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()
-i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(}\AttributeTok{x =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{, }\AttributeTok{y =} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{10}\NormalTok{))}
-
-\FunctionTok{ggplot}\NormalTok{(df, }\FunctionTok{aes}\NormalTok{(x, y)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
 \includegraphics{template_files/figure-pdf/unnamed-chunk-2-1.pdf}
 
 \subsection{Introducción}\label{introducciuxf3n}
@@ -497,12 +490,6 @@ The \texttt{\#\textbar{}} is what sets up our cross-references and you
 can then reference the table as \texttt{@tbl-cars}. Note in order for
 table numbering to work in Quarto, you \textbf{must} label your tables
 with the \texttt{tbl-} prefix.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(mtcars))}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2609}}
@@ -588,13 +575,7 @@ interpreted for the PDF output.
 The \texttt{\#\textbar{}} is what sets up our cross-references and you
 can then reference the table as \texttt{@fig-cars}.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{plot}\NormalTok{(mtcars[,}\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{])}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}[H]
+\begin{figure}
 
 \centering{
 
