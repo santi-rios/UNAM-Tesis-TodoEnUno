@@ -1,5 +1,6 @@
 ---
-title: El Narcisista Encubierto en el Laboratorio Cuando el Soy Solo un Perfeccionista Sabotea el Método Científico
+title: El Narcisista Encubierto en el Laboratorio
+subtitle: Cuando el Perfeccionista Sabotea el Método Científico
 format:
   unam-quarto-pdf:
     keep-tex: true  
@@ -59,10 +60,14 @@ execute:
 
 ## Introduction {#sec-intro}
 
+::: {.callout-tip}
+
 - [ ] Comenzar con una oración de tópico ([pirámide invertida](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)))
 - [ ] Revisión concisa de literatura pertinente
 
 [Ver más](https://writingcenter.gmu.edu/writing-resources/imrad/imrad-reports-introductions)
+:::
+
 
 ¿Qué pasa cuando mezclas a alguien que piensa que es Ramón y Cajal con la necesidad de probar que su hipótesis favorita es un la única correcta? **Spoiler**: caos epistemológico. Exploraremos cómo el ***narcisismo encubierto***, disfrazado de falsa modestia, corroe los pilares de la ciencia: pensamiento flexible, crítica constructiva y humildad intelectual. Porque, admitámoslo, la frase "*Soy muy brillante, pero el mundo está contra mi*" suele significar "*Soy insufrible con los demás*".
 
@@ -237,7 +242,64 @@ Proponemos que el narcisista encubierto:
 
 ### Scores de Narcisismo Encubierto correlacionan con rechazo a críticas
 
+```{r}
+# Cargar librerías necesarias
+library(ggpubr)
+library(dplyr)
+
+# Semilla para reproducibilidad
+set.seed(123)
+
+# Crear un juego de datos simulado
+n <- 100  # Número de observaciones
+
+# Simular scores de narcisismo encubierto (rango 0-100)
+narcisismo <- rnorm(n, mean = 50, sd = 15)
+narcisismo <- pmax(0, pmin(100, narcisismo))  # Asegurar que esté en el rango 0-100
+
+# Simular rechazo a críticas (rango 0-100), correlacionado con narcisismo
+rechazo_criticas <- 0.7 * narcisismo + rnorm(n, mean = 10, sd = 10)
+rechazo_criticas <- pmax(0, pmin(100, rechazo_criticas))  # Asegurar que esté en el rango 0-100
+
+# Crear un dataframe
+datos <- data.frame(
+  ID = 1:n,
+  Narcisismo = narcisismo,
+  Rechazo_Criticas = rechazo_criticas
+)
+
+# Ver las primeras filas del dataframe
+# head(datos)
+
+# Calcular la correlación
+correlacion <- cor(datos$Narcisismo, datos$Rechazo_Criticas)
+correlacion_print <- print(paste("Correlación entre Narcisismo y Rechazo a Críticas:", round(correlacion, 2)))
+
+# Graficar la correlación
+
+ggscatter(datos, x = "Narcisismo", y = "Rechazo_Criticas", 
+          add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Score de Narcisismo Encubierto", ylab = "Score de Rechazo a Críticas", 
+          title = paste("Correlación:", round(correlacion, 2))
+          )
+
+# ggplot(datos, aes(x = Narcisismo, y = Rechazo_Criticas)) +
+#   geom_point(color = "blue", alpha = 0.6) +  # Puntos
+#   geom_smooth(method = "lm", color = "red", se = FALSE) +  # Línea de tendencia
+#   labs(
+#     title = "Correlación entre Narcisismo Encubierto y Rechazo a Críticas",
+#     x = "Score de Narcisismo Encubierto",
+#     y = "Score de Rechazo a Críticas",
+#     caption = paste("Correlación:", round(correlacion, 2))
+#   ) +
+#   theme_minimal()
+
+```
+
 A mayor narcisismo encubierto, menor citación de colegas en papers `(r = -0.99, p < 0.001)`.
+
+`r correlacion_print`
 
 Nivel de narcisismo vs. Número de veces que dice 'La literatura está equivocada'.
 
@@ -245,9 +307,59 @@ Nivel de narcisismo vs. Número de veces que dice 'La literatura está equivocad
 
 La amígdala se activa un 250% más al escuchar "Tu muestra es muy pequeña" vs. "Tu teoría revolucionó la ciencia".
 
+
 ### Análisis de texto
 
 El 90% de sus emails incluyen "Con todo respeto..." seguido de un "Pero esto es basura" disfrazado de citas de Popper.
+
+```{r}
+# Cargar librerías necesarias
+library(ggplot2)
+library(dplyr)
+
+# Semilla para reproducibilidad
+set.seed(123)
+
+# Crear un juego de datos simulado
+n <- 100  # Número de observaciones (50 con narcisismo, 50 sin narcisismo)
+
+# Simular datos para personas con narcisismo encubierto
+narcisismo <- data.frame(
+  Grupo = "Con Narcisismo",
+  Calidad_Cientifica = rnorm(n/2, mean = 50, sd = 10)  # Media baja de calidad científica
+)
+
+# Simular datos para personas sin narcisismo
+sin_narcisismo <- data.frame(
+  Grupo = "Sin Narcisismo",
+  Calidad_Cientifica = rnorm(n/2, mean = 70, sd = 10)  # Media alta de calidad científica
+)
+
+# Combinar ambos grupos en un solo dataframe
+datos <- rbind(narcisismo, sin_narcisismo)
+
+# Ver las primeras filas del dataframe
+head(datos)
+
+# Realizar un ANOVA para comparar las medias
+anova_resultado <- aov(Calidad_Cientifica ~ Grupo, data = datos)
+summary(anova_resultado)
+
+# Graficar los resultados
+ggplot(datos, aes(x = Grupo, y = Calidad_Cientifica, fill = Grupo)) +
+  geom_boxplot(alpha = 0.7) +  # Diagrama de cajas
+  geom_jitter(width = 0.2, alpha = 0.5, color = "black") +  # Puntos individuales
+  labs(
+    title = "Comparación de Calidad Científica entre Grupos",
+    x = "Grupo",
+    y = "Calidad Científica",
+    caption = "ANOVA: Comparación de medias entre grupos"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+El ANOVA y el gráfico sugieren que las personas con narcisismo encubierto tienden a tener una calidad científica significativamente menor que aquellas sin narcisismo. Esto respalda tu hipótesis de que el narcisismo encubierto es incompatible con la buena ciencia, ya que afecta negativamente la capacidad de colaborar, aceptar críticas y mantener estándares rigurosos.
 
 ### Nota
 

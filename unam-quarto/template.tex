@@ -204,6 +204,22 @@
 % \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 % }
 \makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -252,7 +268,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={El Narcisista Encubierto en el Laboratorio Cuando el Soy Solo un Perfeccionista Sabotea el Método Científico},
+  pdftitle={El Narcisista Encubierto en el Laboratorio},
   pdfauthor={string},
   pdfkeywords={template, demo},
   colorlinks=true,
@@ -262,8 +278,7 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{El Narcisista Encubierto en el Laboratorio Cuando el Soy Solo un
-Perfeccionista Sabotea el Método Científico}
+\title{El Narcisista Encubierto en el Laboratorio}
 
 % \programa{Posgrado en Ciencias Biológicas}
 
@@ -331,9 +346,8 @@ Biológicas}}}\\[0.3cm]
         {\large \MakeUppercase{Biología Experimental}}\\[1cm]
         
         % Título de la tesis
-        {\Large \textbf{El Narcisista Encubierto en el Laboratorio
-Cuando el Soy Solo un Perfeccionista Sabotea el Método
-Científico}}\\[1cm]
+        {\Large \textbf{El Narcisista Encubierto en el
+Laboratorio}}\\[1cm]
         
         % Texto "Tesis"
         {\LARGE \textbf{T E S I S}}\\[0.5cm]
@@ -434,6 +448,8 @@ Científico}}\\[1cm]
 }
 \subsection{Introduction}\label{sec-intro}
 
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, arc=.35mm, toprule=.15mm, colback=white, leftrule=.75mm, bottomrule=.15mm, breakable, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, titlerule=0mm, opacityback=0]
+
 \begin{itemize}
 \tightlist
 \item[$\square$]
@@ -446,6 +462,8 @@ Científico}}\\[1cm]
 
 \href{https://writingcenter.gmu.edu/writing-resources/imrad/imrad-reports-introductions}{Ver
 más}
+
+\end{tcolorbox}
 
 ¿Qué pasa cuando mezclas a alguien que piensa que es Ramón y Cajal con
 la necesidad de probar que su hipótesis favorita es un la única
@@ -817,8 +835,16 @@ Han escrito & Han sido escritos \\
 a
 críticas}\label{scores-de-narcisismo-encubierto-correlacionan-con-rechazo-a-cruxedticas}
 
+\begin{verbatim}
+[1] "Correlación entre Narcisismo y Rechazo a Críticas: 0.69"
+\end{verbatim}
+
+\includegraphics{template_files/figure-pdf/unnamed-chunk-2-1.pdf}
+
 A mayor narcisismo encubierto, menor citación de colegas en papers
 \texttt{(r\ =\ -0.99,\ p\ \textless{}\ 0.001)}.
+
+Correlación entre Narcisismo y Rechazo a Críticas: 0.69
 
 Nivel de narcisismo vs.~Número de veces que dice `La literatura está
 equivocada'.
@@ -833,6 +859,26 @@ pequeña'' vs.~``Tu teoría revolucionó la ciencia''.
 
 El 90\% de sus emails incluyen ``Con todo respeto\ldots{}'' seguido de
 un ``Pero esto es basura'' disfrazado de citas de Popper.
+
+\begin{verbatim}
+           Grupo Calidad_Cientifica
+1 Con Narcisismo           44.39524
+2 Con Narcisismo           47.69823
+3 Con Narcisismo           65.58708
+4 Con Narcisismo           50.70508
+5 Con Narcisismo           51.29288
+6 Con Narcisismo           67.15065
+\end{verbatim}
+
+\begin{verbatim}
+            Df Sum Sq Mean Sq F value Pr(>F)    
+Grupo        1  11151   11151     133 <2e-16 ***
+Residuals   98   8218      84                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\includegraphics{template_files/figure-pdf/unnamed-chunk-3-1.pdf}
 
 \subsubsection{Nota}\label{nota}
 
