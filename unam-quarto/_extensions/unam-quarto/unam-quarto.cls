@@ -318,29 +318,29 @@ documentación de KOMA-script para más detalles.}]{fancyhdr}
 %	Agradecimientos institucionales
 %----------------------------------------------------------------------------------------
 
-\usepackage{xcolor}
-\colorlet{mdtRed}{red!50!black}
-\newcommand{\acknowledgementname}{Agradecimientos Institucionales}
-\providecaptionname{spanish} {\acknowledgementname}{Agradecimientos} % Acknowledgement text for English countries
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementname}{Acknowledgements} % Acknowledgement text for English countries
+% \usepackage{xcolor}
+% \colorlet{mdtRed}{red!50!black}
+% \newcommand{\acknowledgementname}{agradecimientos}
+% \providecaptionname{spanish} {\acknowledgementname}{agradecimientos} % Acknowledgement text for English countries
+% \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementname}{Acknowledgements} % Acknowledgement text for English countries
 
-\ifbool{consistentlayout}{
-	\DeclareDocumentEnvironment{acknowledgements}{}{%
-		\tttypeout{\acknowledgementname}
-		\addchap*{\acknowledgementname}
-	}
-}
-{
-	\DeclareDocumentEnvironment{acknowledgements}{}{%
-		\checktoopen
-		\tttypeout{\acknowledgementname}
-		\thispagestyle{plain}
-		\begin{center}{\huge\textit{\acknowledgementname}\par}\end{center}
-	}
-	{
-		\vfil\vfil\null
-	}
-}
+% \ifbool{consistentlayout}{
+% 	\DeclareDocumentEnvironment{agradecimientos}{}{%
+% 		\tttypeout{\acknowledgementname}
+% 		\addchap*{\acknowledgementname}
+% 	}
+% }
+% {
+% 	\DeclareDocumentEnvironment{agradecimientos}{}{%
+% 		\checktoopen
+% 		\tttypeout{\acknowledgementname}
+% 		\thispagestyle{plain}
+% 		\begin{center}{\huge\textit{\acknowledgementname}\par}\end{center}
+% 	}
+% 	{
+% 		\vfil\vfil\null
+% 	}
+% }
 
 %----------------------------------------------------------------------------------------
 %	SOPORTE PARA HYPERREF

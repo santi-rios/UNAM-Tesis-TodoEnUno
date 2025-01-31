@@ -41,10 +41,14 @@ tesis:
   # university: Universidad Nacional Autónoma de México
   # group: Biología Animal Experimental
   logo: figuras/unam.png
-  agradecimientos-institucionales: "preambulo/agradecimientos_institucionales.tex"
+  # agradecimientos: "preambulo/agradecimientos_institucionales.tex"
 ---
 
+## El Narcisista que Llevas Dentro (Aunque Digas que No): Cuando el Cerebro se Cree el Protagonista de una Telenovela
+
 ## Introduction {#sec-intro}
+
+Imagina a esa persona que publica "Ugh, odio ser tan perfeccionista" en LinkedIn mientras bebe un latte de oro. Bienvenido al narcisismo encubierto: el arte de disfrazar la autoimportancia bajo un manto de falsa modestia. Aquí exploraremos cómo el cerebro de estos individuos convierte la autocrítica en un humblebrag (autoelogio disfrazado de queja) y por qué sus neuronas parecen organizar un festival de cine en su honor.
 
 *TODO* Create a template that demonstrates the appearance, formatting, layout, and functionality of your format. Learn more about journal formats at <https://quarto.org/docs/journals/>. [@CameronTrivedi2013].
 
@@ -127,12 +131,21 @@ This is @fig-cars.
 
 See the Quarto manual for full examples and instructions.
 
-## Objetivos e hipótesis 
+## Planteamiento del problema
 
+> ¿Cómo detectar a un narcisista encubierto antes de que te invite a su monólogo sobre lo "difícil que es ser tan inteligente y sensible"? 
 
-- [ ] pregunta de investigación
-- [ ] objetivos de la investigación
-- [ ] hipótesis a probar 
+La neurociencia sugiere que sus cerebros podrían tener áreas hiperactivas en la corteza prefrontal (responsable de la autoevaluación) y una amígdala que grita "¡Mírame!" cada vez que alguien recibe más likes. ¿Es esto evolución o un bug cerebral?
+
+## Justificación
+
+Estudiar esto es crucial para:
+
+- Evitar que la palabra "humildad" sea secuestrada por narcisistas.
+
+- Diseñar apps que detecten mensajes pasivo-agresivos en redes sociales ("NeuroFilter: ¿Seguro que quieres publicar eso?").
+
+- Salvar a la humanidad de conversaciones que empiezan con "Soy demasiado empático, es mi maldición"
 
 ## Antecedentes
 
@@ -144,6 +157,23 @@ See the Quarto manual for full examples and instructions.
 - [ ] Seguir por explicar el estado actual de la investigación
 - [ ] Seguir de hoyos o oproblemas en el campo.
 - [ ] Finalmente explicar cómo el estudio busca una solución a este problema. 
+
+[@IAyNarcisismo2024; @NeurosisEnPijama2023; @DopaminaYSelfies2019; @NeuroFilter2020; @DejaDeLeer2021; @SelfieCerebral2022; @FreudRecargado2023]
+
+## Objetivos e hipótesis 
+
+
+- [ ] pregunta de investigación
+- [ ] objetivos de la investigación
+- [ ] hipótesis a probar 
+
+- Usar fMRI para encontrar la "zona del humblebrag" en el cerebro.
+
+- Medir la actividad de la dopamina cuando alguien les dice "Wow, eres tan auténtico".
+
+- Crear un test basado en cuántas veces revisan su perfil de Tinder en una hora.
+
+> Proponemos que el narcisista encubierto tiene un circuito neuronal que convierte la autocrítica en combustible para su ego, como un Tamagotchi que solo come cumplidos indirectos. Su cerebro procesa el "No soy nada especial" como "Soy el mesías de la modestia".
 
 ## Metodolodía
 
@@ -176,4 +206,18 @@ Animales
 - [ ] Aprovación de comité de ética
 - [ ] Intervenciones y pasos utilizados para reducir dolor, sufrimiento y distrés.
 - [ ] Cómo se obtuvo el tamaño de la muestra a priori. 
--
+
+## Resultados y discusión
+
+    MRI Funcional: Su corteza prefrontal se ilumina al escribir "Soy un desastre" (traducción neuronal: "Soy un desastre... ¡PERO MÍRENME ARREGLARLO!").
+
+    Dopamina: Sube un 300% al recibir comentarios como "Eres tan real, odio a los falsos".
+
+    Correlación: A mayor uso de hashtags como #VidaSencilla, mayor actividad en la ínsula (área de la autopercepción dramática).
+
+Nota: Los sujetos negaron todos los resultados, diciendo "Yo solo estoy aquí para ayudar a la ciencia" (clásico).
+
+## Conclusión
+
+Confirmamos que el narcisismo encubierto es como el ajo en las recetas: todos creen que no lo usan, pero se huele a kilómetros. La neurociencia sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero con suficiente humor y memes, quizá podamos salvarlos (o al menos reírnos en el proceso). Propuesta final: un bot de Twitter que responda "Ok, Sigmund Freud" a sus hilos existenciales.
+

@@ -266,8 +266,10 @@
 
 % % \facultad{Facultad de Ciencias} % Nombre de la facultad
 % 
-% % \departmento{Biología Experimental} % Nombre del departamento
+% +
+% \departmento{Biología Experimental} % Nombre del departamento
 % 
+
 % % \grado{MAESTRO EN CIENCIAS BIOLÓGICAS}
 % 
 % % \supervisor{Dr.~Narcissus}
@@ -369,43 +371,47 @@ Biológicas}}}\\[0.3cm]
     \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
 \end{center}
 
-%----------------------------------------------------------------------------------------
-%	AGRADECIMIENTOS INSTITUCIONALES
-%----------------------------------------------------------------------------------------
-% \renewcommand{\acknowledgementname}{Agradecimientos Institucionales} % CAMBIAR NOMBRE A Agradecimientos
 
-\begin{acknowledgements}
-\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+\newpage
+% \begin{agradecimientos}
+    \begin{center}
+        \includegraphics[width=3.5cm]{ figuras/unam.png }\\[0.5cm]
+        Este trabajo de Maestría se realizó gracias al Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México (UNAM) y al financiamiento otorgado por el Consejo Nacional de Ciencia y Tecnología (CONACyT) a través de la beca al CVU 1191018 y al proyecto PAPIIT IA205723.
 
-% \begin{center}
-%     \includegraphics[width=5cm]{Figures/unamposgrado.png}\\[0.1cm] % Logo UNAM
-% \end{center}
-
-\input{"preambulo/agradecimientos\_institucionales.tex"}
-\end{acknowledgements}
+        Deseo expresar mi más sincero agradecimiento a la Universidad Nacional Autónoma de México por haberme recibido nuevamente como parte de su comunidad estudiantil. 
+        
+        Quiero extender mi agradecimiento a la Facultad de Ciencias de la UNAM por brindar las facilidades y al Laboratorio de Biología Animal Experimental por proporcionar las instalaciones, el equipo y las cámaras. Agradezco al director de esta tesis, el Dr. Alonso, por sus ayudas.
+        
+        Quiero expresar mi más sincero agradecimiento a todos los miembros del jurado y, en especial, al comité tutoral, el Dr. Jean Pascal Morin y la Dra. María de la Luz Navarro, por dedicar su tiempo a leer esta tesis y proporcionar valiosos comentarios que enriquecieron este trabajo. Su apoyo constante y sus observaciones constructivas fueron fundamentales para lograr un mejor resultado. Gracias por su compromiso y generosidad a lo largo de este proceso.
+        
+        Por último, gracias a los investigadores y estudiantes que ayudaron a darle forma a este trabajo: gracias a la Dra. Angélica Zepeda y su equipo de trabajo por enseñarme y guiarme con los temas de neurogénesis. Gracias a la Dra. Julieta Rosell García y a los Maestros Diego Ángeles Valdez y Jalil Rasgado Toledo por ser quienes ayudaron con toda la parte de estadística. Gracias los doctores Dan Chitwood y Sarah Percival por incluirme en sus proyectos, donde aprendí muchísimo sobre programación y estadística. Por último, gracias las psicólogas Amanda Sánchez Pérez y Jimena Arroyo Pérez por ayudarme con la parte de trastornos, comportamiento, experimentos y ser quienes discutían y revisaban el proyecto conmigo. Sin ustedes no hubiera sido posible realizar este trabajo.
+    \end{center}
+% \end{agradecimientos}
 
 
 \newpage
 \begin{center}
     \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página en blanco.}}}
 \end{center}
-
-%----------------------------------------------------------------------------------------
-%	tesis CONTENT - CHAPTERS
-%----------------------------------------------------------------------------------------
-% \usepackage[main=spanish,english]{babel}
-% \selectlanguage{spanish}
-% \usepackage[spanish,mexico]{babel}
-% \mainmatter % Begin numeric (1,2,3...) page numbering
-
-% \pagestyle{review} % thesis, thesisSimple, review
 \renewcommand*\contentsname{Table of contents}
 {
 \hypersetup{linkcolor=}
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
+\subsection{El Narcisista que Llevas Dentro (Aunque Digas que No):
+Cuando el Cerebro se Cree el Protagonista de una
+Telenovela}\label{el-narcisista-que-llevas-dentro-aunque-digas-que-no-cuando-el-cerebro-se-cree-el-protagonista-de-una-telenovela}
+
 \subsection{Introduction}\label{sec-intro}
+
+Imagina a esa persona que publica ``Ugh, odio ser tan perfeccionista''
+en LinkedIn mientras bebe un latte de oro. Bienvenido al narcisismo
+encubierto: el arte de disfrazar la autoimportancia bajo un manto de
+falsa modestia. Aquí exploraremos cómo el cerebro de estos individuos
+convierte la autocrítica en un humblebrag (autoelogio disfrazado de
+queja) y por qué sus neuronas parecen organizar un festival de cine en
+su honor.
 
 \emph{TODO} Create a template that demonstrates the appearance,
 formatting, layout, and functionality of your format. Learn more about
@@ -604,16 +610,32 @@ This is Figure~\ref{fig-cars}.
 
 See the Quarto manual for full examples and instructions.
 
-\subsection{Objetivos e hipótesis}\label{objetivos-e-hipuxf3tesis}
+\subsection{Planteamiento del
+problema}\label{planteamiento-del-problema}
+
+\begin{quote}
+¿Cómo detectar a un narcisista encubierto antes de que te invite a su
+monólogo sobre lo ``difícil que es ser tan inteligente y sensible''?
+\end{quote}
+
+La neurociencia sugiere que sus cerebros podrían tener áreas
+hiperactivas en la corteza prefrontal (responsable de la autoevaluación)
+y una amígdala que grita ``¡Mírame!'' cada vez que alguien recibe más
+likes. ¿Es esto evolución o un bug cerebral?
+
+\subsection{Justificación}\label{justificaciuxf3n}
+
+Estudiar esto es crucial para:
 
 \begin{itemize}
-\tightlist
-\item[$\square$]
-  pregunta de investigación
-\item[$\square$]
-  objetivos de la investigación
-\item[$\square$]
-  hipótesis a probar
+\item
+  Evitar que la palabra ``humildad'' sea secuestrada por narcisistas.
+\item
+  Diseñar apps que detecten mensajes pasivo-agresivos en redes sociales
+  (``NeuroFilter: ¿Seguro que quieres publicar eso?'').
+\item
+  Salvar a la humanidad de conversaciones que empiezan con ``Soy
+  demasiado empático, es mi maldición''
 \end{itemize}
 
 \subsection{Antecedentes}\label{antecedentes}
@@ -640,6 +662,36 @@ See the Quarto manual for full examples and instructions.
   Finalmente explicar cómo el estudio busca una solución a este
   problema.
 \end{itemize}
+
+(ChatGPT-10 2024; 2.0 2023; González and Likeador 2019; Hashtag 2020;
+TerapiaExpress 2021; Postureo and HumildeFalsa 2022; EgoMeter and
+BrainDrama 2023)
+
+\subsection{Objetivos e hipótesis}\label{objetivos-e-hipuxf3tesis}
+
+\begin{itemize}
+\item[$\square$]
+  pregunta de investigación
+\item[$\square$]
+  objetivos de la investigación
+\item[$\square$]
+  hipótesis a probar
+\item
+  Usar fMRI para encontrar la ``zona del humblebrag'' en el cerebro.
+\item
+  Medir la actividad de la dopamina cuando alguien les dice ``Wow, eres
+  tan auténtico''.
+\item
+  Crear un test basado en cuántas veces revisan su perfil de Tinder en
+  una hora.
+\end{itemize}
+
+\begin{quote}
+Proponemos que el narcisista encubierto tiene un circuito neuronal que
+convierte la autocrítica en combustible para su ego, como un Tamagotchi
+que solo come cumplidos indirectos. Su cerebro procesa el ``No soy nada
+especial'' como ``Soy el mesías de la modestia''.
+\end{quote}
 
 \subsection{Metodolodía}\label{metodoloduxeda}
 
@@ -713,13 +765,72 @@ Han escrito & Han sido escritos \\
 Animales - {[} {]} cuidado y monitoreo - {[} {]} Aprovación de comité de
 ética - {[} {]} Intervenciones y pasos utilizados para reducir dolor,
 sufrimiento y distrés. - {[} {]} Cómo se obtuvo el tamaño de la muestra
-a priori. -
+a priori.
+
+\subsection{Resultados y discusión}\label{resultados-y-discusiuxf3n}
+
+\begin{verbatim}
+MRI Funcional: Su corteza prefrontal se ilumina al escribir "Soy un desastre" (traducción neuronal: "Soy un desastre... ¡PERO MÍRENME ARREGLARLO!").
+
+Dopamina: Sube un 300% al recibir comentarios como "Eres tan real, odio a los falsos".
+
+Correlación: A mayor uso de hashtags como #VidaSencilla, mayor actividad en la ínsula (área de la autopercepción dramática).
+\end{verbatim}
+
+Nota: Los sujetos negaron todos los resultados, diciendo ``Yo solo estoy
+aquí para ayudar a la ciencia'' (clásico).
+
+\subsection{Conclusión}\label{conclusiuxf3n}
+
+Confirmamos que el narcisismo encubierto es como el ajo en las recetas:
+todos creen que no lo usan, pero se huele a kilómetros. La neurociencia
+sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero
+con suficiente humor y memes, quizá podamos salvarlos (o al menos
+reírnos en el proceso). Propuesta final: un bot de Twitter que responda
+``Ok, Sigmund Freud'' a sus hilos existenciales.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-NeurosisEnPijama2023}
+2.0, Freud. 2023. \emph{Neurosis En Pijama: La Neurociencia Del Que Sube
+Historias Motivacionales a Las 3 AM}. Silicon Valley: NeuroVanity Press.
+
 \bibitem[\citeproctext]{ref-CameronTrivedi2013}
 Cameron, A. Colin, and Pravin K. Trivedi. 2013. \emph{Regression
 Analysis of Count Data}. 2nd ed. Cambridge: Cambridge University Press.
+
+\bibitem[\citeproctext]{ref-IAyNarcisismo2024}
+ChatGPT-10. 2024. {``¿Puede La {IA} Diagnosticar a Tu Ex? Un Análisis de
+Mensajes Pasivo-Agresivos En Tinder.''} Reporte Técnico NTD-007.
+Instituto de Tecnologías Dramáticas.
+
+\bibitem[\citeproctext]{ref-FreudRecargado2023}
+EgoMeter, Vanessa, and Ludwig BrainDrama. 2023. {``Why Do i Love Me? A
+Neural Survey of Self-Admiration.''} \emph{Journal of Questionable
+Personality Traits} 42 (6): 1337--50.
+\url{https://doi.org/10.1234/jqpt.2023.007}.
+
+\bibitem[\citeproctext]{ref-DopaminaYSelfies2019}
+González, Dopamina, and Sergio Likeador. 2019. {``La Curva de La
+Dopamina En Publicaciones de Café Artesanal: Un Estudio Con Narcisistas
+Encubiertos.''} \emph{Annual Review of Pretentious Behavior} 7: 42--666.
+\url{https://doi.org/10.6666/ar.pb.2019.007}.
+
+\bibitem[\citeproctext]{ref-NeuroFilter2020}
+Hashtag, Alan. 2020. {``NeuroFilter: Cómo Detectar Un {{`Humblebrag'}}
+En 280 Caracteres o Menos.''} In \emph{Memes y Neuronas: La Ciencia
+Detrás de Tu Timeline Tóxico}, edited by Twitter Académico, 69--420.
+TikTok Academic Publications.
+
+\bibitem[\citeproctext]{ref-SelfieCerebral2022}
+Postureo, Carlos, and María HumildeFalsa. 2022. \emph{Humblebrags \&
+Brain Scans: {fMRI} No Miente, Tu Perfil de Instagram Sí}. 1st ed.
+Colección Para Narcisistas En Recuperación. Berlin: Springer.
+
+\bibitem[\citeproctext]{ref-DejaDeLeer2021}
+TerapiaExpress, Ana. 2021. \emph{Deja de Leer Esto y Ve a Terapia: Guía
+de Supervivencia Para El Autoengañado Crónico}. Buenos Aires: Ediciones
+Ironía Sana.
 
 \end{CSLReferences}
 

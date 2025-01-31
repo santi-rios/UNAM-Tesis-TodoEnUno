@@ -72,39 +72,25 @@
     \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
 \end{center}
 
-%----------------------------------------------------------------------------------------
-%	AGRADECIMIENTOS INSTITUCIONALES
-%----------------------------------------------------------------------------------------
-% \renewcommand{\acknowledgementname}{Agradecimientos Institucionales} % CAMBIAR NOMBRE A Agradecimientos
-$if(tesis.agradecimientos-institucionales)$
 
-\begin{acknowledgements}
-\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+\newpage
+% \begin{agradecimientos}
+    \begin{center}
+        \includegraphics[width=3.5cm]{$if(tesis.logo)$ $tesis.logo$ $endif$}\\[0.5cm]
+        Este trabajo de Maestría se realizó gracias al Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México (UNAM) y al financiamiento otorgado por el Consejo Nacional de Ciencia y Tecnología (CONACyT) a través de la beca al CVU 1191018 y al proyecto PAPIIT IA205723.
 
-% \begin{center}
-%     \includegraphics[width=5cm]{Figures/unamposgrado.png}\\[0.1cm] % Logo UNAM
-% \end{center}
+        Deseo expresar mi más sincero agradecimiento a la Universidad Nacional Autónoma de México por haberme recibido nuevamente como parte de su comunidad estudiantil. 
+        
+        Quiero extender mi agradecimiento a la Facultad de Ciencias de la UNAM por brindar las facilidades y al Laboratorio de Biología Animal Experimental por proporcionar las instalaciones, el equipo y las cámaras. Agradezco al director de esta tesis, el Dr. Alonso, por sus ayudas.
+        
+        Quiero expresar mi más sincero agradecimiento a todos los miembros del jurado y, en especial, al comité tutoral, el Dr. Jean Pascal Morin y la Dra. María de la Luz Navarro, por dedicar su tiempo a leer esta tesis y proporcionar valiosos comentarios que enriquecieron este trabajo. Su apoyo constante y sus observaciones constructivas fueron fundamentales para lograr un mejor resultado. Gracias por su compromiso y generosidad a lo largo de este proceso.
+        
+        Por último, gracias a los investigadores y estudiantes que ayudaron a darle forma a este trabajo: gracias a la Dra. Angélica Zepeda y su equipo de trabajo por enseñarme y guiarme con los temas de neurogénesis. Gracias a la Dra. Julieta Rosell García y a los Maestros Diego Ángeles Valdez y Jalil Rasgado Toledo por ser quienes ayudaron con toda la parte de estadística. Gracias los doctores Dan Chitwood y Sarah Percival por incluirme en sus proyectos, donde aprendí muchísimo sobre programación y estadística. Por último, gracias las psicólogas Amanda Sánchez Pérez y Jimena Arroyo Pérez por ayudarme con la parte de trastornos, comportamiento, experimentos y ser quienes discutían y revisaban el proyecto conmigo. Sin ustedes no hubiera sido posible realizar este trabajo.
+    \end{center}
+% \end{agradecimientos}
 
-$if(tesis.agradecimientos-institucionales.text)$
-$tesis.agradecimientos-institucionales.text$
-$else$
-\input{"$tesis.agradecimientos-institucionales$"}
-$endif$
-\end{acknowledgements}
-
-$endif$
 
 \newpage
 \begin{center}
     \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página en blanco.}}}
 \end{center}
-
-%----------------------------------------------------------------------------------------
-%	tesis CONTENT - CHAPTERS
-%----------------------------------------------------------------------------------------
-% \usepackage[main=spanish,english]{babel}
-% \selectlanguage{spanish}
-% \usepackage[spanish,mexico]{babel}
-% \mainmatter % Begin numeric (1,2,3...) page numbering
-
-% \pagestyle{review} % thesis, thesisSimple, review
