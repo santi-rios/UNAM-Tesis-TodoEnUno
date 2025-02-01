@@ -2,7 +2,7 @@
 % \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
 \pagestyle{plain} % Default to the plain heading style until the tesis style is called for the body content
-
+\pagenumbering{Roman}% Capital 'R': uppercase Roman numerals
 %----------------------------------------------------------------------------------------
 %	PORTADA
 %----------------------------------------------------------------------------------------
@@ -10,7 +10,7 @@
 % Primera portada
 \begin{titlepage}
     \begin{center}
-        \vspace*{-1.5cm} % Ajusta este valor conforme sea necesario
+        \vspace*{-0.2cm} % Ajusta este valor conforme sea necesario
         
         % Logo de la UNAM
         \includegraphics[width=3.5cm]{$if(tesis.logo)$ $tesis.logo$ $endif$}\\[0.5cm]
@@ -23,22 +23,22 @@
         
         % Facultad y área
         {\large \MakeUppercase{$tesis.facultad$}}\\[0.2cm]
-        {\large \MakeUppercase{$tesis.departmento$}}\\[1cm]
+        {\large \MakeUppercase{$tesis.departmento$}}\\[0.3cm]
         
         % Título de la tesis
-        {\Large \textbf{$title$}}\\[1cm]
-        {\small $if(subtitle)$ $subtitle$ $endif$}\\[1cm]
+        {\Large \textbf{$title$}}\\[0.2cm]
+        {\small $if(subtitle)$ $subtitle$ $endif$}\\[0.2cm]
         
         % Texto "Tesis"
         {\LARGE \textbf{T E S I S}}\\[0.5cm]
         
         % Texto de grado
-        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.3cm]
-        {\Large \textbf{$tesis.grado$}}\\[1cm]
+        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.15cm]
+        {\Large \textbf{$tesis.grado$}}\\[0.4cm]
         
         % Autor
-        {\large PRESENTA:}\\[0.3cm]
-        {\LARGE \textbf{$tesis.nombre$}}\\[1.0cm]
+        {\large PRESENTA:}\\[0.1cm]
+        {\LARGE \textbf{$tesis.nombre$}}\\[0.4cm]
         
         % Tutor y comité
         {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
@@ -46,19 +46,18 @@
         {\small $if(tesis.supervisor.faculty)$ $tesis.supervisor.faculty$ $endif$}\\[0.5cm]
         
         {\small \textbf{COMITÉ TUTOR:}}\\
-        {\small $if(tesis.sinodales.uno)$ $tesis.sinodales.uno$ $endif$}\\
-        {\small $if(tesis.sinodales.unofacultad)$ $tesis.sinodales.unofacultad$ $endif$}\\[0.3cm]
-        {\small $if(tesis.sinodales.dos)$ $tesis.sinodales.dos$ $endif$}\\
-        {\small $if(tesis.sinodales.dosfacultad)$ $tesis.sinodales.dosfacultad$ $endif$}\\[1cm]
+        {\small $if(tesis.sinodales.uno)$ $tesis.sinodales.uno$ $endif$} {\small $if(tesis.sinodales.unofacultad)$ $tesis.sinodales.unofacultad$ $endif$}\\
+        {\small $if(tesis.sinodales.dos)$ $tesis.sinodales.dos$ $endif$} {\small $if(tesis.sinodales.dosfacultad)$ $tesis.sinodales.dosfacultad$ $endif$}\\
         
-        % Lugar y fecha
-        % \vfill
-        % $if(book.date)$
-        % {\small \textbf{{$tesis.lugar$} \hfill {$book.date$}}}\\
-        % $endif$
+        Lugar y fecha
+        \vfill
+        $if(tesis.lugar)$
+        {\small \textbf{{$tesis.lugar$} \hfill {$tesis.fecha$}}}\\
+        $endif$
         
     \end{center}
 \end{titlepage}
+
 
 
 % Primera página de \missingfigure
@@ -73,49 +72,58 @@
     \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
 \end{center}
 
-
+% agradecimientos institucionales
 \newpage
-% \begin{agradecimientos}
-    \begin{center}
-        {\large \textbf{Agradecimientos Institucionales}}\\[0.3cm]
-        \includegraphics[width=3.5cm]{$if(tesis.logoB)$ $tesis.logoB$ $endif$}\\[0.5cm]
-        Quiero expresar mi más sincero agradecimiento a todos los miembros del jurado y, en especial, al comité tutoral, el Dr. Jean Pascal Morin y la Dra. María de la Luz Navarro, por dedicar su tiempo a leer esta tesis y proporcionar valiosos comentarios que enriquecieron este trabajo. Su apoyo constante y sus observaciones constructivas fueron fundamentales para lograr un mejor resultado. Gracias por su compromiso y generosidad a lo largo de este proceso.
-        
-        Por último, gracias a los investigadores y estudiantes que ayudaron a darle forma a este trabajo: gracias a la Dra. Angélica Zepeda y su equipo de trabajo por enseñarme y guiarme con los temas de neurogénesis. Gracias a la Dra. Julieta Rosell García y a los Maestros Diego Ángeles Valdez y Jalil Rasgado Toledo por ser quienes ayudaron con toda la parte de estadística. Gracias los doctores Dan Chitwood y Sarah Percival por incluirme en sus proyectos, donde aprendí muchísimo sobre programación y estadística. Por último, gracias las psicólogas Amanda Sánchez Pérez y Jimena Arroyo Pérez por ayudarme con la parte de trastornos, comportamiento, experimentos y ser quienes discutían y revisaban el proyecto conmigo. Sin ustedes no hubiera sido posible realizar este trabajo.
-    \end{center}
-% \end{agradecimientos}
+$if(tesis.agradecimientos)$
+\input{"$tesis.agradecimientos$"}
+$endif$
 
-
-
-
+% agradecimientos personales
 \newpage
-% \begin{agradecimientos}
-    \begin{center}
-        {\large \textbf{Agradecimientos Personales}}\\[0.3cm]
-        Lleno de sinapsis agotadas y neuronas al borde del colapso, es momento de agradecer a quienes hicieron posible que esta tesis sobre vea la luz.
+$if(tesis.personales)$
+\input{"$tesis.personales$"}
+$endif$
 
-        A mi familia, que aún no entiende del todo qué es lo que hago, pero siempre me apoyó incondicionalmente. 
-
-    \end{center}
-
+% dedicatoria
 \newpage
-% \begin{agradecimientos}
-    \begin{center}
-        Para Cami y Reni por ser mis compañeras de vida y de tesis. Por ser mi apoyo incondicional, mi motivación y mi inspiración. Por ser mis críticas más duras y mis mayores fans. Por ser mis mejores amigas y mis compañeras de tesis. Por ser mis hermanas y mis cómplices. Por ser mis confidentes y mis consejeras. Por ser mis compañeras de piso y mis compañeras de tesis. Por ser mis compañeras de via
-    \end{center}
+$if(tesis.dedicatoria)$
+\input{"$tesis.dedicatoria$"}
+$endif$
 
 \newpage
 \begin{center}
     \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página en blanco.}}}
 \end{center}
 
-% \renewcommand*\contentsname{Tabla de contenidos}
-\newpage
-% \tableofcontents
 
-$if(tesis.agradecimientos)$
-\input{"$tesis.agradecimientos$"}
-$endif$
-
+\renewcommand*\contentsname{Tabla de contenidos}
 \newpage
 \tableofcontents
+
+\newpage
+
+
+\renewcommand{\listfigurename}{Lista de figuras}
+\renewcommand{\listtablename}{Lista de tablas}
+\listoffigures
+\listoftables
+
+% acronimos
+\newpage
+\printacronyms[name=Abreviaturas]    
+
+% resumen
+\newpage
+$if(tesis.resumen)$
+\input{"$tesis.resumen$"}
+$endif$
+
+% abstract
+\newpage
+$if(tesis.abstract)$
+\input{"$tesis.abstract$"}
+$endif$
+
+
+\newpage
+\pagenumbering{arabic}

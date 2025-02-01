@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-]{article}
+  10pt]{article}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -38,6 +38,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage[paper=a4paper,inner=2.5cm,outer=3.8cm,bindingoffset=.5cm,top=1.5cm,bottom=1.5cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
@@ -153,23 +154,38 @@
 \usepackage[T1]{fontenc}
 \usepackage[autostyle=true]{csquotes}
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes} % insertar comentarios y notas
-\usepackage[spanish]{babel}
+% \usepackage[spanish]{babel}
+\usepackage{longtable}
 % \usepackage[disable]{todonotes} # descomentar si quieres QUITAR notas y comentarios
 
+% \renewcommand{\chaptername}{\textbf{Capítulo}}
+% \renewcommand{\figurename}{\textbf{Figura}}
+% \renewcommand{\tablename}{\textbf{Tabla}}
+% \renewcommand{\appendixname}{\textbf{Apéndice}}
+
+% \usepackage{acro}[=v2]
+\usepackage{acro}
+
+% \acsetup{list/display=all}
 % \usepackage{acro}
 % \ac \Ac acronym first time
 % \acs \Acs short form
 % \acl \Acl longform
 
-% \acsetup{
-% 	make-links = true 
-% 	}
+\acsetup{
+	make-links = true,
+    patch/longtable=false
+	}
 
-% \DeclareAcronym{5-ht}{
-%     short = 5-HT,
-%     long = Serotonina
-% }
+\DeclareAcronym{5-ht}{
+    short = 5-HT,
+    long = Serotonina
+}
 
+\DeclareAcronym{mwm}{
+	short = MWM,
+	long = Laberinto Acuático de Morris
+}
 % \DeclareAcronym{5-htp}{
 %     short = 5-HTP,
 %     long = 5-Hidroxitriptófano
@@ -223,36 +239,36 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
-  \renewcommand*\contentsname{Table of contents}
+  \renewcommand*\contentsname{Tabla de contenidos}
 \else
-  \newcommand\contentsname{Table of contents}
+  \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{List of Figures}
+  \renewcommand*\listfigurename{Listado de Figuras}
 \else
-  \newcommand\listfigurename{List of Figures}
+  \newcommand\listfigurename{Listado de Figuras}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{List of Tables}
+  \renewcommand*\listtablename{Listado de Tablas}
 \else
-  \newcommand\listtablename{List of Tables}
+  \newcommand\listtablename{Listado de Tablas}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Figure}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{Figure}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{Table}
+  \renewcommand*\tablename{Tabla}
 \else
-  \newcommand\tablename{Table}
+  \newcommand\tablename{Tabla}
 \fi
 }
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \makeatother
 \makeatletter
 \makeatother
@@ -260,6 +276,15 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -270,7 +295,7 @@
 \hypersetup{
   pdftitle={El Narcisista Encubierto en el Laboratorio},
   pdfauthor={string},
-  pdfkeywords={template, demo},
+  pdflang={es},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -282,7 +307,7 @@
 
 % \programa{Posgrado en Ciencias Biológicas}
 
-% % \facultad{Facultad de Ciencias} % Nombre de la facultad
+% % \facultad{Facultad de mCiencias} % Nombre de la facultad
 % 
 % +
 % \departmento{Biología Experimental} % Nombre del departamento
@@ -321,7 +346,7 @@
 % \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
 \pagestyle{plain} % Default to the plain heading style until the tesis style is called for the body content
-
+\pagenumbering{Roman}% Capital 'R': uppercase Roman numerals
 %----------------------------------------------------------------------------------------
 %	PORTADA
 %----------------------------------------------------------------------------------------
@@ -329,7 +354,7 @@
 % Primera portada
 \begin{titlepage}
     \begin{center}
-        \vspace*{-1.5cm} % Ajusta este valor conforme sea necesario
+        \vspace*{-0.2cm} % Ajusta este valor conforme sea necesario
         
         % Logo de la UNAM
         \includegraphics[width=3.5cm]{ figuras/unam.png }\\[0.5cm]
@@ -342,25 +367,25 @@
 Biológicas}}}\\[0.3cm]
         
         % Facultad y área
-        {\large \MakeUppercase{Facultad de Ciencias}}\\[0.2cm]
-        {\large \MakeUppercase{Biología Experimental}}\\[1cm]
+        {\large \MakeUppercase{Facultad de mCiencias}}\\[0.2cm]
+        {\large \MakeUppercase{Biología Experimental}}\\[0.3cm]
         
         % Título de la tesis
         {\Large \textbf{El Narcisista Encubierto en el
-Laboratorio}}\\[1cm]
+Laboratorio}}\\[0.2cm]
         {\small  Cuando el Perfeccionista Sabotea el Método
-Científico }\\[1cm]
+Científico }\\[0.2cm]
         
         % Texto "Tesis"
         {\LARGE \textbf{T E S I S}}\\[0.5cm]
         
         % Texto de grado
-        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.3cm]
-        {\Large \textbf{MAESTRO EN CIENCIAS BIOLÓGICAS}}\\[1cm]
+        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.15cm]
+        {\Large \textbf{MAESTRO EN CIENCIAS BIOLÓGICAS}}\\[0.4cm]
         
         % Autor
-        {\large PRESENTA:}\\[0.3cm]
-        {\LARGE \textbf{Santiago García-Rios}}\\[1.0cm]
+        {\large PRESENTA:}\\[0.1cm]
+        {\LARGE \textbf{Santiago García-Rios}}\\[0.4cm]
         
         % Tutor y comité
         {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
@@ -368,16 +393,17 @@ Científico }\\[1cm]
         {\small  Thespiae in Boeotia }\\[0.5cm]
         
         {\small \textbf{COMITÉ TUTOR:}}\\
-        {\small  Dr.~Socrates }\\
-        {\small  Academy of Athens }\\[0.3cm]
-        {\small  Dr.~Plato }\\
-        {\small  Academy of Athens }\\[1cm]
+        {\small  Dr.~Socrates } {\small  Academy of Athens }\\
+        {\small  Dr.~Plato } {\small  Academy of Athens }\\
         
-        % Lugar y fecha
-        % \vfill
-        %         
+        Lugar y fecha
+        \vfill
+                {\small \textbf{{Ciudad Universitaria,
+CD.MX.} \hfill {today}}}\\
+                
     \end{center}
 \end{titlepage}
+
 
 
 % Primera página de \missingfigure
@@ -392,59 +418,56 @@ Científico }\\[1cm]
     \missingfigure{\MakeUppercase{\LARGE{Página reservada para Oficio de Jurado.}}}
 \end{center}
 
-
+% agradecimientos institucionales
 \newpage
-% \begin{agradecimientos}
-    \begin{center}
-        {\large \textbf{Agradecimientos Institucionales}}\\[0.3cm]
-        \includegraphics[width=3.5cm]{ figuras/unamposgrado.png }\\[0.5cm]
-        Quiero expresar mi más sincero agradecimiento a todos los miembros del jurado y, en especial, al comité tutoral, el Dr. Jean Pascal Morin y la Dra. María de la Luz Navarro, por dedicar su tiempo a leer esta tesis y proporcionar valiosos comentarios que enriquecieron este trabajo. Su apoyo constante y sus observaciones constructivas fueron fundamentales para lograr un mejor resultado. Gracias por su compromiso y generosidad a lo largo de este proceso.
-        
-        Por último, gracias a los investigadores y estudiantes que ayudaron a darle forma a este trabajo: gracias a la Dra. Angélica Zepeda y su equipo de trabajo por enseñarme y guiarme con los temas de neurogénesis. Gracias a la Dra. Julieta Rosell García y a los Maestros Diego Ángeles Valdez y Jalil Rasgado Toledo por ser quienes ayudaron con toda la parte de estadística. Gracias los doctores Dan Chitwood y Sarah Percival por incluirme en sus proyectos, donde aprendí muchísimo sobre programación y estadística. Por último, gracias las psicólogas Amanda Sánchez Pérez y Jimena Arroyo Pérez por ayudarme con la parte de trastornos, comportamiento, experimentos y ser quienes discutían y revisaban el proyecto conmigo. Sin ustedes no hubiera sido posible realizar este trabajo.
-    \end{center}
-% \end{agradecimientos}
+\input{"preambulo/agradecimientos\_institucionales.tex"}
 
-
-
-
+% agradecimientos personales
 \newpage
-% \begin{agradecimientos}
-    \begin{center}
-        {\large \textbf{Agradecimientos Personales}}\\[0.3cm]
-        Lleno de sinapsis agotadas y neuronas al borde del colapso, es momento de agradecer a quienes hicieron posible que esta tesis sobre vea la luz.
+\input{"preambulo/agradecimientos\_personales.tex"}
 
-        A mi familia, que aún no entiende del todo qué es lo que hago, pero siempre me apoyó incondicionalmente. 
-
-    \end{center}
-
+% dedicatoria
 \newpage
-% \begin{agradecimientos}
-    \begin{center}
-        Para Cami y Reni por ser mis compañeras de vida y de tesis. Por ser mi apoyo incondicional, mi motivación y mi inspiración. Por ser mis críticas más duras y mis mayores fans. Por ser mis mejores amigas y mis compañeras de tesis. Por ser mis hermanas y mis cómplices. Por ser mis confidentes y mis consejeras. Por ser mis compañeras de piso y mis compañeras de tesis. Por ser mis compañeras de via
-    \end{center}
+\input{"preambulo/dedicatoria.tex"}
 
 \newpage
 \begin{center}
     \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página en blanco.}}}
 \end{center}
 
-% \renewcommand*\contentsname{Tabla de contenidos}
-\newpage
-% \tableofcontents
 
-\input{"preambulo/agradecimientos\_institucionales.tex"}
-
+\renewcommand*\contentsname{Tabla de contenidos}
 \newpage
 \tableofcontents
-\renewcommand*\contentsname{Table of contents}
-{
-\hypersetup{linkcolor=}
-\setcounter{tocdepth}{3}
-\tableofcontents
-}
+
+\newpage
+
+
+\renewcommand{\listfigurename}{Lista de figuras}
+\renewcommand{\listtablename}{Lista de tablas}
+\listoffigures
+\listoftables
+
+% acronimos
+\newpage
+\printacronyms[name=Abreviaturas]    
+
+% resumen
+\newpage
+\input{"preambulo/resumen.tex"}
+
+% abstract
+\newpage
+\input{"preambulo/abstract.tex"}
+
+
+\newpage
+\pagenumbering{arabic}
 \subsection{Introducción}\label{sec-intro}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+Ver \textbf{Apartado}~\ref{sec-intro} para mas información.
+
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 \begin{enumerate}
 \def\labelenumi{\roman{enumi}.}
@@ -537,7 +560,8 @@ Analizaremos cómo el narcisismo encubierto, disfrazado de falsa
 modestia, socava los pilares fundamentales de la ciencia: el pensamiento
 flexible, la crítica constructiva y la humildad intelectual. Después de
 todo, la frase ``Soy muy brillante, pero el mundo está contra mí'' suele
-significar ``Soy insufrible con los demás''.
+significar ``Soy insufrible con los demás''. Entonces es \ac{5-ht} y
+\ac{mwm} y \ac{5-ht} y \ac{mwm}.
 
 Para ilustrar mejor el fenómeno, pensemos en esa persona que publica
 ``Ugh, odio ser tan inteligente en un mundo de idiotas'' en Facebook
@@ -554,7 +578,7 @@ Encubierto}\label{ejemplos-de-narcisismo-encubierto}
 
 En general, el narcisismo encubierto se caracteriza por una combinación
 de victimización, autoimagen grandiosa y sabotaje pasivo-agresivo
-(Table~\ref{tbl-actitudes}).
+(\textbf{Tabla}~\ref{tbl-actitudes}).
 
 \begin{longtable}[]{@{}
   >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3933}}
@@ -587,15 +611,16 @@ Manipulación pasivo-agresiva & Desinformación pública (ej: Goop, teorías
 sin base). \\
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, toprule=.15mm, left=2mm, colframe=quarto-callout-color-frame, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-color-frame, toprule=.15mm, leftrule=.75mm, opacityback=0, arc=.35mm, colback=white, bottomrule=.15mm, left=2mm, breakable, rightrule=.15mm]
 
 \vspace{-3mm}\textbf{Chuck McGill (Better Call Saul), caso de estudio}\vspace{3mm}
 
-\textbf{Superioridad y grandiosidad}: Chuck (Figure~\ref{fig-chuck}) se
-creía intelectualmente superior a los demás, especialmente a su hermano
-Jimmy. Menospreciaba los logros de Jimmy y lo consideraba moralmente
-inferior como un mecanismo de defensa para proteger su autoimagen. Su
-narcisismo encubierto lo llevó a la ruina personal y profesional.
+\textbf{Superioridad y grandiosidad}: Chuck
+(\textbf{Fig}~\ref{fig-chuck}) se creía intelectualmente superior a los
+demás, especialmente a su hermano Jimmy. Menospreciaba los logros de
+Jimmy y lo consideraba moralmente inferior como un mecanismo de defensa
+para proteger su autoimagen. Su narcisismo encubierto lo llevó a la
+ruina personal y profesional.
 
 \textbf{Necesidad de admiración}: Aunque no lo demostraba abiertamente,
 Chuck necesitaba la validación y admiración de los demás. Su ego se
@@ -629,13 +654,13 @@ obtener validación de otras personas.}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Narcisista Encubierto vs.~Narcisista Evidente}, colframe=quarto-callout-important-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Narcisista Encubierto vs.~Narcisista Evidente}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-important-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
-En la Table~\ref{tbl-comparacion}, se presentan las diferencias clave
-entre el narcisista encubierto y el narcisista evidente. Mientras que el
-narcisista evidente muestra abiertamente su grandiosidad y necesidad de
-admiración, el narcisista encubierto lo hace de manera más sutil, a
-través de la victimización y la manipulación pasiva.
+En la \textbf{Tabla}~\ref{tbl-comparacion}, se presentan las diferencias
+clave entre el narcisista encubierto y el narcisista evidente. Mientras
+que el narcisista evidente muestra abiertamente su grandiosidad y
+necesidad de admiración, el narcisista encubierto lo hace de manera más
+sutil, a través de la victimización y la manipulación pasiva.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1341}}
@@ -672,7 +697,7 @@ historia, nadie lo hace mejor que yo' \\
 
 \subsection{Antecedentes}\label{antecedentes}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Contenido: Revisión crítica de estudios previos, identificando vacíos o
 contradicciones que tu trabajo abordará.
@@ -685,19 +710,26 @@ Gramática: Tiempos pasados para referirte a investigaciones previas
 
 \end{tcolorbox}
 
-(ChatGPT-10 2024; 2.0 2023; González and Likeador 2019; Hashtag 2020;
-TerapiaExpress 2021; Postureo and HumildeFalsa 2022; EgoMeter and
-BrainDrama 2023)
+(\citeproc{ref-NeurosisEnPijama2023}{2.0, 2023};
+\citeproc{ref-IAyNarcisismo2024}{ChatGPT-10, 2024};
+\citeproc{ref-FreudRecargado2023}{EgoMeter y BrainDrama, 2023};
+\citeproc{ref-DopaminaYSelfies2019}{González y Likeador, 2019};
+\citeproc{ref-NeuroFilter2020}{Hashtag, 2020};
+\citeproc{ref-SelfieCerebral2022}{Postureo y HumildeFalsa, 2022};
+\citeproc{ref-DejaDeLeer2021}{TerapiaExpress, 2021})
 
-(PeerReviewHater and DataCherryPicker 2023; Butterfly 2024; Sarcasmo
-2024; Falsacionista 2022)
+(\citeproc{ref-CienciaToxica2024}{Butterfly, 2024};
+\citeproc{ref-PopperLloruxf3n2022}{Falsacionista, 2022};
+\citeproc{ref-EgoLab2023}{PeerReviewHater y DataCherryPicker, 2023};
+\citeproc{ref-AlgorithmShade2024}{Sarcasmo, 2024})
 
-(Peter Gould 2015-\/-2022; Carreyrou 2015)
+(\citeproc{ref-HolmesFraude2021}{Carreyrou, 2015};
+\citeproc{ref-McGillCaseStudy}{Peter Gould, 2015-\/-2022})
 
 \subsection{Planteamiento del
 problema}\label{planteamiento-del-problema}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Contenido: Formula la pregunta de investigación de manera clara y
 específica. Ejemplo: ``¿Cómo afecta la exposición a estrés crónico a la
@@ -741,7 +773,7 @@ likes. ¿Es esto evolución o un bug cerebral?
 
 \subsection{Justificación}\label{justificaciuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Justificación
 
@@ -783,7 +815,7 @@ Estudiar esto es urgente porque:
 
 \subsection{Objetivos}\label{objetivos}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -831,7 +863,7 @@ Estudiar esto es urgente porque:
 
 \subsection{Hipótesis}\label{hipuxf3tesis}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 \begin{verbatim}
 Contenido: Propuesta verificable que responde al problema. Ejemplo: "La deprivación de sueño reduce la densidad sináptica en la corteza prefrontal".
@@ -1057,7 +1089,7 @@ Los sujetos negaron todos los resultados, diciendo ``Yo solo estoy aquí
 para ayudar a la ciencia'' (clásico).
 \end{quote}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Contenido: Detalla diseño experimental, sujetos/muestras, técnicas (ej.:
 fMRI, PCR), análisis estadístico y ética.
@@ -1070,7 +1102,7 @@ propuesta
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Términos Importantes}, colframe=quarto-callout-note-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Términos Importantes}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 \emph{Metodología}: Este término es más amplio y no solo describe los
 procedimientos específicos utilizados en el experimento, sino también
@@ -1093,7 +1125,7 @@ métodos.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-caution-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Voz Pasiva en Metodología}, colframe=quarto-callout-caution-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-caution-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Voz Pasiva en Metodología}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-caution-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Escribir en pasado, con voz pasiva (\emph{Daniel cocinó una tortilla},
 \emph{Una tortilla fue cocinada por Danie}, \emph{Daniel la cocinó},
@@ -1155,7 +1187,7 @@ Han escrito & Han sido escritos \\
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Animales de Laboratorio}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Animales de Laboratorio}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Reportar el uso de animales de laboratorio, incluyendo:
 
@@ -1180,7 +1212,7 @@ Reportar el uso de animales de laboratorio, incluyendo:
 
 \subsubsection{Reporte de Animales}\label{reporte-de-animales}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Contenido: Datos crudos (tablas, gráficos) sin interpretación. Responde
 a cada objetivo.
@@ -1206,7 +1238,7 @@ críticas}\label{scores-de-narcisismo-encubierto-correlacionan-con-rechazo-a-cru
 
 \includegraphics{template_files/figure-pdf/unnamed-chunk-4-1.pdf}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Puedes usar el paquete de R \texttt{report} (incluido en el código) para
 generar automáticamente un informe las pruebas pruebas estadísticas en
@@ -1241,8 +1273,8 @@ pequeña'' vs.~``Tu teoría revolucionó la ciencia''.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# install.packages("fmri")}
-\NormalTok{devtools}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"muschellij2/fmri"}\NormalTok{)}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"fmri"}\NormalTok{)}
+\CommentTok{\# devtools::install\_github("muschellij2/fmri")}
 \CommentTok{\# https://johnmuschelli.com/Neuroimaging\_in\_R/fmri\_proc.html\#15}
 \FunctionTok{library}\NormalTok{(fmri)}
 
@@ -1268,7 +1300,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 \includegraphics{template_files/figure-pdf/unnamed-chunk-6-1.pdf}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 \begin{verbatim}
 The ANOVA (formula: Calidad_Cientifica ~ Grupo) suggests that:
@@ -1313,7 +1345,7 @@ mantener estándares rigurosos.
 
 \subsection{Discusión}\label{discusiuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 \begin{verbatim}
 Contenido: Interpreta resultados, contrasta con antecedentes, explica limitaciones y sugiere futuras investigaciones.
@@ -1327,7 +1359,7 @@ Gramática: Presente para teorías aceptadas (ej.: "Estos datos apoyan la hipót
 
 \subsection{Conclusión}\label{conclusiuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, toprule=.15mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, leftrule=.75mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm]
 
 Contenido: Síntesis de hallazgos clave y su relevancia. No repitas
 resultados.
@@ -1437,72 +1469,71 @@ https://github.com/tidyverse/dplyr.
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-NeurosisEnPijama2023}
-2.0, Freud. 2023. \emph{Neurosis En Pijama: La Neurociencia Del Que Sube
-Historias Motivacionales a Las 3 AM}. Silicon Valley: NeuroVanity Press.
+2.0, F. (2023). \emph{Neurosis en Pijama: La Neurociencia del Que Sube
+Historias Motivacionales a las 3 AM}. Silicon Valley: NeuroVanity Press.
 
 \bibitem[\citeproctext]{ref-CienciaToxica2024}
-Butterfly, Dr. I. Ron. 2024. \emph{Ciencia Tóxica: Cuando El Ego Es El
+Butterfly, Dr. I. R. (2024). \emph{Ciencia Tóxica: Cuando el Ego es el
 Principal {COI} (Conflicto de Intereses)}. Cambridge: Black Hole
 Academic Press.
 
 \bibitem[\citeproctext]{ref-HolmesFraude2021}
-Carreyrou, John. 2015. {``Bad Blood: Secrets and Lies in a Silicon
-Valley Startup.''} \emph{The Wall Street Journal}.
+Carreyrou, J. (2015). Bad Blood: Secrets and Lies in a Silicon Valley
+Startup. \emph{The Wall Street Journal}.
 
 \bibitem[\citeproctext]{ref-IAyNarcisismo2024}
-ChatGPT-10. 2024. {``¿Puede La {IA} Diagnosticar a Tu Ex? Un Análisis de
-Mensajes Pasivo-Agresivos En Tinder.''} Reporte Técnico NTD-007.
-Instituto de Tecnologías Dramáticas.
+ChatGPT-10. (2024). \emph{¿Puede la {IA} Diagnosticar a tu Ex? Un
+Análisis de Mensajes Pasivo-Agresivos en Tinder} (Reporte Técnico N.º
+NTD-007). Instituto de Tecnologías Dramáticas.
 
 \bibitem[\citeproctext]{ref-FreudRecargado2023}
-EgoMeter, Vanessa, and Ludwig BrainDrama. 2023. {``Why Do i Love Me? A
-Neural Survey of Self-Admiration.''} \emph{Journal of Questionable
-Personality Traits} 42 (6): 1337--50.
-\url{https://doi.org/10.1234/jqpt.2023.007}.
+EgoMeter, V., y BrainDrama, L. (2023). Why Do I Love Me? A Neural Survey
+of Self-Admiration. \emph{Journal of Questionable Personality Traits},
+\emph{42}(6), 1337-1350. \url{https://doi.org/10.1234/jqpt.2023.007}
 
 \bibitem[\citeproctext]{ref-PopperLloruxf3n2022}
-Falsacionista, Karl. 2022. {``El Narcisista y La Falsabilidad: Por Qué
-Su Hipótesis Es Inmune a Los Hechos.''} In \emph{Psicopatologías de La
-Razón: Filosofía Para Científicos Con Daddy Issues}, 777--89. Ediciones
+Falsacionista, K. (2022). El Narcisista y la Falsabilidad: Por Qué su
+Hipótesis es Inmune a los Hechos. En \emph{Psicopatologías de la Razón:
+Filosofía para Científicos con Daddy Issues} (pp. 777-789). Ediciones
 Crítica Constructiva (Ironicamente).
 
 \bibitem[\citeproctext]{ref-DopaminaYSelfies2019}
-González, Dopamina, and Sergio Likeador. 2019. {``La Curva de La
-Dopamina En Publicaciones de Café Artesanal: Un Estudio Con Narcisistas
-Encubiertos.''} \emph{Annual Review of Pretentious Behavior} 7: 42--666.
-\url{https://doi.org/10.6666/ar.pb.2019.007}.
+González, D., y Likeador, S. (2019). La Curva de la Dopamina en
+Publicaciones de Café Artesanal: Un Estudio con Narcisistas Encubiertos.
+\emph{Annual Review of Pretentious Behavior}, \emph{7}, 42-666.
+\url{https://doi.org/10.6666/ar.pb.2019.007}
 
 \bibitem[\citeproctext]{ref-NeuroFilter2020}
-Hashtag, Alan. 2020. {``NeuroFilter: Cómo Detectar Un {{`Humblebrag'}}
-En 280 Caracteres o Menos.''} In \emph{Memes y Neuronas: La Ciencia
-Detrás de Tu Timeline Tóxico}, edited by Twitter Académico, 69--420.
-TikTok Academic Publications.
+Hashtag, A. (2020). NeuroFilter: Cómo Detectar un {{«Humblebrag»}} en
+280 Caracteres o Menos. En T. Académico (Ed.), \emph{Memes y Neuronas:
+La Ciencia detrás de tu Timeline Tóxico} (pp. 69-420). TikTok Academic
+Publications.
 
 \bibitem[\citeproctext]{ref-EgoLab2023}
-PeerReviewHater, Richard, and Ella DataCherryPicker. 2023. {``Narcissus
-in the Lab: How Covert Narcissism Corrupts Citation Networks.''}
-\emph{Journal of Irreproducible Results} 12: 45--69.
-\url{https://doi.org/10.6666/jir.2023.045}.
+PeerReviewHater, R., y DataCherryPicker, E. (2023). Narcissus in the
+Lab: How Covert Narcissism Corrupts Citation Networks. \emph{Journal of
+Irreproducible Results}, \emph{12}, 45-69.
+\url{https://doi.org/10.6666/jir.2023.045}
 
 \bibitem[\citeproctext]{ref-McGillCaseStudy}
-Peter Gould, Vince Gilligan y. 2015-\/-2022. {``Better Call Saul:
-Análisis de Chuck McGill Como Arquetipo Del Narcisista Encubierto En
-Entornos de Alta Exigencia.''}
+Peter Gould, V. G. y. (2015-\/-2022). \emph{Better Call Saul: Análisis
+de Chuck McGill como arquetipo del narcisista encubierto en entornos de
+alta exigencia}.
 
 \bibitem[\citeproctext]{ref-SelfieCerebral2022}
-Postureo, Carlos, and María HumildeFalsa. 2022. \emph{Humblebrags \&
-Brain Scans: {fMRI} No Miente, Tu Perfil de Instagram Sí}. 1st ed.
-Colección Para Narcisistas En Recuperación. Berlin: Springer.
+Postureo, C., y HumildeFalsa, M. (2022). \emph{Humblebrags \& Brain
+Scans: {fMRI} No Miente, Tu Perfil de Instagram Sí} (1st ed.). Berlin:
+Springer.
 
 \bibitem[\citeproctext]{ref-AlgorithmShade2024}
-Sarcasmo, Ada. 2024. {``Detecting Academic Narcissism via
-Passive-Aggressive LaTeX Comments: A Machine Learning Approach.''}
-Technical Report IDPR-666. Institute of Dramatic Peer Review.
-\url{https://arxiv.org/abs/2404.01joke}.
+Sarcasmo, A. (2024). \emph{Detecting Academic Narcissism via
+Passive-Aggressive LaTeX Comments: A Machine Learning Approach}
+(Technical Report N.º IDPR-666). Recuperado de Institute of Dramatic
+Peer Review website: \url{https://arxiv.org/abs/2404.01joke}
 
 \bibitem[\citeproctext]{ref-DejaDeLeer2021}
-TerapiaExpress, Ana. 2021. \emph{Deja de Leer Esto y Ve a Terapia: Guía
-de Supervivencia Para El Autoengañado Crónico}. Buenos Aires: Ediciones
+TerapiaExpress, A. (2021). \emph{Deja de Leer Esto y Ve a Terapia: Guía
+de Supervivencia para el Autoengañado Crónico}. Buenos Aires: Ediciones
 Ironía Sana.
 
 \end{CSLReferences}

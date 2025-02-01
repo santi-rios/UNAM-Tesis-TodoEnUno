@@ -2,23 +2,38 @@
 \usepackage[T1]{fontenc}
 \usepackage[autostyle=true]{csquotes}
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes} % insertar comentarios y notas
-\usepackage[spanish]{babel}
+% \usepackage[spanish]{babel}
+\usepackage{longtable}
 % \usepackage[disable]{todonotes} # descomentar si quieres QUITAR notas y comentarios
 
+% \renewcommand{\chaptername}{\textbf{Capítulo}}
+% \renewcommand{\figurename}{\textbf{Figura}}
+% \renewcommand{\tablename}{\textbf{Tabla}}
+% \renewcommand{\appendixname}{\textbf{Apéndice}}
+
+% \usepackage{acro}[=v2]
+\usepackage{acro}
+
+% \acsetup{list/display=all}
 % \usepackage{acro}
 % \ac \Ac acronym first time
 % \acs \Acs short form
 % \acl \Acl longform
 
-% \acsetup{
-% 	make-links = true 
-% 	}
+\acsetup{
+	make-links = true,
+    patch/longtable=false
+	}
 
-% \DeclareAcronym{5-ht}{
-%     short = 5-HT,
-%     long = Serotonina
-% }
+\DeclareAcronym{5-ht}{
+    short = 5-HT,
+    long = Serotonina
+}
 
+\DeclareAcronym{mwm}{
+	short = MWM,
+	long = Laberinto Acuático de Morris
+}
 % \DeclareAcronym{5-htp}{
 %     short = 5-HTP,
 %     long = 5-Hidroxitriptófano

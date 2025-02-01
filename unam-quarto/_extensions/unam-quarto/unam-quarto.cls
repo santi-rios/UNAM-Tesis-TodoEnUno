@@ -315,6 +315,20 @@ documentación de KOMA-script para más detalles.}]{fancyhdr}
 % ...
 
 %----------------------------------------------------------------------------------------
+%	ABBREVIATIONS PAGE DESIGN
+%----------------------------------------------------------------------------------------
+
+% \newcommand{\abbrevname}{List of Abbreviations}
+% \providecaptionname{english,british,american}{\abbrevname}{List of Abbreviations}
+% \providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
+% \providecaptionname{spanish}{\abbrevname}{Abreviaturas}
+\NewDocumentEnvironment{abbreviations}{ m }{%
+	\addtocounter{table}{-1}% Don't count this table as one of the document tables
+	\ifbool{nolistspace}{\endgroup}{}
+	\printacronyms[heading = chapter, name=Abreviaturas, pages={display=all,seq/use=false}] % Print acronyms
+}
+
+%----------------------------------------------------------------------------------------
 %	Agradecimientos institucionales
 %----------------------------------------------------------------------------------------
 

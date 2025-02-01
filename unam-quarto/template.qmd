@@ -3,7 +3,9 @@ title: El Narcisista Encubierto en el Laboratorio
 subtitle: Cuando el Perfeccionista Sabotea el Método Científico
 format:
   unam-quarto-pdf:
-    keep-tex: true  
+    keep-tex: true
+    toc: false
+    lang: es  
   # unam'-quarto-html: default
 author: 
   - id: string
@@ -12,12 +14,8 @@ author:
       given: Santiago García-Rios
       family: string
       literal: string
-abstract: |
-  This document is a template demonstrating the Unam-quarto format.
-acknowledgements: |
-  We thank the Quarto team for their support in creating this template.
-keywords: [template, demo]
-bibliography: bibliography.bib  
+bibliography: bibliography.bib
+csl: apa.csl  
 # fontsize: "9pt"
 # classoption:
 #  - twocolumn
@@ -27,10 +25,11 @@ tesis:
   # version: "2.0" # Revisada por comité tutoral
   nombre: Santiago García-Rios
   programa: Posgrado en Ciencias Biológicas
-  facultad: Facultad de Ciencias
+  facultad: Facultad de mCiencias
   departmento: Biología Experimental
   grado: MAESTRO EN CIENCIAS BIOLÓGICAS
-  # lugar: Ciudad Universitaria, CD.MX.
+  lugar: Ciudad Universitaria, CD.MX.
+  fecha: today
   supervisor: 
     name: Dr. Narcissus
     faculty: Thespiae in Boeotia
@@ -39,13 +38,15 @@ tesis:
     unofacultad: Academy of Athens
     dos: Dr. Plato
     dosfacultad: Academy of Athens
-  # university: Universidad Nacional Autónoma de México
-  # group: Biología Animal Experimental
   logo: figuras/unam.png
   logoB: figuras/unamposgrado.png
   # lang: es
   toc: false # controlado por latex
   agradecimientos: "preambulo/agradecimientos_institucionales.tex"
+  personales: "preambulo/agradecimientos_personales.tex"
+  dedicatoria: "preambulo/dedicatoria.tex"
+  resumen: "preambulo/resumen.tex"
+  abstract: "preambulo/abstract.tex"
 editor: visual
 execute:
   echo: false
@@ -53,13 +54,24 @@ execute:
   warning: false
   code-overflow: wrap
   cache: false
-# crossref:
-#   tbl-prefix: "**Tabla**"
-#   fig-prefix: "**Fig**"
-#   sec-prefix: "**Apartado**"
+crossref:
+  tbl-prefix: "**Tabla**"
+  fig-prefix: "**Fig**"
+  sec-prefix: "**Apartado**"
+geometry: 
+  - paper=a4paper
+  - inner=2.5cm
+  - outer=3.8cm
+  - bindingoffset=.5cm
+  - top=1.5cm
+  - bottom=1.5cm
 ---
 
+
+
 ## Introducción {#sec-intro}
+
+Ver @sec-intro para mas información.
 
 ::: {.callout-tip}
 
@@ -98,7 +110,7 @@ Gramática: Usa presente para hechos establecidos (ej.: "La plasticidad neuronal
 
 :::
 
-En este trabajo investigamos el impacto del narcisismo encubierto en la práctica científica. Este tipo de narcisismo se manifiesta a menudo como una aparente obsesión por la perfección, aunque en realidad suele traducirse en un sabotaje pasivo-agresivo del método científico. Analizaremos cómo el narcisismo encubierto, disfrazado de falsa modestia, socava los pilares fundamentales de la ciencia: el pensamiento flexible, la crítica constructiva y la humildad intelectual. Después de todo, la frase "Soy muy brillante, pero el mundo está contra mí" suele significar "Soy insufrible con los demás".
+En este trabajo investigamos el impacto del narcisismo encubierto en la práctica científica. Este tipo de narcisismo se manifiesta a menudo como una aparente obsesión por la perfección, aunque en realidad suele traducirse en un sabotaje pasivo-agresivo del método científico. Analizaremos cómo el narcisismo encubierto, disfrazado de falsa modestia, socava los pilares fundamentales de la ciencia: el pensamiento flexible, la crítica constructiva y la humildad intelectual. Después de todo, la frase "Soy muy brillante, pero el mundo está contra mí" suele significar "Soy insufrible con los demás". Entonces es \ac{5-ht} y \ac{mwm} y \ac{5-ht} y \ac{mwm}.
 
 Para ilustrar mejor el fenómeno, pensemos en esa persona que publica "Ugh, odio ser tan inteligente en un mundo de idiotas" en Facebook mientras bebe vino de una botella que parece arte contemporáneo y escucha "mejor música que la tuya". Este es el narcisismo encubierto en acción: el arte de disfrazar la autoimportancia bajo el manto de la falsa modestia. Exploraremos cómo el cerebro de estos individuos transforma la autocrítica en un humblebrag (autoelogio disfrazado de queja) y por qué sus redes neuronales parecen estar organizando un festival de cine en su propio honor.
 
@@ -521,8 +533,8 @@ La amígdala se activa un 250% más al escuchar "Tu muestra es muy pequeña" vs.
 
 
 ```r
-# install.packages("fmri")
-devtools::install_github("muschellij2/fmri")
+install.packages("fmri")
+# devtools::install_github("muschellij2/fmri")
 # https://johnmuschelli.com/Neuroimaging_in_R/fmri_proc.html#15
 library(fmri)
 

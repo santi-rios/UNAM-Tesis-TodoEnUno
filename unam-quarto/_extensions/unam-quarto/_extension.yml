@@ -12,8 +12,9 @@ contributes:
       # documentclass: unam-quarto
       # template: template.tex
       # include-in-header: header.tex
-      format-resources:
-        - unam-quarto.cls
+      # format-resources:
+      #   - unam-quarto.cls
+      classoption: ["10pt"]
       template-partials: 
         - partials/title.tex
         - partials/before-body.tex
@@ -22,6 +23,8 @@ contributes:
       #   - "partials/doc-class.tex"
       include-in-header: 
         - partials/in-header.tex
+      link-citations: true
+      latex-auto-install: true # enable/disable automatic package installation
     html:
       css: styles.css
 
