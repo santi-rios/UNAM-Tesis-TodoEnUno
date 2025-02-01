@@ -1,0 +1,12 @@
+---
+title: "Presentacion"
+format: revealjs
+---
+
+## Resultados
+
+![](figuras/chuck.png)
+
+##
+
+[](template_files/figure-pdf/unnamed-chunk-2-1.pdf)

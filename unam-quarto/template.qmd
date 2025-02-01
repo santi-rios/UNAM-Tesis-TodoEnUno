@@ -46,6 +46,7 @@ tesis:
   # lang: es
   toc: false # controlado por latex
   agradecimientos: "preambulo/agradecimientos_institucionales.tex"
+editor: visual
 execute:
   echo: false
   message: false
