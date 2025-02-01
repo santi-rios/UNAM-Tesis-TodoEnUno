@@ -7,6 +7,14 @@ format:
     toc: false
     lang: es  
   # unam'-quarto-html: default
+  docx:
+    reference-doc: CDC_Template.docx
+    abstract-title: Resumen
+    toc: true
+    number-sections: true
+    link-citations: true
+    highlight-style: github
+    lang: es 
 author: 
   - id: string
     number: number
@@ -29,7 +37,7 @@ tesis:
   departmento: Biología Experimental
   grado: MAESTRO EN CIENCIAS BIOLÓGICAS
   lugar: Ciudad Universitaria, CD.MX.
-  fecha: today
+  fecha: "2025-Enero"
   supervisor: 
     name: Dr. Narcissus
     faculty: Thespiae in Boeotia
@@ -69,44 +77,15 @@ geometry:
 
 ## Introducción {#sec-intro}
 
-Ver @sec-intro para mas información.
-
 ::: callout-tip
-i.  **Establecer el territorio de investigación:**
-    -   Describir el estado actual del conocimiento sobre el tema.\
-    -   Mostrar la relevancia o importancia del área de estudio.\
-    -   Revisar investigaciones previas en el campo.\
-        **Ejemplos:**\
-    -   “La evidencia sugiere que X es uno de los factores más relevantes para...”\
-    -   “Investigaciones previas han demostrado que...”
-ii. **Identificar un nicho:**
-    -   Motivar la realización del estudio destacando aspectos no abordados o problemáticos.\
-    -   Esto puede incluir:
-        a)  Señalar errores o limitaciones en investigaciones anteriores.\
-        b)  Resaltar vacíos en el campo.\
-        c)  Plantear preguntas sin respuesta.\
-        d)  Proponer contribuciones novedosas.\
-            **Ejemplos:**\
-    -   “El análisis de Smith no considera...”\
-    -   “Hasta ahora, los estudios sobre X no han abordado...”
-iii. **Ocupar el nicho:**
-     -   Explicar cómo la investigación aborda el problema identificado.\
-     -   Definir objetivos, hipótesis o preguntas de investigación.\
-     -   Resaltar el valor y la novedad del estudio.\
-     -   Describir la estructura del artículo.\
-         **Ejemplos:**\
-     -   “El propósito de esta investigación es explorar la relación entre...”\
-     -   “Este estudio proporciona nuevas perspectivas sobre...”\
-     -   “El artículo se divide en cuatro secciones...”
+Estilo narrativo: **Expositivo y conciso**. Evita detalles técnicos profundos.
 
-Estilo narrativo: Expositivo y conciso. Evita detalles técnicos profundos.
-
-Gramática: Usa presente para hechos establecidos (ej.: "La plasticidad neuronal es fundamental para...") y pasado para mencionar hallazgos previos (ej.: "Estudios demostraron que...").
+**Gramática**: Usa presente para hechos establecidos (ej.: "*La plasticidad neuronal es fundamental para...*") y pasado para mencionar hallazgos previos (ej.: "*Estudios demostraron que...*").
 :::
 
-En este trabajo investigamos el impacto del narcisismo encubierto en la práctica científica. Este tipo de narcisismo se manifiesta a menudo como una aparente obsesión por la perfección, aunque en realidad suele traducirse en un sabotaje pasivo-agresivo del método científico. Analizaremos cómo el narcisismo encubierto, disfrazado de falsa modestia, socava los pilares fundamentales de la ciencia: el pensamiento flexible, la crítica constructiva y la humildad intelectual. Después de todo, la frase "Soy muy brillante, pero el mundo está contra mí" suele significar "Soy insufrible con los demás". Entonces es \ac{5-ht} y \ac{mwm} y \ac{5-ht} y \ac{mwm}.
+El \ac{narc} es un trastorno de la personalidad que se caracteriza por una necesidad de admiración y validación, pero que se oculta detrás de una fachada de modestia, timidez y victimización [@First2013].
 
-Para ilustrar mejor el fenómeno, pensemos en esa persona que publica "Ugh, odio ser tan inteligente en un mundo de idiotas" en Facebook mientras bebe vino de una botella que parece arte contemporáneo y escucha "mejor música que la tuya". Este es el narcisismo encubierto en acción: el arte de disfrazar la autoimportancia bajo el manto de la falsa modestia. Exploraremos cómo el cerebro de estos individuos transforma la autocrítica en un humblebrag (autoelogio disfrazado de queja) y por qué sus redes neuronales parecen estar organizando un festival de cine en su propio honor.
+Para ilustrar mejor el fenómeno, pensemos en esa persona que bebe vino de una botella que parece arte contemporáneo y escucha "mejor música que la tuya" mientras maldice al mundo por no reconocer su genio. Este es el \ac{narc} \todo{manejo de acrónimos automático en la plantilla} en acción: el arte de disfrazar la autoimportancia bajo el manto de la falsa modestia. De acuerdo a @AlgorithmShade2024, el cerebro de estos individuos transforma la *autocrítica* en un ***humblebrag*** (autoelogio disfrazado de queja) ya qué sus redes neuronales organizan un festival de cine en su propio honor.
 
 ### Ejemplos de Narcisismo Encubierto
 
@@ -145,7 +124,7 @@ knitr::include_graphics('figuras/chuck.png')
 ::: callout-important
 ### Narcisista Encubierto vs. Narcisista Evidente
 
-En la @tbl-comparacion, se presentan las diferencias clave entre el narcisista encubierto y el narcisista evidente. Mientras que el narcisista evidente muestra abiertamente su grandiosidad y necesidad de admiración, el narcisista encubierto lo hace de manera más sutil, a través de la victimización y la manipulación pasiva.
+En la @tbl-comparacion \todo{ejemplo de tabla renderizada con R}, se presentan las diferencias clave entre el narcisista encubierto y el narcisista evidente. Mientras que el narcisista evidente muestra abiertamente su grandiosidad y necesidad de admiración, el narcisista encubierto lo hace de manera más sutil, a través de la victimización y la manipulación pasiva.
 
 ```{r}
 #| label: tbl-comparacion
@@ -166,182 +145,99 @@ knitr::kable(datos)
 ## Antecedentes
 
 ::: callout-tip
-Contenido: Revisión crítica de estudios previos, identificando vacíos o contradicciones que tu trabajo abordará.
+-   **Contenido**: Revisión crítica de estudios previos, identificando vacíos o contradicciones que tu trabajo abordará.
 
-Estilo narrativo: Analítico y comparativo. Usa conectores como "Sin embargo...", "A diferencia de...".
-
-Gramática: Tiempos pasados para referirte a investigaciones previas (ej.: "X et al. (2020) observaron que...").
+-   **Estilo narrativo**: Analítico y comparativo. Usa conectores como "Sin embargo...", "A diferencia de...".
 :::
 
-[@IAyNarcisismo2024; @NeurosisEnPijama2023; @DopaminaYSelfies2019; @NeuroFilter2020; @DejaDeLeer2021; @SelfieCerebral2022; @FreudRecargado2023]
+De acuerdo a ... [@EgoLab2023; @DopaminaYSelfies2019].
 
-[@EgoLab2023; @CienciaToxica2024; @AlgorithmShade2024; @PopperLlorón2022]
+Sin embargo, los \ac{narc} son peligrosos en la ciencia [@CienciaToxica2024; @NeuroFilter2020] ya que estos individuos suelen:
 
-[@McGillCaseStudy; @HolmesFraude2021]
+-   Descartar críticas como "**envidia académica**".
+-   **Adulterar datos** para que coincidan con su "brillante intuición".
+-   **Desacreditar** colegas con frases como "Su metodología es... peculiar" (traducción: "Odio que tenga razón").
 
 ## Planteamiento del problema
 
 ::: callout-tip
-Contenido: Formula la pregunta de investigación de manera clara y específica. Ejemplo: "¿Cómo afecta la exposición a estrés crónico a la neurogénesis en el hipocampo?".
+-   **Contenido**: Formula la pregunta de investigación de manera clara y específica. Ejemplo: "¿Cómo afecta la exposición a estrés crónico a la neurogénesis en el hipocampo?".
 
-Estilo narrativo: Directo y enfocado. Evita ambigüedades.
+-   Estilo narrativo: Directo y enfocado. Evita ambigüedades.
 
-Gramática: Usa interrogativas directas o frases declarati\>vas (ej.: "Se desconoce si...").
+-   Gramática: Usa interrogativas directas o frases declarativas (ej.: "Se desconoce si...").
 :::
 
-> ¿Cómo afecta el narcisismo encubierto a la práctica científica? Estos individuos suelen:
-
--   Descartar críticas como "envidia académica".
--   Adulterar datos para que coincidan con su "brillante intuición".
--   Desacreditar colegas con frases como "Su metodología es... interesante" (traducción: "Odio que tenga razón").
--   ¿Es posible hacer ciencia rigurosa cuando tu cerebro interpreta "revisión por pares" como "ataque personal"?
+> ¿Cómo afecta el narcisismo encubierto a la práctica científica?
+>
+> ¿Es posible hacer ciencia rigurosa cuando tu cerebro interpreta "revisión por pares" como "ataque personal"?
 
 > ¿Cómo detectar a un narcisista encubierto antes de que te invite a su monólogo sobre lo "difícil que es ser tan inteligente y sensible"?
-
-La neurociencia sugiere que sus cerebros podrían tener áreas hiperactivas en la corteza prefrontal (responsable de la autoevaluación) y una amígdala que grita "¡Mírame!" cada vez que alguien recibe más likes. ¿Es esto evolución o un bug cerebral?
 
 ## Justificación
 
 ::: callout-tip
-Justificación
+-   **Contenido**: Explica por qué el problema es relevante científicamente, clínicamente o socialmente. Incluye posibles aplicaciones.
 
-Contenido: Explica por qué el problema es relevante científicamente, clínicamente o socialmente. Incluye posibles aplicaciones.
-
-Estilo narrativo: Persuasivo. Destaca el impacto potencial (ej.: "Este estudio podría mejorar estrategias para...").
-
-Gramática: Usa futuro hipotético ("podría contribuir a...") y presente para realidades establecidas ("El estrés es un problema de salud pública").
+-   **Estilo narrativo**: Persuasivo. Destaca el impacto potencial (ej.: "Este estudio podría mejorar estrategias para...").
 :::
 
-Estudiar esto es urgente porque:
-
--   La ciencia no es un monólogo, pero el narcisista encubierto la trata como su TED Talk personal.
--   El sesgo de confirmación se vuelve dogma cuando el investigador cree que "mi teoría es tan obvia que hasta mi perro la entiende".
--   La reputación de la ciencia se daña cuando los papers incluyen "Agradezco a nadie, porque yo lo hice todo" en la sección de acknowledgments.
--   Evitar que la palabra "humildad" sea secuestrada por narcisistas.
--   Diseñar apps que detecten mensajes pasivo-agresivos en redes sociales ("NeuroFilter: ¿Seguro que quieres publicar eso?").
--   Salvar a la humanidad de conversaciones que empiezan con "Soy demasiado empático, es mi maldición"
+Estudiar el \ac{narc} es urgente porque la ciencia no es un monólogo, pero el narcisista encubierto la trata como su TED Talk personal. Además, el sesgo de confirmación se vuelve dogma cuando el investigador cree que "mi teoría es tan obvia y correcta que hasta mi perro la entiende". Por último, hay que evitar que la palabra "humildad" sea secuestrada por narcisistas y salvar a la humanidad de conversaciones que empiezan con "Soy demasiado empático y por eso el mundo me odia, es mi maldición"
 
 ## Objetivos
 
 ::: callout-tip
-5.  Objetivos
+-   **Objetivo general**: Amplio y alineado con el problema.
 
-    Contenido:
+-   **Objetivos específicos**: Medibles y secuenciales.
 
-    ```         
-     Objetivo general: Amplio y alineado con el problema.
+-   *Estilo narrativo*: Imperativo o infinitivo (ej.: "Determinar...", "Analizar...").
 
-     Objetivos específicos: Medibles y secuenciales.
-    ```
-
-    Estilo narrativo: Imperativo o infinitivo (ej.: "Determinar...", "Analizar...").
-
-    Gramática: Verbos de acción claros (evita "estudiar" si es vago; usa "cuantificar", "comparar")
+-   *Gramática*: Verbos de acción claros (evita "estudiar" si es vago; usa "cuantificar", "comparar")
 :::
 
-i.  Correlacionar puntuaciones de narcisismo encubierto con resistencia a la revisión por pares.
+i.  Correlacionar puntuaciones de narcisismo encubierto con resistencia a la crítica por pares.
 
 ii. Cuantificar la frecuencia de frases pasivo-agresivas en correos de rechazo a colaboradores ("Lamento que no hayas entendido mi genialidad").
 
 iii. Demostrar que su corteza prefrontal prioriza "proteger mi ego" sobre "aceptar evidencia" mediante fMRI durante discusiones académicas.
 
-iv. Desarrollar un algoritmo que detecte narcisismo encubierto en reviews anónimos (pista: busca la palabra "claramente" seguida de un insulto elegante).
+iv. Desarrollar un algoritmo que detecte narcisismo encubierto en reviews anónimos (pista: busca la palabra "claramente" seguida de un insulto o desacreditación).
 
 v.  Medir la actividad de la dopamina cuando alguien les dice "Wow, eres tan auténtico".
 
 ## Hipótesis
 
 ::: callout-tip
-```         
-Contenido: Propuesta verificable que responde al problema. Ejemplo: "La deprivación de sueño reduce la densidad sináptica en la corteza prefrontal".
+-   **Contenido**: Propuesta verificable que responde al problema. Ejemplo: "La deprivación de sueño reduce la densidad sináptica en la corteza prefrontal".
 
-Estilo narrativo: Afirmativo y basado en teoría. Usa condicionales si es exploratorio (ej.: "Se hipotetiza que...").
+-   **Estilo narrativo**: Afirmativo y basado en teoría. Usa condicionales si es exploratorio (ej.: "Se hipotetiza que...").
 
-Gramática: Presente o futuro simple (ej.: "Los ratones expuestos mostrarán...").
-```
-
-Hipótesis: No formularla como pregunta ni incluir metodología
-
-Es un error común formular la **hipótesis** como una **pregunta** porque, por definición, una hipótesis es una **afirmación o proposición** que se plantea como una posible respuesta a la pregunta de investigación. La hipótesis no es la pregunta en sí, sino una **predicción fundamentada** que se deriva de la teoría y los antecedentes, y que será sometida a prueba mediante la investigación. A continuación, te explico con más detalle por qué es importante evitar este error:
+-   **Gramática**: Presente o futuro simple (ej.: "Los ratones expuestos mostrarán...").
 
 ------------------------------------------------------------------------
 
-### **1. La hipótesis es una afirmación, no una pregunta**
+::: callout-tip
+NOTA: No formularla como pregunta ni incluir metodología. Es un error común formular la **hipótesis** como una **pregunta** porque, por definición, una hipótesis es una **afirmación o proposición** que se plantea como una posible respuesta a la pregunta de investigación. La hipótesis no es la pregunta en sí, sino una **predicción fundamentada** que se deriva de la teoría y los antecedentes, y que será sometida a prueba mediante la investigación.
 
--   **Razón científica**: La hipótesis debe ser una declaración que pueda ser **verificada o refutada** empíricamente. Si se formula como pregunta, no cumple con este requisito, ya que una pregunta no puede ser probada directamente.
-    -   **Correcto**: *"La exposición a luz azul antes de dormir reduce la calidad del sueño en adultos jóvenes."*\
-    -   **Incorrecto**: *"¿La exposición a luz azul antes de dormir reduce la calidad del sueño en adultos jóvenes?"*
--   **Razón narrativa**: La pregunta corresponde al **planteamiento del problema**, no a la hipótesis. La hipótesis es el siguiente paso lógico, donde propones una respuesta tentativa basada en la teoría y los antecedentes.
-
-------------------------------------------------------------------------
-
-### **2. La hipótesis debe ser clara y específica**
-
--   Al formularla como pregunta, se pierde la claridad y precisión que requiere una hipótesis científica. Una hipótesis bien formulada debe incluir las **variables** involucradas y la **relación esperada** entre ellas.
-    -   **Correcto**: *"El aumento en los niveles de cortisol está asociado con una disminución en el volumen del hipocampo."*\
-    -   **Incorrecto**: *"¿El aumento en los niveles de cortisol está asociado con una disminución en el volumen del hipocampo?"*
-
-------------------------------------------------------------------------
-
-### **3. La hipótesis guía el diseño metodológico**
-
--   Una hipótesis clara y afirmativa permite diseñar métodos específicos para probarla. Si es una pregunta, no queda claro qué se está poniendo a prueba.
-    -   **Ejemplo**: Si la hipótesis es *"El estrés crónico reduce la neurogénesis en el hipocampo"*, puedes diseñar un experimento para medir la neurogénesis en sujetos con y sin estrés. Si es una pregunta, no sabes qué relación estás evaluando.
-
-------------------------------------------------------------------------
-
-### **4. La hipótesis refleja el enfoque teórico**
-
--   La hipótesis debe estar basada en la teoría y los antecedentes. Al formularla como afirmación, demuestras que has analizado la literatura y propones una predicción fundamentada. Si es una pregunta, no se evidencia este proceso.
-    -   **Correcto**: *"Basado en estudios previos, se hipotetiza que la deprivación de sueño altera la conectividad funcional en la red neuronal por defecto."*\
-    -   **Incorrecto**: *"¿La deprivación de sueño altera la conectividad funcional en la red neuronal por defecto?"*
-
-------------------------------------------------------------------------
-
-### **5. Coherencia con el método científico**
-
--   El método científico implica **observar, plantear preguntas, formular hipótesis, predecir y probar**. La hipótesis es una **predicción**, no una pregunta. Si la hipótesis se formula como pregunta, se rompe la lógica del proceso científico.
-    -   **Ejemplo**:
-        -   **Pregunta de investigación**: *"¿Cómo afecta el ejercicio aeróbico a la memoria de trabajo?"*\
-        -   **Hipótesis**: *"El ejercicio aeróbico mejora el rendimiento en tareas de memoria de trabajo."*
-
-------------------------------------------------------------------------
-
-### **Consejos para formular una hipótesis correctamente**
-
-1.  **Basarse en la teoría**: Usa los antecedentes para justificar tu predicción.\
-2.  **Ser específica**: Incluye las variables y la relación esperada entre ellas.\
-3.  **Ser comprobable**: Asegúrate de que pueda ser validada o refutada con datos.\
-4.  **Usar afirmaciones claras**: Evita preguntas, ambigüedades o lenguaje vago.
-
-------------------------------------------------------------------------
-
-### **Ejemplo de flujo correcto**
-
-1.  **Pregunta de investigación**: *"¿Cómo afecta la meditación mindfulness a la actividad de la amígdala en personas con ansiedad?"*\
-2.  **Hipótesis**: *"La práctica de meditación mindfulness reduce la actividad de la amígdala en personas con ansiedad."*
-
-------------------------------------------------------------------------
-
-En resumen, formular la hipótesis como una pregunta es un error porque desdibuja su función como **predicción comprobable** y rompe la estructura lógica del método científico. Una hipótesis bien formulada debe ser una **afirmación clara, específica y basada en teoría** que guíe tu investigación. ¡Espero que esta explicación te sea útil para tu tesis! 😊
+Es muy importante que se formule una hipótesis que pueda ser refutada (ver "[If you say Science is Right, you're wrong](https://www.scientificamerican.com/article/if-you-say-science-is-right-youre-wrong/)" y [Falsacionismo](https://es.wikipedia.org/wiki/Falsacionismo)).
+:::
 :::
 
 Proponemos que el narcisista encubierto:
 
 -   Distorsiona el método científico para validar su autoimagen, convirtiendo hipótesis en horóscopos académicos ("Los datos no coinciden, pero mi intuición es un don").
--   Usa la sección de conflicto de intereses para listar enemigos.
--   Su actividad cerebral al recibir críticas se asemeja a la de alguien viendo arder su trofeo de kindergarten.
+-   Usa la sección de conflicto de intereses para listar enemigos y la revisión por pares como método de venganza contra sus enemigos (***spoiler***: TODOS son sus enemigos).
+-   Su actividad cerebral al recibir críticas se asemeja a la de un niño viendo arder su jugete en el kindergarten.
 
 ## Metodolodía
 
-> Los sujetos negaron todos los resultados, diciendo "Yo solo estoy aquí para ayudar a la ciencia" (clásico).
-
 ::: callout-tip
-Contenido: Detalla diseño experimental, sujetos/muestras, técnicas (ej.: fMRI, PCR), análisis estadístico y ética.
+-   **Contenido**: Detalla diseño experimental, sujetos/muestras, técnicas (ej.: fMRI, PCR), análisis estadístico y ética.
 
-Estilo narrativo: Descriptivo y replicable. Usa pasiva para objetividad (ej.: "Se utilizó un diseño doble ciego...").
+-   **Estilo narrativo**: Descriptivo y replicable. Usa pasiva para objetividad (ej.: "Se utilizó un diseño doble ciego...").
 
-Gramática: Pasado si el estudio ya se realizó; presente si es una propuesta
+-   **Gramática**: Pasado si el estudio ya se realizó; presente si es una propuesta
 :::
 
 ::: callout-note
@@ -357,7 +253,7 @@ Gramática: Pasado si el estudio ya se realizó; presente si es una propuesta
 ::: callout-caution
 ### Voz Pasiva en Metodología
 
-Escribir en pasado, con voz pasiva (*Daniel cocinó una tortilla*, *Una tortilla fue cocinada por Danie*, *Daniel la cocinó*, *América fue colonizada en 1492*, *Se reparan automóviles /Se espera la renuncia del mandatario*), en contraste de voz activa (*El presidente pronunció un largo discurso*, *Varios millones visitan Barcelona cada año*)
+\todo{ejemplo de tabla renderizada con Markdown}
 
 | **Voz Activa**                             | **Voz Pasiva**                                      |
 |---------------------------------|---------------------------------------|
@@ -391,20 +287,24 @@ Reportar el uso de animales de laboratorio, incluyendo:
 -   Cómo se obtuvo el tamaño de la muestra a priori.
 :::
 
+### Disclaimer sobre los sujetos experimentales
+
+Todos los sujetos con personalidad narcisista negaron todos los métodos y resultados, diciendo "Yo solo estoy aquí para ayudar a la ciencia" y/o "yo haría un mejor estudio" (clásico).
+
 ## Resultados
 
 ### Reporte de Animales
 
 ```{r}
 # install.packages("report")
-# library(report)
-# library(easystats)
+library(report)
+library(easystats)
 # easystats::install_latest()
 
-# data <- data.frame(
-#   "Age" = c(22, 23, 54, 21),
-#   "Sex" = c("F", "F", "M", "M")
-# )
+data <- data.frame(
+  "Age" = c(22, 23, 54, 21),
+  "Sex" = c("F", "F", "M", "M")
+)
 
 # paste(
 #   report_participants(data, spell_n = TRUE),
@@ -425,6 +325,8 @@ Resultados vs. Discusión: No mezclar descripción de datos con interpretación
 :::
 
 ### Scores de Narcisismo Encubierto correlacionan con rechazo a críticas
+
+\todo{ejemplo de gráfico renderizado con R y Datos Simulados en R.}
 
 ```{r}
 # Cargar librerías necesarias
@@ -462,45 +364,22 @@ correlacion_print <- print(paste("Correlación entre Narcisismo y Rechazo a Crí
 
 # Graficar la correlación
 
-ggscatter(datos, x = "Narcisismo", y = "Rechazo_Criticas", 
-          add = "reg.line", conf.int = TRUE, 
-          cor.coef = TRUE, cor.method = "pearson",
-          xlab = "Score de Narcisismo Encubierto", ylab = "Score de Rechazo a Críticas", 
+ggscatter(datos, x = "Narcisismo", 
+          y = "Rechazo_Criticas",
+          color = "#00AFBB", 
+          add = "reg.line", 
+          conf.int = TRUE, 
+          cor.coef = TRUE, 
+          cor.method = "pearson",
+          add.params = list(color = "blue", fill = "lightgray"),
+          xlab = "Score de Narcisismo Encubierto", 
+          ylab = "Score de Rechazo a Críticas", 
           title = paste("Correlación:", round(correlacion, 2))
           )
-
-# 3. Custom plot
-# ggplot(iris, aes(x = Species, y = Sepal.Width)) +
-#   # Add base data
-#   geom_violin(aes(fill = Species), color = "white") +
-#   geom_jitter(width = 0.1, height = 0, alpha = 0.5, size = 3) +
-#   # Add pointrange and line for means
-#   geom_line(data = means, aes(y = Mean, group = 1), linewidth = 1) +
-#   geom_pointrange(
-#     data = means,
-#     aes(y = Mean, ymin = CI_low, ymax = CI_high),
-#     size = 1,
-#     color = "white"
-#   ) +
-#   # Improve colors
-#   scale_fill_manual(values = c("pink", "lightblue", "lightgreen")) +
-#   theme_minimal()
-# ggplot(datos, aes(x = Narcisismo, y = Rechazo_Criticas)) +
-#   geom_point(color = "blue", alpha = 0.6) +  # Puntos
-#   geom_smooth(method = "lm", color = "red", se = FALSE) +  # Línea de tendencia
-#   labs(
-#     title = "Correlación entre Narcisismo Encubierto y Rechazo a Críticas",
-#     x = "Score de Narcisismo Encubierto",
-#     y = "Score de Rechazo a Críticas",
-#     caption = paste("Correlación:", round(correlacion, 2))
-#   ) +
-#   theme_minimal()
-
-
 ```
 
 ::: callout-tip
-Puedes usar el paquete de R `report` (incluido en el código) para generar automáticamente un informe las pruebas pruebas estadísticas en formato APA. A pesar que por el momento solo lo hace en inglés, te ahorrará mucho tiempo y asegura calidad y estandarización de tu reporte.
+Puedes usar el paquete de R `report` (incluido en la app) para generar automáticamente un informe las pruebas estadísticas en formato APA. A pesar que por el momento solo lo hace en inglés, te ahorrará mucho tiempo y asegura calidad y estandarización de tu reporte.
 
 ```{r}
 install.packages("report")
@@ -513,14 +392,11 @@ cor.test(datos$Narcisismo, datos$Rechazo_Criticas) %>%
 reporte_corr <- report_statistics(cor.test(datos$Narcisismo, datos$Rechazo_Criticas))
 ```
 
-Y luego puedes incluir el resultado en tu texto:
+Y luego puedes incluir el resultado en tu texto \todo{Esto se hace de manera automática, por lo que si cambias tus datos, el reporte se actualiza automáticamente.}:
 
-A mayor narcisismo encubierto, menor citación de colegas en papers `r reporte_corr`.
+- A mayor narcisismo encubierto, mayor rechazo a críticas constructivas (`r reporte_corr`).
+- `r correlacion_print`
 :::
-
-`r correlacion_print`
-
-Nivel de narcisismo vs. Número de veces que dice 'La literatura está equivocada'.
 
 ### Activación cerebral en fMRI
 
@@ -538,105 +414,75 @@ neuro_install("neurobase", release = "stable")
 orthographic(data)
 ```
 
-### Análisis de texto
+### Comparación de Calidad Científica entre Grupos
 
-El 90% de sus emails incluyen "Con todo respeto..." seguido de un "Pero esto es basura" disfrazado de citas de Popper.
+::: {.callout-important}
+En la app, se incluyen funciones de fórmulas estadísticas para analizar, graficar y reportar tus datos. Para hacerlo con tus datos, abre el archivo './datos/datos.csv' y reemplaza las variables y nombres de columnas en el código de abajo. Recuerda usar el formato estándar en ciencia de datos (r, python, spss), el cual corresponde a: una fila por observación y una columna por variable.
+:::
 
 ```{r}
 # Cargar librerías necesarias
-library(ggplot2)
-library(dplyr)
+library("ggpubr")
+# leer datos
+datos_df <- read.csv("./datos/datos.csv")
 
-# Semilla para reproducibilidad
-set.seed(123)
+# graficar
+p <- ggboxplot(datos_df, 
+               y = "calidad_cientifica",
+               x = "personalidad", 
+               fill = "personalidad", 
+               palette = c("#00AFBB", "#E7B800"),
+               xlab = "Personalidad", 
+               ylab = "Calidad Científica") +
+    # mejorar colores y apariencia con ggplot
+    scale_fill_manual(values = c("pink", "lightblue", "lightgreen")) +
+    theme_minimal()
 
-# Crear un juego de datos simulado
-n <- 100  # Número de observaciones (50 con narcisismo, 50 sin narcisismo)
+p + stat_compare_means(method = "t.test", paired = FALSE)
 
-# Simular datos para personas con narcisismo encubierto
-narcisismo <- data.frame(
-  Grupo = "Con Narcisismo",
-  Calidad_Cientifica = rnorm(n/2, mean = 50, sd = 10)  # Media baja de calidad científica
-)
 
-# Simular datos para personas sin narcisismo
-sin_narcisismo <- data.frame(
-  Grupo = "Sin Narcisismo",
-  Calidad_Cientifica = rnorm(n/2, mean = 70, sd = 10)  # Media alta de calidad científica
-)
 
-# Simular datos para personas sin narcisismo
-Aspergers <- data.frame(
-  Grupo = "Aspergers",
-  Calidad_Cientifica = rnorm(n/2, mean = 72, sd = 7)  # Media alta de calidad científica
-)
-
-# Combinar ambos grupos en un solo dataframe
-datos <- rbind(narcisismo, sin_narcisismo, Aspergers)
-
-# Ver las primeras filas del dataframe
-# head(datos)
-
-# Realizar un ANOVA para comparar las medias
-anova_resultado <- aov(Calidad_Cientifica ~ Grupo, data = datos)
-summary(anova_resultado)
-
-# Graficar los resultados
-ggplot(datos, aes(x = Grupo, y = Calidad_Cientifica, fill = Grupo)) +
-  geom_boxplot(alpha = 0.7) +  # Diagrama de cajas
-  geom_jitter(width = 0.2, alpha = 0.5, color = "black") +  # Puntos individuales
-  labs(
-    title = "Comparación de Calidad Científica entre Grupos",
-    x = "Grupo",
-    y = "Calidad Científica",
-    caption = "ANOVA: Comparación de medias entre grupos"
-  ) +
-  theme_minimal() +
-  theme(legend.position = "none")
-
-# # 3. Custom plot
-# ggplot(iris, aes(x = Species, y = Sepal.Width)) +
-#   # Add base data
-#   geom_violin(aes(fill = Species), color = "white") +
-#   geom_jitter(width = 0.1, height = 0, alpha = 0.5, size = 3) +
-#   # Add pointrange and line for means
-#   geom_line(data = means, aes(y = Mean, group = 1), linewidth = 1) +
-#   geom_pointrange(
-#     data = means,
-#     aes(y = Mean, ymin = CI_low, ymax = CI_high),
-#     size = 1,
-#     color = "white"
-#   ) +
-#   # Improve colors
-#   scale_fill_manual(values = c("pink", "lightblue", "lightgreen")) +
-#   theme_minimal()
 ```
 
-::: callout-tip
+::: {.callout}
+## Funciones Ejemplo para Revisar Supuestos y reportar en formato APA
+
 ```{r}
-aov(Calidad_Cientifica ~ Grupo, data = datos) %>%
+shapiro.test(datos_df$calidad_cientifica)
+
+ggqqplot(datos_df$calidad_cientifica, ylab = "Calidad Científica", xlab = "Teórico", ggtheme = theme_minimal())
+
+t.test(datos_df$calidad_cientifica ~ datos_df$personalidad) %>%
   report()
+
 ```
+
 :::
 
-El ANOVA y el gráfico sugieren que las personas con narcisismo encubierto tienden a tener una calidad científica significativamente menor que aquellas sin narcisismo. Esto respalda tu hipótesis de que el narcisismo encubierto es incompatible con la buena ciencia, ya que afecta negativamente la capacidad de colaborar, aceptar críticas y mantener estándares rigurosos.
+La prueba de T y el gráfico sugieren que las personas con narcisismo encubierto tienden a tener una calidad científica significativamente menor... \todo{En discusión, habla mas sobre este resultado y c'omo respalda que el narcisismo encubierto es incompatible con la buena ciencia, ya que afecta negativamente la capacidad de colaborar, aceptar críticas y mantener estándares rigurosos}.
 
-## Extra
+### Más resultados interesantes
 
-``` r
+Más resultados y funciones interesantes para que te inspires. recuerda que puedes sustituir con tus datos y variables.
+
+``` {r}
+
 p1 <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
   geom_boxplot() +
-  theme_modern(axis.text.angle = 45) +
+  theme_void() +
+  # theme_modern(axis.text.angle = 45) +
   scale_fill_material_d()
 
 p2 <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
   geom_violin() +
-  theme_modern(axis.text.angle = 45) +
+  theme_void() +
+  # theme_modern(axis.text.angle = 45) +
   scale_fill_material_d(palette = "ice")
 
 p3 <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width, color = Sepal.Length)) +
   geom_point2() +
-  theme_modern() +
+  theme_void() +
+  # theme_modern() +
   scale_color_material_c(palette = "rainbow")
 
 plots(p1, p2, p3, n_columns = 2)
@@ -644,54 +490,39 @@ plots(p1, p2, p3, n_columns = 2)
 
 ## Discusión
 
-::: callout-tip
-```         
-Contenido: Interpreta resultados, contrasta con antecedentes, explica limitaciones y sugiere futuras investigaciones.
-
-Estilo narrativo: Crítico y reflexivo. Usa comparaciones (ej.: "A diferencia de X, nuestros hallazgos sugieren...").
-
-Gramática: Presente para teorías aceptadas (ej.: "Estos datos apoyan la hipótesis de que...").
-```
+::: callout-tip  
+- **Contenido**: Interpreta resultados, contrasta con antecedentes, explica limitaciones y sugiere futuras investigaciones.
+- **Estilo narrativo**: Crítico y reflexivo. Usa comparaciones (ej.: "A diferencia de X, nuestros hallazgos sugieren...").
+- **Gramática**: Presente para teorías aceptadas (ej.: "Estos datos apoyan la hipótesis de que...").
 :::
 
 ## Conclusión
 
 ::: callout-tip
-Contenido: Síntesis de hallazgos clave y su relevancia. No repitas resultados.
-
-Estilo narrativo: Conciso y enfocado en contribuciones.
-
-Gramática: Presente perfecto o presente (ej.: "Este estudio demuestra que...")
-
-Conclusión: No introducir nuevos datos o ideas no discutidas previamente.
+- **Contenido**: Síntesis de hallazgos clave y su relevancia. No repitas resultados.
+- **Estilo narrativo**: Conciso y enfocado en contribuciones.
+- **Gramática**: Presente perfecto o presente (ej.: "Este estudio demuestra que...")
+- **Conclusión**: No introducir nuevos datos o ideas no discutidas previamente.
 :::
 
-El narcisismo encubierto es el virus silencioso de la mala ciencia: convierte la duda en herejía, la colaboración en competencia, y los journals en diarios íntimos con DOI. La solución no es expulsarlos, sino mandarlos a un retiro espiritual con Carl Sagan de fondo ("El universo no gira en torno a ti, Karen"). Propuesta: incluir tests de narcisismo en las convocatorias de financiamiento. Cof cof.
+El narcisismo encubierto es el virus silencioso de la mala ciencia: convierte la duda en herejía, la colaboración en competencia, y los journals en diarios íntimos. La solución no es expulsarlos, sino mandarlos a un retiro espiritual con Alan Watts de fondo ("*The you who you think you are dpes not exists*"). 
 
-Confirmamos que el narcisismo encubierto es como el ajo en las recetas: todos creen que no lo usan, pero se huele a kilómetros. La neurociencia sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero con suficiente humor y memes, quizá podamos salvarlos (o al menos reírnos en el proceso). Propuesta final: un bot de Twitter que responda "Ok, Sigmund Freud" a sus hilos existenciales.
+**Propuesta**: incluir tests de narcisismo en las convocatorias de financiamiento. Cof cof.
+
+Confirmamos que el narcisismo encubierto es como el ajo en las recetas: todos creen que no lo usan, pero se huele a kilómetros. La neurociencia sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero con suficiente humor y memes, quizá podamos salvarlos (o al menos reírnos en el proceso). **Propuesta final**: un bot de Twitter que responda "Ok, *Kandel Sebastian Bach*" a sus hilos existenciales.
 
 ## Apéndices
 
-### Supuestos Estadísticos
+### Funciones Extra
 
-``` r
-install.packages("easystats")
-install.packages("patchwork")
+::: {.callout}
+Revisar outliers en un modelo de regresión lineal (p.ej., ANOVA).
+
+```{r}
+# install.packages("easystats")
+# install.packages("patchwork")
 library(performance)
 library(see)
-
-model <- lm(wt ~ mpg, data = mtcars)
-check <- check_normality(model)
-
-plot(check, type = "qq")
-
-m <- lm(mpg ~ wt + cyl + gear + disp, data = mtcars)
-result <- check_collinearity(m)
-
-# result
-
-plot(result)
-
 
 # select only mpg and disp (continuous)
 mt1 <- mtcars[, c(1, 3, 4)]
@@ -699,26 +530,27 @@ mt1 <- mtcars[, c(1, 3, 4)]
 mt2 <- rbind(mt1, data.frame(mpg = c(37, 40), disp = c(300, 400), hp = c(110, 120)))
 # fit model with outliers
 model <- lm(disp ~ mpg + hp, data = mt2)
+
 result <- check_outliers(model)
 
 plot(result, type = "dots")
+``` 
 
-model2 <- lm(mpg ~ wt + cyl + gear + disp, data = mtcars)
-result2 <- check_normality(model2)
+:::
 
-plot(result2, type = "density")
-
-plot(result2, type = "qq")
-
-model <- lm(mpg ~ wt + cyl + gear + disp, data = mtcars)
-result <- check_heteroscedasticity(model)
-plot(result)
-```
-
-### Info
+::: {.callout}
+Revisar y Citar paquetes de R utilizados en tu análisis.
 
 ```{r}
 report(sessionInfo())
 ```
+
+:::
+
+## Agradecimientos
+
+Cada participante con personalidad Narcisista que colaboró en este estudio, sin saberlo, merece un agradecimiento especial. Agradecemos a la Dra. Narcissus por su supervisión y a los Drs. Socrates y Plato por sus valiosas sugerencias. Agradecemos a la Facultad de Thespiae in Boeotia por su apoyo financiero y a la Academia of Athens por su infraestructura.
+
+Finalmente, los participantes con personalidad narcisista pidieron ser mencionados en los créditos como "*los verdaderos héroes de la ciencia*" o "*los únicos que entienden la verdadera ciencia*".
 
 ## Referencias

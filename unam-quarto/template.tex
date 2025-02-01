@@ -177,15 +177,18 @@
     patch/longtable=false
 	}
 
-\DeclareAcronym{5-ht}{
-    short = 5-HT,
-    long = Serotonina
+\DeclareAcronym{narc}{
+    short = narc,
+    long = Narcisissta Encubierto
 }
 
-\DeclareAcronym{mwm}{
-	short = MWM,
-	long = Laberinto Acuático de Morris
-}
+% Más ejemplos de acrónimos
+
+% \DeclareAcronym{mwm}{
+% 	short = MWM,
+% 	long = Laberinto Acuático de Morris
+% }
+
 % \DeclareAcronym{5-htp}{
 %     short = 5-HTP,
 %     long = 5-Hidroxitriptófano
@@ -354,38 +357,38 @@
 % Primera portada
 \begin{titlepage}
     \begin{center}
-        \vspace*{-0.2cm} % Ajusta este valor conforme sea necesario
+        \vspace*{-0.5cm} % Ajusta este valor conforme sea necesario
         
         % Logo de la UNAM
-        \includegraphics[width=3.5cm]{ figuras/unam.png }\\[0.5cm]
+        \includegraphics[width=4.5cm]{ figuras/unam.png }\\[0.5cm]
         
         % Nombre de la Universidad
         {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
         
         % Programa de posgrado
         {\large \textbf{\MakeUppercase{Posgrado en Ciencias
-Biológicas}}}\\[0.3cm]
+Biológicas}}}\\[1cm]
         
         % Facultad y área
-        {\large \MakeUppercase{Facultad de mCiencias}}\\[0.2cm]
-        {\large \MakeUppercase{Biología Experimental}}\\[0.3cm]
+        {\large \MakeUppercase{Facultad de mCiencias}}\\[0.4cm]
+        {\large \MakeUppercase{Biología Experimental}}\\[1.2cm]
         
         % Título de la tesis
         {\Large \textbf{El Narcisista Encubierto en el
-Laboratorio}}\\[0.2cm]
+Laboratorio}}\\[0.3cm]
         {\small  Cuando el Perfeccionista Sabotea el Método
-Científico }\\[0.2cm]
+Científico }\\[0.6cm]
         
         % Texto "Tesis"
-        {\LARGE \textbf{T E S I S}}\\[0.5cm]
+        {\LARGE \textbf{T E S I S}}\\[1cm]
         
         % Texto de grado
         {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.15cm]
-        {\Large \textbf{MAESTRO EN CIENCIAS BIOLÓGICAS}}\\[0.4cm]
+        {\Large \textbf{MAESTRO EN CIENCIAS BIOLÓGICAS}}\\[0.8cm]
         
         % Autor
-        {\large PRESENTA:}\\[0.1cm]
-        {\LARGE \textbf{Santiago García-Rios}}\\[0.4cm]
+        {\large PRESENTA:}\\[0.3cm]
+        {\LARGE \textbf{Santiago García-Rios}}\\[0.8cm]
         
         % Tutor y comité
         {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
@@ -396,10 +399,9 @@ Científico }\\[0.2cm]
         {\small  Dr.~Socrates } {\small  Academy of Athens }\\
         {\small  Dr.~Plato } {\small  Academy of Athens }\\
         
-        Lugar y fecha
         \vfill
                 {\small \textbf{{Ciudad Universitaria,
-CD.MX.} \hfill {today}}}\\
+CD.MX.} \hfill {2025-Enero}}}\\
                 
     \end{center}
 \end{titlepage}
@@ -412,6 +414,58 @@ CD.MX.} \hfill {today}}}\\
     \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página reservada para Derechos de Autor por parte de la Dirección de Bibliotecas.}}}
 \end{center}
 
+% Segunda portada
+\begin{titlepage}
+    \begin{center}
+        \vspace*{-0.5cm} % Ajusta este valor conforme sea necesario
+        
+        % Logo de la UNAM
+        \includegraphics[width=4.5cm]{ figuras/unam.png }\\[0.5cm]
+        
+        % Nombre de la Universidad
+        {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
+        
+        % Programa de posgrado
+        {\large \textbf{\MakeUppercase{Posgrado en Ciencias
+Biológicas}}}\\[1cm]
+        
+        % Facultad y área
+        {\large \MakeUppercase{Facultad de mCiencias}}\\[0.4cm]
+        {\large \MakeUppercase{Biología Experimental}}\\[1.2cm]
+        
+        % Título de la tesis
+        {\Large \textbf{El Narcisista Encubierto en el
+Laboratorio}}\\[0.3cm]
+        {\small  Cuando el Perfeccionista Sabotea el Método
+Científico }\\[0.6cm]
+        
+        % Texto "Tesis"
+        {\LARGE \textbf{T E S I S}}\\[1cm]
+        
+        % Texto de grado
+        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.15cm]
+        {\Large \textbf{MAESTRO EN CIENCIAS BIOLÓGICAS}}\\[0.8cm]
+        
+        % Autor
+        {\large PRESENTA:}\\[0.3cm]
+        {\LARGE \textbf{Santiago García-Rios}}\\[0.8cm]
+        
+        % Tutor y comité
+        {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
+        {\small  Dr.~Narcissus }\\
+        {\small  Thespiae in Boeotia }\\[0.5cm]
+        
+        {\small \textbf{COMITÉ TUTOR:}}\\
+        {\small  Dr.~Socrates } {\small  Academy of Athens }\\
+        {\small  Dr.~Plato } {\small  Academy of Athens }\\
+        
+        \vfill
+                {\small \textbf{{Ciudad Universitaria,
+CD.MX.} \hfill {2025-Enero}}}\\
+                
+    \end{center}
+\end{titlepage}
+
 % Tercera página de \missingfigure
 \newpage
 \begin{center}
@@ -422,9 +476,19 @@ CD.MX.} \hfill {today}}}\\
 \newpage
 \input{"preambulo/agradecimientos\_institucionales.tex"}
 
+\newpage
+\begin{center}
+    \missingfigure{\MakeUppercase{\LARGE{Página EN BLANCO.}}}
+\end{center}
+
 % agradecimientos personales
 \newpage
 \input{"preambulo/agradecimientos\_personales.tex"}
+
+\newpage
+\begin{center}
+    \missingfigure{\MakeUppercase{\LARGE{Página EN BLANCO.}}}
+\end{center}
 
 % dedicatoria
 \newpage
@@ -465,113 +529,33 @@ CD.MX.} \hfill {today}}}\\
 \pagenumbering{arabic}
 \subsection{Introducción}\label{sec-intro}
 
-Ver \textbf{Apartado}~\ref{sec-intro} para mas información.
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
-
-\begin{enumerate}
-\def\labelenumi{\roman{enumi}.}
-\tightlist
-\item
-  \textbf{Establecer el territorio de investigación:}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Describir el estado actual del conocimiento sobre el tema.\\
-  \item
-    Mostrar la relevancia o importancia del área de estudio.\\
-  \item
-    Revisar investigaciones previas en el campo.\\
-    \textbf{Ejemplos:}\\
-  \item
-    ``La evidencia sugiere que X es uno de los factores más relevantes
-    para\ldots{}''\\
-  \item
-    ``Investigaciones previas han demostrado que\ldots{}''
-  \end{itemize}
-\item
-  \textbf{Identificar un nicho:}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Motivar la realización del estudio destacando aspectos no abordados
-    o problemáticos.\\
-  \item
-    Esto puede incluir:
-
-    \begin{enumerate}
-    \def\labelenumii{\alph{enumii})}
-    \tightlist
-    \item
-      Señalar errores o limitaciones en investigaciones anteriores.\\
-    \item
-      Resaltar vacíos en el campo.\\
-    \item
-      Plantear preguntas sin respuesta.\\
-    \item
-      Proponer contribuciones novedosas.\\
-      \textbf{Ejemplos:}\\
-    \end{enumerate}
-  \item
-    ``El análisis de Smith no considera\ldots{}''\\
-  \item
-    ``Hasta ahora, los estudios sobre X no han abordado\ldots{}''
-  \end{itemize}
-\item
-  \textbf{Ocupar el nicho:}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Explicar cómo la investigación aborda el problema identificado.\\
-  \item
-    Definir objetivos, hipótesis o preguntas de investigación.\\
-  \item
-    Resaltar el valor y la novedad del estudio.\\
-  \item
-    Describir la estructura del artículo.\\
-    \textbf{Ejemplos:}\\
-  \item
-    ``El propósito de esta investigación es explorar la relación
-    entre\ldots{}''\\
-  \item
-    ``Este estudio proporciona nuevas perspectivas sobre\ldots{}''\\
-  \item
-    ``El artículo se divide en cuatro secciones\ldots{}''
-  \end{itemize}
-\end{enumerate}
-
-Estilo narrativo: Expositivo y conciso. Evita detalles técnicos
+Estilo narrativo: \textbf{Expositivo y conciso}. Evita detalles técnicos
 profundos.
 
-Gramática: Usa presente para hechos establecidos (ej.: ``La plasticidad
-neuronal es fundamental para\ldots{}'') y pasado para mencionar
-hallazgos previos (ej.: ``Estudios demostraron que\ldots{}'').
+\textbf{Gramática}: Usa presente para hechos establecidos (ej.:
+``\emph{La plasticidad neuronal es fundamental para\ldots{}}'') y pasado
+para mencionar hallazgos previos (ej.: ``\emph{Estudios demostraron
+que\ldots{}}'').
 
 \end{tcolorbox}
 
-En este trabajo investigamos el impacto del narcisismo encubierto en la
-práctica científica. Este tipo de narcisismo se manifiesta a menudo como
-una aparente obsesión por la perfección, aunque en realidad suele
-traducirse en un sabotaje pasivo-agresivo del método científico.
-Analizaremos cómo el narcisismo encubierto, disfrazado de falsa
-modestia, socava los pilares fundamentales de la ciencia: el pensamiento
-flexible, la crítica constructiva y la humildad intelectual. Después de
-todo, la frase ``Soy muy brillante, pero el mundo está contra mí'' suele
-significar ``Soy insufrible con los demás''. Entonces es \ac{5-ht} y
-\ac{mwm} y \ac{5-ht} y \ac{mwm}.
+El \ac{narc} es un trastorno de la personalidad que se caracteriza por
+una necesidad de admiración y validación, pero que se oculta detrás de
+una fachada de modestia, timidez y victimización
+(\citeproc{ref-First2013}{First, 2013}).
 
-Para ilustrar mejor el fenómeno, pensemos en esa persona que publica
-``Ugh, odio ser tan inteligente en un mundo de idiotas'' en Facebook
-mientras bebe vino de una botella que parece arte contemporáneo y
-escucha ``mejor música que la tuya''. Este es el narcisismo encubierto
-en acción: el arte de disfrazar la autoimportancia bajo el manto de la
-falsa modestia. Exploraremos cómo el cerebro de estos individuos
-transforma la autocrítica en un humblebrag (autoelogio disfrazado de
-queja) y por qué sus redes neuronales parecen estar organizando un
-festival de cine en su propio honor.
+Para ilustrar mejor el fenómeno, pensemos en esa persona que bebe vino
+de una botella que parece arte contemporáneo y escucha ``mejor música
+que la tuya'' mientras maldice al mundo por no reconocer su genio. Este
+es el \ac{narc} \todo{manejo de acrónimos automático en la plantilla} en
+acción: el arte de disfrazar la autoimportancia bajo el manto de la
+falsa modestia. De acuerdo a Sarcasmo
+(\citeproc{ref-AlgorithmShade2024}{2024}), el cerebro de estos
+individuos transforma la \emph{autocrítica} en un
+\textbf{\emph{humblebrag}} (autoelogio disfrazado de queja) ya qué sus
+redes neuronales organizan un festival de cine en su propio honor.
 
 \subsubsection{Ejemplos de Narcisismo
 Encubierto}\label{ejemplos-de-narcisismo-encubierto}
@@ -611,7 +595,7 @@ Manipulación pasivo-agresiva & Desinformación pública (ej: Goop, teorías
 sin base). \\
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, breakable, bottomrule=.15mm, colback=white, colframe=quarto-callout-color-frame, leftrule=.75mm, rightrule=.15mm, opacityback=0, left=2mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-color-frame, breakable, opacityback=0, bottomrule=.15mm, left=2mm, rightrule=.15mm, arc=.35mm, toprule=.15mm, colback=white]
 
 \vspace{-3mm}\textbf{Chuck McGill (Better Call Saul), caso de estudio}\vspace{3mm}
 
@@ -654,9 +638,10 @@ obtener validación de otras personas.}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-important-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-important-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Narcisista Encubierto vs.~Narcisista Evidente}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Narcisista Encubierto vs.~Narcisista Evidente}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-important-color!10!white]
 
-En la \textbf{Tabla}~\ref{tbl-comparacion}, se presentan las diferencias
+En la \textbf{Tabla}~\ref{tbl-comparacion}
+\todo{ejemplo de tabla renderizada con R}, se presentan las diferencias
 clave entre el narcisista encubierto y el narcisista evidente. Mientras
 que el narcisista evidente muestra abiertamente su grandiosidad y
 necesidad de admiración, el narcisista encubierto lo hace de manera más
@@ -697,146 +682,112 @@ historia, nadie lo hace mejor que yo' \\
 
 \subsection{Antecedentes}\label{antecedentes}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-Contenido: Revisión crítica de estudios previos, identificando vacíos o
-contradicciones que tu trabajo abordará.
-
-Estilo narrativo: Analítico y comparativo. Usa conectores como ``Sin
-embargo\ldots{}'', ``A diferencia de\ldots{}''.
-
-Gramática: Tiempos pasados para referirte a investigaciones previas
-(ej.: ``X et al.~(2020) observaron que\ldots{}'').
+\begin{itemize}
+\item
+  \textbf{Contenido}: Revisión crítica de estudios previos,
+  identificando vacíos o contradicciones que tu trabajo abordará.
+\item
+  \textbf{Estilo narrativo}: Analítico y comparativo. Usa conectores
+  como ``Sin embargo\ldots{}'', ``A diferencia de\ldots{}''.
+\end{itemize}
 
 \end{tcolorbox}
 
-(\citeproc{ref-NeurosisEnPijama2023}{2.0, 2023};
-\citeproc{ref-IAyNarcisismo2024}{ChatGPT-10, 2024};
-\citeproc{ref-FreudRecargado2023}{EgoMeter y BrainDrama, 2023};
-\citeproc{ref-DopaminaYSelfies2019}{González y Likeador, 2019};
-\citeproc{ref-NeuroFilter2020}{Hashtag, 2020};
-\citeproc{ref-SelfieCerebral2022}{Postureo y HumildeFalsa, 2022};
-\citeproc{ref-DejaDeLeer2021}{TerapiaExpress, 2021})
+De acuerdo a \ldots{} (\citeproc{ref-DopaminaYSelfies2019}{González y
+Likeador, 2019}; \citeproc{ref-EgoLab2023}{PeerReviewHater y
+DataCherryPicker, 2023}).
 
+Sin embargo, los \ac{narc} son peligrosos en la ciencia
 (\citeproc{ref-CienciaToxica2024}{Butterfly, 2024};
-\citeproc{ref-PopperLloruxf3n2022}{Falsacionista, 2022};
-\citeproc{ref-EgoLab2023}{PeerReviewHater y DataCherryPicker, 2023};
-\citeproc{ref-AlgorithmShade2024}{Sarcasmo, 2024})
-
-(\citeproc{ref-HolmesFraude2021}{Carreyrou, 2015};
-\citeproc{ref-McGillCaseStudy}{Peter Gould, 2015-\/-2022})
-
-\subsection{Planteamiento del
-problema}\label{planteamiento-del-problema}
-
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
-
-Contenido: Formula la pregunta de investigación de manera clara y
-específica. Ejemplo: ``¿Cómo afecta la exposición a estrés crónico a la
-neurogénesis en el hipocampo?''.
-
-Estilo narrativo: Directo y enfocado. Evita ambigüedades.
-
-Gramática: Usa interrogativas directas o frases
-declarati\textgreater vas (ej.: ``Se desconoce si\ldots{}'').
-
-\end{tcolorbox}
-
-\begin{quote}
-¿Cómo afecta el narcisismo encubierto a la práctica científica? Estos
-individuos suelen:
-\end{quote}
+\citeproc{ref-NeuroFilter2020}{Hashtag, 2020}) ya que estos individuos
+suelen:
 
 \begin{itemize}
 \tightlist
 \item
-  Descartar críticas como ``envidia académica''.
+  Descartar críticas como ``\textbf{envidia académica}''.
 \item
-  Adulterar datos para que coincidan con su ``brillante intuición''.
+  \textbf{Adulterar datos} para que coincidan con su ``brillante
+  intuición''.
 \item
-  Desacreditar colegas con frases como ``Su metodología es\ldots{}
-  interesante'' (traducción: ``Odio que tenga razón'').
-\item
-  ¿Es posible hacer ciencia rigurosa cuando tu cerebro interpreta
-  ``revisión por pares'' como ``ataque personal''?
+  \textbf{Desacreditar} colegas con frases como ``Su metodología
+  es\ldots{} peculiar'' (traducción: ``Odio que tenga razón'').
 \end{itemize}
+
+\subsection{Planteamiento del
+problema}\label{planteamiento-del-problema}
+
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
+
+\begin{itemize}
+\item
+  \textbf{Contenido}: Formula la pregunta de investigación de manera
+  clara y específica. Ejemplo: ``¿Cómo afecta la exposición a estrés
+  crónico a la neurogénesis en el hipocampo?''.
+\item
+  Estilo narrativo: Directo y enfocado. Evita ambigüedades.
+\item
+  Gramática: Usa interrogativas directas o frases declarativas (ej.:
+  ``Se desconoce si\ldots{}'').
+\end{itemize}
+
+\end{tcolorbox}
+
+\begin{quote}
+¿Cómo afecta el narcisismo encubierto a la práctica científica?
+
+¿Es posible hacer ciencia rigurosa cuando tu cerebro interpreta
+``revisión por pares'' como ``ataque personal''?
+\end{quote}
 
 \begin{quote}
 ¿Cómo detectar a un narcisista encubierto antes de que te invite a su
 monólogo sobre lo ``difícil que es ser tan inteligente y sensible''?
 \end{quote}
 
-La neurociencia sugiere que sus cerebros podrían tener áreas
-hiperactivas en la corteza prefrontal (responsable de la autoevaluación)
-y una amígdala que grita ``¡Mírame!'' cada vez que alguien recibe más
-likes. ¿Es esto evolución o un bug cerebral?
-
 \subsection{Justificación}\label{justificaciuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-Justificación
-
-Contenido: Explica por qué el problema es relevante científicamente,
-clínicamente o socialmente. Incluye posibles aplicaciones.
-
-Estilo narrativo: Persuasivo. Destaca el impacto potencial (ej.: ``Este
-estudio podría mejorar estrategias para\ldots{}'').
-
-Gramática: Usa futuro hipotético (``podría contribuir a\ldots{}'') y
-presente para realidades establecidas (``El estrés es un problema de
-salud pública'').
+\begin{itemize}
+\item
+  \textbf{Contenido}: Explica por qué el problema es relevante
+  científicamente, clínicamente o socialmente. Incluye posibles
+  aplicaciones.
+\item
+  \textbf{Estilo narrativo}: Persuasivo. Destaca el impacto potencial
+  (ej.: ``Este estudio podría mejorar estrategias para\ldots{}'').
+\end{itemize}
 
 \end{tcolorbox}
 
-Estudiar esto es urgente porque:
-
-\begin{itemize}
-\tightlist
-\item
-  La ciencia no es un monólogo, pero el narcisista encubierto la trata
-  como su TED Talk personal.
-\item
-  El sesgo de confirmación se vuelve dogma cuando el investigador cree
-  que ``mi teoría es tan obvia que hasta mi perro la entiende''.
-\item
-  La reputación de la ciencia se daña cuando los papers incluyen
-  ``Agradezco a nadie, porque yo lo hice todo'' en la sección de
-  acknowledgments.
-\item
-  Evitar que la palabra ``humildad'' sea secuestrada por narcisistas.
-\item
-  Diseñar apps que detecten mensajes pasivo-agresivos en redes sociales
-  (``NeuroFilter: ¿Seguro que quieres publicar eso?'').
-\item
-  Salvar a la humanidad de conversaciones que empiezan con ``Soy
-  demasiado empático, es mi maldición''
-\end{itemize}
+Estudiar el \ac{narc} es urgente porque la ciencia no es un monólogo,
+pero el narcisista encubierto la trata como su TED Talk personal.
+Además, el sesgo de confirmación se vuelve dogma cuando el investigador
+cree que ``mi teoría es tan obvia y correcta que hasta mi perro la
+entiende''. Por último, hay que evitar que la palabra ``humildad'' sea
+secuestrada por narcisistas y salvar a la humanidad de conversaciones
+que empiezan con ``Soy demasiado empático y por eso el mundo me odia, es
+mi maldición''
 
 \subsection{Objetivos}\label{objetivos}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
+\begin{itemize}
 \item
-  Objetivos
-
-  Contenido:
-
-\begin{verbatim}
- Objetivo general: Amplio y alineado con el problema.
-
- Objetivos específicos: Medibles y secuenciales.
-\end{verbatim}
-
-  Estilo narrativo: Imperativo o infinitivo (ej.:
+  \textbf{Objetivo general}: Amplio y alineado con el problema.
+\item
+  \textbf{Objetivos específicos}: Medibles y secuenciales.
+\item
+  \emph{Estilo narrativo}: Imperativo o infinitivo (ej.:
   ``Determinar\ldots{}'', ``Analizar\ldots{}'').
-
-  Gramática: Verbos de acción claros (evita ``estudiar'' si es vago; usa
-  ``cuantificar'', ``comparar'')
-\end{enumerate}
+\item
+  \emph{Gramática}: Verbos de acción claros (evita ``estudiar'' si es
+  vago; usa ``cuantificar'', ``comparar'')
+\end{itemize}
 
 \end{tcolorbox}
 
@@ -844,7 +795,7 @@ Estudiar esto es urgente porque:
 \def\labelenumi{\roman{enumi}.}
 \item
   Correlacionar puntuaciones de narcisismo encubierto con resistencia a
-  la revisión por pares.
+  la crítica por pares.
 \item
   Cuantificar la frecuencia de frases pasivo-agresivas en correos de
   rechazo a colaboradores (``Lamento que no hayas entendido mi
@@ -855,7 +806,7 @@ Estudiar esto es urgente porque:
 \item
   Desarrollar un algoritmo que detecte narcisismo encubierto en reviews
   anónimos (pista: busca la palabra ``claramente'' seguida de un insulto
-  elegante).
+  o desacreditación).
 \item
   Medir la actividad de la dopamina cuando alguien les dice ``Wow, eres
   tan auténtico''.
@@ -863,207 +814,40 @@ Estudiar esto es urgente porque:
 
 \subsection{Hipótesis}\label{hipuxf3tesis}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
-
-\begin{verbatim}
-Contenido: Propuesta verificable que responde al problema. Ejemplo: "La deprivación de sueño reduce la densidad sináptica en la corteza prefrontal".
-
-Estilo narrativo: Afirmativo y basado en teoría. Usa condicionales si es exploratorio (ej.: "Se hipotetiza que...").
-
-Gramática: Presente o futuro simple (ej.: "Los ratones expuestos mostrarán...").
-\end{verbatim}
-
-Hipótesis: No formularla como pregunta ni incluir metodología
-
-Es un error común formular la \textbf{hipótesis} como una
-\textbf{pregunta} porque, por definición, una hipótesis es una
-\textbf{afirmación o proposición} que se plantea como una posible
-respuesta a la pregunta de investigación. La hipótesis no es la pregunta
-en sí, sino una \textbf{predicción fundamentada} que se deriva de la
-teoría y los antecedentes, y que será sometida a prueba mediante la
-investigación. A continuación, te explico con más detalle por qué es
-importante evitar este error:
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsubsection{\texorpdfstring{\textbf{1. La hipótesis es una
-afirmación, no una
-pregunta}}{1. La hipótesis es una afirmación, no una pregunta}}\label{la-hipuxf3tesis-es-una-afirmaciuxf3n-no-una-pregunta}
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{itemize}
-\tightlist
 \item
-  \textbf{Razón científica}: La hipótesis debe ser una declaración que
-  pueda ser \textbf{verificada o refutada} empíricamente. Si se formula
-  como pregunta, no cumple con este requisito, ya que una pregunta no
-  puede ser probada directamente.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Correcto}: \emph{``La exposición a luz azul antes de dormir
-    reduce la calidad del sueño en adultos jóvenes.''}\\
-  \item
-    \textbf{Incorrecto}: \emph{``¿La exposición a luz azul antes de
-    dormir reduce la calidad del sueño en adultos jóvenes?''}
-  \end{itemize}
+  \textbf{Contenido}: Propuesta verificable que responde al problema.
+  Ejemplo: ``La deprivación de sueño reduce la densidad sináptica en la
+  corteza prefrontal''.
 \item
-  \textbf{Razón narrativa}: La pregunta corresponde al
-  \textbf{planteamiento del problema}, no a la hipótesis. La hipótesis
-  es el siguiente paso lógico, donde propones una respuesta tentativa
-  basada en la teoría y los antecedentes.
+  \textbf{Estilo narrativo}: Afirmativo y basado en teoría. Usa
+  condicionales si es exploratorio (ej.: ``Se hipotetiza que\ldots{}'').
+\item
+  \textbf{Gramática}: Presente o futuro simple (ej.: ``Los ratones
+  expuestos mostrarán\ldots{}'').
 \end{itemize}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{\texorpdfstring{\textbf{2. La hipótesis debe ser clara y
-específica}}{2. La hipótesis debe ser clara y específica}}\label{la-hipuxf3tesis-debe-ser-clara-y-especuxedfica}
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-\begin{itemize}
-\tightlist
-\item
-  Al formularla como pregunta, se pierde la claridad y precisión que
-  requiere una hipótesis científica. Una hipótesis bien formulada debe
-  incluir las \textbf{variables} involucradas y la \textbf{relación
-  esperada} entre ellas.
+NOTA: No formularla como pregunta ni incluir metodología. Es un error
+común formular la \textbf{hipótesis} como una \textbf{pregunta} porque,
+por definición, una hipótesis es una \textbf{afirmación o proposición}
+que se plantea como una posible respuesta a la pregunta de
+investigación. La hipótesis no es la pregunta en sí, sino una
+\textbf{predicción fundamentada} que se deriva de la teoría y los
+antecedentes, y que será sometida a prueba mediante la investigación.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Correcto}: \emph{``El aumento en los niveles de cortisol
-    está asociado con una disminución en el volumen del hipocampo.''}\\
-  \item
-    \textbf{Incorrecto}: \emph{``¿El aumento en los niveles de cortisol
-    está asociado con una disminución en el volumen del hipocampo?''}
-  \end{itemize}
-\end{itemize}
+Es muy importante que se formule una hipótesis que pueda ser refutada
+(ver
+``\href{https://www.scientificamerican.com/article/if-you-say-science-is-right-youre-wrong/}{If
+you say Science is Right, you're wrong}'' y
+\href{https://es.wikipedia.org/wiki/Falsacionismo}{Falsacionismo}).
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsubsection{\texorpdfstring{\textbf{3. La hipótesis guía el diseño
-metodológico}}{3. La hipótesis guía el diseño metodológico}}\label{la-hipuxf3tesis-guuxeda-el-diseuxf1o-metodoluxf3gico}
-
-\begin{itemize}
-\tightlist
-\item
-  Una hipótesis clara y afirmativa permite diseñar métodos específicos
-  para probarla. Si es una pregunta, no queda claro qué se está poniendo
-  a prueba.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Ejemplo}: Si la hipótesis es \emph{``El estrés crónico
-    reduce la neurogénesis en el hipocampo''}, puedes diseñar un
-    experimento para medir la neurogénesis en sujetos con y sin estrés.
-    Si es una pregunta, no sabes qué relación estás evaluando.
-  \end{itemize}
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsubsection{\texorpdfstring{\textbf{4. La hipótesis refleja el
-enfoque
-teórico}}{4. La hipótesis refleja el enfoque teórico}}\label{la-hipuxf3tesis-refleja-el-enfoque-teuxf3rico}
-
-\begin{itemize}
-\tightlist
-\item
-  La hipótesis debe estar basada en la teoría y los antecedentes. Al
-  formularla como afirmación, demuestras que has analizado la literatura
-  y propones una predicción fundamentada. Si es una pregunta, no se
-  evidencia este proceso.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Correcto}: \emph{``Basado en estudios previos, se hipotetiza
-    que la deprivación de sueño altera la conectividad funcional en la
-    red neuronal por defecto.''}\\
-  \item
-    \textbf{Incorrecto}: \emph{``¿La deprivación de sueño altera la
-    conectividad funcional en la red neuronal por defecto?''}
-  \end{itemize}
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsubsection{\texorpdfstring{\textbf{5. Coherencia con el método
-científico}}{5. Coherencia con el método científico}}\label{coherencia-con-el-muxe9todo-cientuxedfico}
-
-\begin{itemize}
-\tightlist
-\item
-  El método científico implica \textbf{observar, plantear preguntas,
-  formular hipótesis, predecir y probar}. La hipótesis es una
-  \textbf{predicción}, no una pregunta. Si la hipótesis se formula como
-  pregunta, se rompe la lógica del proceso científico.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Ejemplo}:
-
-    \begin{itemize}
-    \tightlist
-    \item
-      \textbf{Pregunta de investigación}: \emph{``¿Cómo afecta el
-      ejercicio aeróbico a la memoria de trabajo?''}\\
-    \item
-      \textbf{Hipótesis}: \emph{``El ejercicio aeróbico mejora el
-      rendimiento en tareas de memoria de trabajo.''}
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsubsection{\texorpdfstring{\textbf{Consejos para formular una
-hipótesis
-correctamente}}{Consejos para formular una hipótesis correctamente}}\label{consejos-para-formular-una-hipuxf3tesis-correctamente}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{Basarse en la teoría}: Usa los antecedentes para justificar tu
-  predicción.\\
-\item
-  \textbf{Ser específica}: Incluye las variables y la relación esperada
-  entre ellas.\\
-\item
-  \textbf{Ser comprobable}: Asegúrate de que pueda ser validada o
-  refutada con datos.\\
-\item
-  \textbf{Usar afirmaciones claras}: Evita preguntas, ambigüedades o
-  lenguaje vago.
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsubsection{\texorpdfstring{\textbf{Ejemplo de flujo
-correcto}}{Ejemplo de flujo correcto}}\label{ejemplo-de-flujo-correcto}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{Pregunta de investigación}: \emph{``¿Cómo afecta la meditación
-  mindfulness a la actividad de la amígdala en personas con
-  ansiedad?''}\\
-\item
-  \textbf{Hipótesis}: \emph{``La práctica de meditación mindfulness
-  reduce la actividad de la amígdala en personas con ansiedad.''}
-\end{enumerate}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-En resumen, formular la hipótesis como una pregunta es un error porque
-desdibuja su función como \textbf{predicción comprobable} y rompe la
-estructura lógica del método científico. Una hipótesis bien formulada
-debe ser una \textbf{afirmación clara, específica y basada en teoría}
-que guíe tu investigación. ¡Espero que esta explicación te sea útil para
-tu tesis! 😊
+\end{tcolorbox}
 
 \end{tcolorbox}
 
@@ -1076,33 +860,33 @@ Proponemos que el narcisista encubierto:
   convirtiendo hipótesis en horóscopos académicos (``Los datos no
   coinciden, pero mi intuición es un don'').
 \item
-  Usa la sección de conflicto de intereses para listar enemigos.
+  Usa la sección de conflicto de intereses para listar enemigos y la
+  revisión por pares como método de venganza contra sus enemigos
+  (\textbf{\emph{spoiler}}: TODOS son sus enemigos).
 \item
-  Su actividad cerebral al recibir críticas se asemeja a la de alguien
-  viendo arder su trofeo de kindergarten.
+  Su actividad cerebral al recibir críticas se asemeja a la de un niño
+  viendo arder su jugete en el kindergarten.
 \end{itemize}
 
 \subsection{Metodolodía}\label{metodoloduxeda}
 
-\begin{quote}
-Los sujetos negaron todos los resultados, diciendo ``Yo solo estoy aquí
-para ayudar a la ciencia'' (clásico).
-\end{quote}
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
-
-Contenido: Detalla diseño experimental, sujetos/muestras, técnicas (ej.:
-fMRI, PCR), análisis estadístico y ética.
-
-Estilo narrativo: Descriptivo y replicable. Usa pasiva para objetividad
-(ej.: ``Se utilizó un diseño doble ciego\ldots{}'').
-
-Gramática: Pasado si el estudio ya se realizó; presente si es una
-propuesta
+\begin{itemize}
+\item
+  \textbf{Contenido}: Detalla diseño experimental, sujetos/muestras,
+  técnicas (ej.: fMRI, PCR), análisis estadístico y ética.
+\item
+  \textbf{Estilo narrativo}: Descriptivo y replicable. Usa pasiva para
+  objetividad (ej.: ``Se utilizó un diseño doble ciego\ldots{}'').
+\item
+  \textbf{Gramática}: Pasado si el estudio ya se realizó; presente si es
+  una propuesta
+\end{itemize}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-note-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Términos Importantes}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Términos Importantes}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 \emph{Metodología}: Este término es más amplio y no solo describe los
 procedimientos específicos utilizados en el experimento, sino también
@@ -1125,14 +909,9 @@ métodos.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-caution-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-caution-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Voz Pasiva en Metodología}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-caution-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Voz Pasiva en Metodología}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-caution-color!10!white]
 
-Escribir en pasado, con voz pasiva (\emph{Daniel cocinó una tortilla},
-\emph{Una tortilla fue cocinada por Danie}, \emph{Daniel la cocinó},
-\emph{América fue colonizada en 1492}, \emph{Se reparan automóviles /Se
-espera la renuncia del mandatario}), en contraste de voz activa
-(\emph{El presidente pronunció un largo discurso}, \emph{Varios millones
-visitan Barcelona cada año})
+\todo{ejemplo de tabla renderizada con Markdown}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4583}}
@@ -1187,7 +966,7 @@ Han escrito & Han sido escritos \\
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Animales de Laboratorio}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Animales de Laboratorio}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
 Reportar el uso de animales de laboratorio, incluyendo:
 
@@ -1208,11 +987,18 @@ Reportar el uso de animales de laboratorio, incluyendo:
 
 \end{tcolorbox}
 
+\subsubsection{Disclaimer sobre los sujetos
+experimentales}\label{disclaimer-sobre-los-sujetos-experimentales}
+
+Todos los sujetos con personalidad narcisista negaron todos los métodos
+y resultados, diciendo ``Yo solo estoy aquí para ayudar a la ciencia''
+y/o ``yo haría un mejor estudio'' (clásico).
+
 \subsection{Resultados}\label{resultados}
 
 \subsubsection{Reporte de Animales}\label{reporte-de-animales}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
 Contenido: Datos crudos (tablas, gráficos) sin interpretación. Responde
 a cada objetivo.
@@ -1232,18 +1018,20 @@ interpretación
 a
 críticas}\label{scores-de-narcisismo-encubierto-correlacionan-con-rechazo-a-cruxedticas}
 
+\todo{ejemplo de gráfico renderizado con R y Datos Simulados en R.}
+
 \begin{verbatim}
 [1] "Correlación entre Narcisismo y Rechazo a Críticas: 0.69"
 \end{verbatim}
 
 \includegraphics{template_files/figure-pdf/unnamed-chunk-4-1.pdf}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-Puedes usar el paquete de R \texttt{report} (incluido en el código) para
-generar automáticamente un informe las pruebas pruebas estadísticas en
-formato APA. A pesar que por el momento solo lo hace en inglés, te
-ahorrará mucho tiempo y asegura calidad y estandarización de tu reporte.
+Puedes usar el paquete de R \texttt{report} (incluido en la app) para
+generar automáticamente un informe las pruebas estadísticas en formato
+APA. A pesar que por el momento solo lo hace en inglés, te ahorrará
+mucho tiempo y asegura calidad y estandarización de tu reporte.
 
 \begin{verbatim}
 Effect sizes were labelled following Funder's (2019) recommendations.
@@ -1253,17 +1041,20 @@ datos$Rechazo_Criticas is positive, statistically significant, and very large
 (r = 0.69, 95% CI [0.57, 0.78], t(98) = 9.33, p < .001)
 \end{verbatim}
 
-Y luego puedes incluir el resultado en tu texto:
+Y luego puedes incluir el resultado en tu texto
+\todo{Esto se hace de manera automática, por lo que si cambias tus datos, el reporte se actualiza automáticamente.}:
 
-A mayor narcisismo encubierto, menor citación de colegas en papers r =
-0.69, 95\% CI {[}0.57, 0.78{]}, t(98) = 9.33, p \textless{} .001.
+\begin{itemize}
+\tightlist
+\item
+  A mayor narcisismo encubierto, mayor rechazo a críticas constructivas
+  (r = 0.69, 95\% CI {[}0.57, 0.78{]}, t(98) = 9.33, p \textless{}
+  .001).
+\item
+  Correlación entre Narcisismo y Rechazo a Críticas: 0.69
+\end{itemize}
 
 \end{tcolorbox}
-
-Correlación entre Narcisismo y Rechazo a Críticas: 0.69
-
-Nivel de narcisismo vs.~Número de veces que dice `La literatura está
-equivocada'.
 
 \subsubsection{Activación cerebral en
 fMRI}\label{activaciuxf3n-cerebral-en-fmri}
@@ -1285,173 +1076,196 @@ pequeña'' vs.~``Tu teoría revolucionó la ciencia''.
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{Análisis de texto}\label{anuxe1lisis-de-texto}
+\subsubsection{Comparación de Calidad Científica entre
+Grupos}\label{comparaciuxf3n-de-calidad-cientuxedfica-entre-grupos}
 
-El 90\% de sus emails incluyen ``Con todo respeto\ldots{}'' seguido de
-un ``Pero esto es basura'' disfrazado de citas de Popper.
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Importante}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-important-color!10!white]
 
-\begin{verbatim}
-             Df Sum Sq Mean Sq F value Pr(>F)    
-Grupo         2  14046    7023   97.69 <2e-16 ***
-Residuals   147  10568      72                   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-\end{verbatim}
+En la app, se incluyen funciones de fórmulas estadísticas para analizar,
+graficar y reportar tus datos. Para hacerlo con tus datos, abre el
+archivo `./datos/datos.csv' y reemplaza las variables y nombres de
+columnas en el código de abajo. Recuerda usar el formato estándar en
+ciencia de datos (r, python, spss), el cual corresponde a: una fila por
+observación y una columna por variable.
+
+\end{tcolorbox}
 
 \includegraphics{template_files/figure-pdf/unnamed-chunk-6-1.pdf}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-color-frame, breakable, opacityback=0, bottomrule=.15mm, left=2mm, rightrule=.15mm, arc=.35mm, toprule=.15mm, colback=white]
+
+\vspace{-3mm}\textbf{Funciones Ejemplo para Revisar Supuestos y reportar en formato APA}\vspace{3mm}
 
 \begin{verbatim}
-The ANOVA (formula: Calidad_Cientifica ~ Grupo) suggests that:
 
-  - The main effect of Grupo is statistically significant and large (F(2, 147) =
-97.69, p < .001; Eta2 = 0.57, 95% CI [0.49, 1.00])
+    Shapiro-Wilk normality test
 
-Effect sizes were labelled following Field's (2013) recommendations.
+data:  datos_df$calidad_cientifica
+W = 0.94834, p-value = 1.309e-06
+\end{verbatim}
+
+\includegraphics{template_files/figure-pdf/unnamed-chunk-7-1.pdf}
+
+\begin{verbatim}
+Effect sizes were labelled following Cohen's (1988) recommendations.
+
+The Welch Two Sample t-test testing the difference of
+datos_df$calidad_cientifica by datos_df$personalidad (mean in group narcisista
+= 40.12, mean in group otro = 82.94) suggests that the effect is negative,
+statistically significant, and large (difference = -42.82, 95% CI [-46.02,
+-39.62], t(175.44) = -26.43, p < .001; Cohen's d = -3.74, 95% CI [-4.21,
+-3.26])
 \end{verbatim}
 
 \end{tcolorbox}
 
-El ANOVA y el gráfico sugieren que las personas con narcisismo
+La prueba de T y el gráfico sugieren que las personas con narcisismo
 encubierto tienden a tener una calidad científica significativamente
-menor que aquellas sin narcisismo. Esto respalda tu hipótesis de que el
-narcisismo encubierto es incompatible con la buena ciencia, ya que
-afecta negativamente la capacidad de colaborar, aceptar críticas y
-mantener estándares rigurosos.
+menor\ldots{}
+\todo{En discusión, habla mas sobre este resultado y c'omo respalda que el narcisismo encubierto es incompatible con la buena ciencia, ya que afecta negativamente la capacidad de colaborar, aceptar críticas y mantener estándares rigurosos}.
 
-\subsection{Extra}\label{extra}
+\subsubsection{Más resultados
+interesantes}\label{muxe1s-resultados-interesantes}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{p1 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Species, }\AttributeTok{y =}\NormalTok{ Sepal.Length, }\AttributeTok{fill =}\NormalTok{ Species)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{theme\_modern}\NormalTok{(}\AttributeTok{axis.text.angle =} \DecValTok{45}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_fill\_material\_d}\NormalTok{()}
+Más resultados y funciones interesantes para que te inspires. recuerda
+que puedes sustituir con tus datos y variables.
 
-\NormalTok{p2 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Species, }\AttributeTok{y =}\NormalTok{ Sepal.Length, }\AttributeTok{fill =}\NormalTok{ Species)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_violin}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{theme\_modern}\NormalTok{(}\AttributeTok{axis.text.angle =} \DecValTok{45}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_fill\_material\_d}\NormalTok{(}\AttributeTok{palette =} \StringTok{"ice"}\NormalTok{)}
-
-\NormalTok{p3 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Petal.Length, }\AttributeTok{y =}\NormalTok{ Petal.Width, }\AttributeTok{color =}\NormalTok{ Sepal.Length)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point2}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{theme\_modern}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{scale\_color\_material\_c}\NormalTok{(}\AttributeTok{palette =} \StringTok{"rainbow"}\NormalTok{)}
-
-\FunctionTok{plots}\NormalTok{(p1, p2, p3, }\AttributeTok{n\_columns =} \DecValTok{2}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\includegraphics{template_files/figure-pdf/unnamed-chunk-8-1.pdf}
 
 \subsection{Discusión}\label{discusiuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-\begin{verbatim}
-Contenido: Interpreta resultados, contrasta con antecedentes, explica limitaciones y sugiere futuras investigaciones.
-
-Estilo narrativo: Crítico y reflexivo. Usa comparaciones (ej.: "A diferencia de X, nuestros hallazgos sugieren...").
-
-Gramática: Presente para teorías aceptadas (ej.: "Estos datos apoyan la hipótesis de que...").
-\end{verbatim}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Contenido}: Interpreta resultados, contrasta con antecedentes,
+  explica limitaciones y sugiere futuras investigaciones.
+\item
+  \textbf{Estilo narrativo}: Crítico y reflexivo. Usa comparaciones
+  (ej.: ``A diferencia de X, nuestros hallazgos sugieren\ldots{}'').
+\item
+  \textbf{Gramática}: Presente para teorías aceptadas (ej.: ``Estos
+  datos apoyan la hipótesis de que\ldots{}'').
+\end{itemize}
 
 \end{tcolorbox}
 
 \subsection{Conclusión}\label{conclusiuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, colback=white, rightrule=.15mm, opacityback=0, left=2mm, opacitybacktitle=0.6, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, titlerule=0mm, bottomtitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, toprule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, toptitle=1mm, left=2mm, arc=.35mm, toprule=.15mm, colback=white, coltitle=black, leftrule=.75mm, breakable, opacityback=0, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, rightrule=.15mm, opacitybacktitle=0.6, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
-Contenido: Síntesis de hallazgos clave y su relevancia. No repitas
-resultados.
-
-Estilo narrativo: Conciso y enfocado en contribuciones.
-
-Gramática: Presente perfecto o presente (ej.: ``Este estudio demuestra
-que\ldots{}'')
-
-Conclusión: No introducir nuevos datos o ideas no discutidas
-previamente.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Contenido}: Síntesis de hallazgos clave y su relevancia. No
+  repitas resultados.
+\item
+  \textbf{Estilo narrativo}: Conciso y enfocado en contribuciones.
+\item
+  \textbf{Gramática}: Presente perfecto o presente (ej.: ``Este estudio
+  demuestra que\ldots{}'')
+\item
+  \textbf{Conclusión}: No introducir nuevos datos o ideas no discutidas
+  previamente.
+\end{itemize}
 
 \end{tcolorbox}
 
 El narcisismo encubierto es el virus silencioso de la mala ciencia:
 convierte la duda en herejía, la colaboración en competencia, y los
-journals en diarios íntimos con DOI. La solución no es expulsarlos, sino
-mandarlos a un retiro espiritual con Carl Sagan de fondo (``El universo
-no gira en torno a ti, Karen''). Propuesta: incluir tests de narcisismo
-en las convocatorias de financiamiento. Cof cof.
+journals en diarios íntimos. La solución no es expulsarlos, sino
+mandarlos a un retiro espiritual con Alan Watts de fondo (``\emph{The
+you who you think you are dpes not exists}'').
+
+\textbf{Propuesta}: incluir tests de narcisismo en las convocatorias de
+financiamiento. Cof cof.
 
 Confirmamos que el narcisismo encubierto es como el ajo en las recetas:
 todos creen que no lo usan, pero se huele a kilómetros. La neurociencia
 sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero
 con suficiente humor y memes, quizá podamos salvarlos (o al menos
-reírnos en el proceso). Propuesta final: un bot de Twitter que responda
-``Ok, Sigmund Freud'' a sus hilos existenciales.
+reírnos en el proceso). \textbf{Propuesta final}: un bot de Twitter que
+responda ``Ok, \emph{Kandel Sebastian Bach}'' a sus hilos existenciales.
 
 \subsection{Apéndices}\label{apuxe9ndices}
 
-\subsubsection{Supuestos Estadísticos}\label{supuestos-estaduxedsticos}
+\subsubsection{Funciones Extra}\label{funciones-extra}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{install.packages}\NormalTok{(}\StringTok{"easystats"}\NormalTok{)}
-\FunctionTok{install.packages}\NormalTok{(}\StringTok{"patchwork"}\NormalTok{)}
-\FunctionTok{library}\NormalTok{(performance)}
-\FunctionTok{library}\NormalTok{(see)}
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-color-frame, breakable, opacityback=0, bottomrule=.15mm, left=2mm, rightrule=.15mm, arc=.35mm, toprule=.15mm, colback=white]
 
-\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(wt }\SpecialCharTok{\textasciitilde{}}\NormalTok{ mpg, }\AttributeTok{data =}\NormalTok{ mtcars)}
-\NormalTok{check }\OtherTok{\textless{}{-}} \FunctionTok{check\_normality}\NormalTok{(model)}
+Revisar outliers en un modelo de regresión lineal (p.ej., ANOVA).
 
-\FunctionTok{plot}\NormalTok{(check, }\AttributeTok{type =} \StringTok{"qq"}\NormalTok{)}
+\includegraphics{template_files/figure-pdf/unnamed-chunk-9-1.pdf}
 
-\NormalTok{m }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt }\SpecialCharTok{+}\NormalTok{ cyl }\SpecialCharTok{+}\NormalTok{ gear }\SpecialCharTok{+}\NormalTok{ disp, }\AttributeTok{data =}\NormalTok{ mtcars)}
-\NormalTok{result }\OtherTok{\textless{}{-}} \FunctionTok{check\_collinearity}\NormalTok{(m)}
+\end{tcolorbox}
 
-\CommentTok{\# result}
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-color-frame, breakable, opacityback=0, bottomrule=.15mm, left=2mm, rightrule=.15mm, arc=.35mm, toprule=.15mm, colback=white]
 
-\FunctionTok{plot}\NormalTok{(result)}
-
-
-\CommentTok{\# select only mpg and disp (continuous)}
-\NormalTok{mt1 }\OtherTok{\textless{}{-}}\NormalTok{ mtcars[, }\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{)]}
-\CommentTok{\# create some fake outliers and attach outliers to main df}
-\NormalTok{mt2 }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(mt1, }\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{mpg =} \FunctionTok{c}\NormalTok{(}\DecValTok{37}\NormalTok{, }\DecValTok{40}\NormalTok{), }\AttributeTok{disp =} \FunctionTok{c}\NormalTok{(}\DecValTok{300}\NormalTok{, }\DecValTok{400}\NormalTok{), }\AttributeTok{hp =} \FunctionTok{c}\NormalTok{(}\DecValTok{110}\NormalTok{, }\DecValTok{120}\NormalTok{)))}
-\CommentTok{\# fit model with outliers}
-\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(disp }\SpecialCharTok{\textasciitilde{}}\NormalTok{ mpg }\SpecialCharTok{+}\NormalTok{ hp, }\AttributeTok{data =}\NormalTok{ mt2)}
-\NormalTok{result }\OtherTok{\textless{}{-}} \FunctionTok{check\_outliers}\NormalTok{(model)}
-
-\FunctionTok{plot}\NormalTok{(result, }\AttributeTok{type =} \StringTok{"dots"}\NormalTok{)}
-
-\NormalTok{model2 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt }\SpecialCharTok{+}\NormalTok{ cyl }\SpecialCharTok{+}\NormalTok{ gear }\SpecialCharTok{+}\NormalTok{ disp, }\AttributeTok{data =}\NormalTok{ mtcars)}
-\NormalTok{result2 }\OtherTok{\textless{}{-}} \FunctionTok{check\_normality}\NormalTok{(model2)}
-
-\FunctionTok{plot}\NormalTok{(result2, }\AttributeTok{type =} \StringTok{"density"}\NormalTok{)}
-
-\FunctionTok{plot}\NormalTok{(result2, }\AttributeTok{type =} \StringTok{"qq"}\NormalTok{)}
-
-\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt }\SpecialCharTok{+}\NormalTok{ cyl }\SpecialCharTok{+}\NormalTok{ gear }\SpecialCharTok{+}\NormalTok{ disp, }\AttributeTok{data =}\NormalTok{ mtcars)}
-\NormalTok{result }\OtherTok{\textless{}{-}} \FunctionTok{check\_heteroscedasticity}\NormalTok{(model)}
-\FunctionTok{plot}\NormalTok{(result)}
-\end{Highlighting}
-\end{Shaded}
-
-\subsubsection{Info}\label{info}
+Revisar y Citar paquetes de R utilizados en tu análisis.
 
 \begin{verbatim}
 Analyses were conducted using the R Statistical language (version 4.3.1; R Core
-Team, 2023) on Ubuntu 22.04.4 LTS, using the packages ggpubr (version 0.6.0;
-Kassambara A, 2023), report (version 0.5.7; Makowski D et al., 2023), ggplot2
-(version 3.4.4; Wickham H, 2016) and dplyr (version 1.1.3; Wickham H et al.,
-2023).
+Team, 2023) on Ubuntu 22.04.4 LTS, using the packages effectsize (version
+0.8.6; Ben-Shachar MS et al., 2020), ggpubr (version 0.6.0; Kassambara A,
+2023), parameters (version 0.21.2; Lüdecke D et al., 2020), performance
+(version 0.10.7; Lüdecke D et al., 2021), easystats (version 0.6.0; Lüdecke D
+et al., 2022), see (version 0.8.0; Lüdecke D et al., 2021), insight (version
+0.19.6; Lüdecke D et al., 2019), bayestestR (version 0.13.1; Makowski D et al.,
+2019), modelbased (version 0.8.6; Makowski D et al., 2020), report (version
+0.5.7; Makowski D et al., 2023), correlation (version 0.8.4; Makowski D et al.,
+2022), datawizard (version 0.9.0; Patil I et al., 2022), ggplot2 (version
+3.4.4; Wickham H, 2016) and dplyr (version 1.1.3; Wickham H et al., 2023).
 
 References
 ----------
+  - Ben-Shachar MS, Lüdecke D, Makowski D (2020). "effectsize: Estimation of
+Effect Size Indices and Standardized Parameters." _Journal of Open Source
+Software_, *5*(56), 2815. doi:10.21105/joss.02815
+<https://doi.org/10.21105/joss.02815>, <https://doi.org/10.21105/joss.02815>.
   - Kassambara A (2023). _ggpubr: 'ggplot2' Based Publication Ready Plots_. R
 package version 0.6.0, <https://rpkgs.datanovia.com/ggpubr/>.
+  - Lüdecke D, Ben-Shachar M, Patil I, Makowski D (2020). "Extracting, Computing
+and Exploring the Parameters of Statistical Models using R." _Journal of Open
+Source Software_, *5*(53), 2445. doi:10.21105/joss.02445
+<https://doi.org/10.21105/joss.02445>.
+  - Lüdecke D, Ben-Shachar M, Patil I, Waggoner P, Makowski D (2021).
+"performance: An R Package for Assessment, Comparison and Testing of
+Statistical Models." _Journal of Open Source Software_, *6*(60), 3139.
+doi:10.21105/joss.03139 <https://doi.org/10.21105/joss.03139>.
+  - Lüdecke D, Ben-Shachar M, Patil I, Wiernik B, Makowski D (2022). "easystats:
+Framework for Easy Statistical Modeling, Visualization, and Reporting." _CRAN_.
+R package, <https://easystats.github.io/easystats/>.
+  - Lüdecke D, Patil I, Ben-Shachar M, Wiernik B, Waggoner P, Makowski D (2021).
+"see: An R Package for Visualizing Statistical Models." _Journal of Open Source
+Software_, *6*(64), 3393. doi:10.21105/joss.03393
+<https://doi.org/10.21105/joss.03393>.
+  - Lüdecke D, Waggoner P, Makowski D (2019). "insight: A Unified Interface to
+Access Information from Model Objects in R." _Journal of Open Source Software_,
+*4*(38), 1412. doi:10.21105/joss.01412 <https://doi.org/10.21105/joss.01412>.
+  - Makowski D, Ben-Shachar M, Lüdecke D (2019). "bayestestR: Describing Effects
+and their Uncertainty, Existence and Significance within the Bayesian
+Framework." _Journal of Open Source Software_, *4*(40), 1541.
+doi:10.21105/joss.01541 <https://doi.org/10.21105/joss.01541>,
+<https://joss.theoj.org/papers/10.21105/joss.01541>.
+  - Makowski D, Ben-Shachar M, Patil I, Lüdecke D (2020). "Estimation of
+Model-Based Predictions, Contrasts and Means." _CRAN_.
+<https://github.com/easystats/modelbased>.
   - Makowski D, Lüdecke D, Patil I, Thériault R, Ben-Shachar M, Wiernik B (2023).
 "Automated Results Reporting as a Practical Tool to Improve Reproducibility and
 Methodological Best Practices Adoption." _CRAN_.
 <https://easystats.github.io/report/>.
+  - Makowski D, Wiernik B, Patil I, Lüdecke D, Ben-Shachar M (2022).
+"correlation: Methods for Correlation Analysis." Version 0.8.3,
+<https://CRAN.R-project.org/package=correlation>. Makowski D, Ben-Shachar M,
+Patil I, Lüdecke D (2020). "Methods and Algorithms for Correlation Analysis in
+R." _Journal of Open Source Software_, *5*(51), 2306. doi:10.21105/joss.02306
+<https://doi.org/10.21105/joss.02306>,
+<https://joss.theoj.org/papers/10.21105/joss.02306>.
+  - Patil I, Makowski D, Ben-Shachar M, Wiernik B, Bacher E, Lüdecke D (2022).
+"datawizard: An R Package for Easy Data Preparation and Statistical
+Transformations." _Journal of Open Source Software_, *7*(78), 4684.
+doi:10.21105/joss.04684 <https://doi.org/10.21105/joss.04684>.
   - R Core Team (2023). _R: A Language and Environment for Statistical
 Computing_. R Foundation for Statistical Computing, Vienna, Austria.
 <https://www.R-project.org/>.
@@ -1463,39 +1277,36 @@ of Data Manipulation_. https://dplyr.tidyverse.org,
 https://github.com/tidyverse/dplyr.
 \end{verbatim}
 
+\end{tcolorbox}
+
+\subsection{Agradecimientos}\label{agradecimientos}
+
+Cada participante con personalidad Narcisista que colaboró en este
+estudio, sin saberlo, merece un agradecimiento especial. Agradecemos a
+la Dra. Narcissus por su supervisión y a los Drs. Socrates y Plato por
+sus valiosas sugerencias. Agradecemos a la Facultad de Thespiae in
+Boeotia por su apoyo financiero y a la Academia of Athens por su
+infraestructura.
+
+Finalmente, los participantes con personalidad narcisista pidieron ser
+mencionados en los créditos como ``\emph{los verdaderos héroes de la
+ciencia}'' o ``\emph{los únicos que entienden la verdadera ciencia}''.
+
 \subsection*{Referencias}\label{referencias}
 \addcontentsline{toc}{subsection}{Referencias}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-NeurosisEnPijama2023}
-2.0, F. (2023). \emph{Neurosis en Pijama: La Neurociencia del Que Sube
-Historias Motivacionales a las 3 AM}. Silicon Valley: NeuroVanity Press.
-
 \bibitem[\citeproctext]{ref-CienciaToxica2024}
 Butterfly, Dr. I. R. (2024). \emph{Ciencia Tóxica: Cuando el Ego es el
 Principal {COI} (Conflicto de Intereses)}. Cambridge: Black Hole
 Academic Press.
 
-\bibitem[\citeproctext]{ref-HolmesFraude2021}
-Carreyrou, J. (2015). Bad Blood: Secrets and Lies in a Silicon Valley
-Startup. \emph{The Wall Street Journal}.
-
-\bibitem[\citeproctext]{ref-IAyNarcisismo2024}
-ChatGPT-10. (2024). \emph{¿Puede la {IA} Diagnosticar a tu Ex? Un
-Análisis de Mensajes Pasivo-Agresivos en Tinder} (Reporte Técnico N.º
-NTD-007). Instituto de Tecnologías Dramáticas.
-
-\bibitem[\citeproctext]{ref-FreudRecargado2023}
-EgoMeter, V., y BrainDrama, L. (2023). Why Do I Love Me? A Neural Survey
-of Self-Admiration. \emph{Journal of Questionable Personality Traits},
-\emph{42}(6), 1337-1350. \url{https://doi.org/10.1234/jqpt.2023.007}
-
-\bibitem[\citeproctext]{ref-PopperLloruxf3n2022}
-Falsacionista, K. (2022). El Narcisista y la Falsabilidad: Por Qué su
-Hipótesis es Inmune a los Hechos. En \emph{Psicopatologías de la Razón:
-Filosofía para Científicos con Daddy Issues} (pp. 777-789). Ediciones
-Crítica Constructiva (Ironicamente).
+\bibitem[\citeproctext]{ref-First2013}
+First, M. B. (2013). Diagnostic and Statistical Manual of Mental
+Disorders, 5th Edition, and Clinical Utility. \emph{Journal of Nervous
+\& Mental Disease}, \emph{201}(9), 727-729.
+\url{https://doi.org/10.1097/nmd.0b013e3182a2168a}
 
 \bibitem[\citeproctext]{ref-DopaminaYSelfies2019}
 González, D., y Likeador, S. (2019). La Curva de la Dopamina en
@@ -1515,26 +1326,11 @@ Lab: How Covert Narcissism Corrupts Citation Networks. \emph{Journal of
 Irreproducible Results}, \emph{12}, 45-69.
 \url{https://doi.org/10.6666/jir.2023.045}
 
-\bibitem[\citeproctext]{ref-McGillCaseStudy}
-Peter Gould, V. G. y. (2015-\/-2022). \emph{Better Call Saul: Análisis
-de Chuck McGill como arquetipo del narcisista encubierto en entornos de
-alta exigencia}.
-
-\bibitem[\citeproctext]{ref-SelfieCerebral2022}
-Postureo, C., y HumildeFalsa, M. (2022). \emph{Humblebrags \& Brain
-Scans: {fMRI} No Miente, Tu Perfil de Instagram Sí} (1st ed.). Berlin:
-Springer.
-
 \bibitem[\citeproctext]{ref-AlgorithmShade2024}
 Sarcasmo, A. (2024). \emph{Detecting Academic Narcissism via
 Passive-Aggressive LaTeX Comments: A Machine Learning Approach}
 (Technical Report N.º IDPR-666). Recuperado de Institute of Dramatic
 Peer Review website: \url{https://arxiv.org/abs/2404.01joke}
-
-\bibitem[\citeproctext]{ref-DejaDeLeer2021}
-TerapiaExpress, A. (2021). \emph{Deja de Leer Esto y Ve a Terapia: Guía
-de Supervivencia para el Autoengañado Crónico}. Buenos Aires: Ediciones
-Ironía Sana.
 
 \end{CSLReferences}
 

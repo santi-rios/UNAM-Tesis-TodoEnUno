@@ -10,35 +10,35 @@
 % Primera portada
 \begin{titlepage}
     \begin{center}
-        \vspace*{-0.2cm} % Ajusta este valor conforme sea necesario
+        \vspace*{-0.5cm} % Ajusta este valor conforme sea necesario
         
         % Logo de la UNAM
-        \includegraphics[width=3.5cm]{$if(tesis.logo)$ $tesis.logo$ $endif$}\\[0.5cm]
+        \includegraphics[width=4.5cm]{$if(tesis.logo)$ $tesis.logo$ $endif$}\\[0.5cm]
         
         % Nombre de la Universidad
         {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
         
         % Programa de posgrado
-        {\large \textbf{\MakeUppercase{$tesis.programa$}}}\\[0.3cm]
+        {\large \textbf{\MakeUppercase{$tesis.programa$}}}\\[1cm]
         
         % Facultad y área
-        {\large \MakeUppercase{$tesis.facultad$}}\\[0.2cm]
-        {\large \MakeUppercase{$tesis.departmento$}}\\[0.3cm]
+        {\large \MakeUppercase{$tesis.facultad$}}\\[0.4cm]
+        {\large \MakeUppercase{$tesis.departmento$}}\\[1.2cm]
         
         % Título de la tesis
-        {\Large \textbf{$title$}}\\[0.2cm]
-        {\small $if(subtitle)$ $subtitle$ $endif$}\\[0.2cm]
+        {\Large \textbf{$title$}}\\[0.3cm]
+        {\small $if(subtitle)$ $subtitle$ $endif$}\\[0.6cm]
         
         % Texto "Tesis"
-        {\LARGE \textbf{T E S I S}}\\[0.5cm]
+        {\LARGE \textbf{T E S I S}}\\[1cm]
         
         % Texto de grado
         {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.15cm]
-        {\Large \textbf{$tesis.grado$}}\\[0.4cm]
+        {\Large \textbf{$tesis.grado$}}\\[0.8cm]
         
         % Autor
-        {\large PRESENTA:}\\[0.1cm]
-        {\LARGE \textbf{$tesis.nombre$}}\\[0.4cm]
+        {\large PRESENTA:}\\[0.3cm]
+        {\LARGE \textbf{$tesis.nombre$}}\\[0.8cm]
         
         % Tutor y comité
         {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
@@ -49,7 +49,6 @@
         {\small $if(tesis.sinodales.uno)$ $tesis.sinodales.uno$ $endif$} {\small $if(tesis.sinodales.unofacultad)$ $tesis.sinodales.unofacultad$ $endif$}\\
         {\small $if(tesis.sinodales.dos)$ $tesis.sinodales.dos$ $endif$} {\small $if(tesis.sinodales.dosfacultad)$ $tesis.sinodales.dosfacultad$ $endif$}\\
         
-        Lugar y fecha
         \vfill
         $if(tesis.lugar)$
         {\small \textbf{{$tesis.lugar$} \hfill {$tesis.fecha$}}}\\
@@ -66,6 +65,56 @@
     \missingfigure[figcolor=white]{\MakeUppercase{\LARGE{Página reservada para Derechos de Autor por parte de la Dirección de Bibliotecas.}}}
 \end{center}
 
+% Segunda portada
+\begin{titlepage}
+    \begin{center}
+        \vspace*{-0.5cm} % Ajusta este valor conforme sea necesario
+        
+        % Logo de la UNAM
+        \includegraphics[width=4.5cm]{$if(tesis.logo)$ $tesis.logo$ $endif$}\\[0.5cm]
+        
+        % Nombre de la Universidad
+        {\large \textbf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}\\[0.4cm]
+        
+        % Programa de posgrado
+        {\large \textbf{\MakeUppercase{$tesis.programa$}}}\\[1cm]
+        
+        % Facultad y área
+        {\large \MakeUppercase{$tesis.facultad$}}\\[0.4cm]
+        {\large \MakeUppercase{$tesis.departmento$}}\\[1.2cm]
+        
+        % Título de la tesis
+        {\Large \textbf{$title$}}\\[0.3cm]
+        {\small $if(subtitle)$ $subtitle$ $endif$}\\[0.6cm]
+        
+        % Texto "Tesis"
+        {\LARGE \textbf{T E S I S}}\\[1cm]
+        
+        % Texto de grado
+        {\large QUE PARA OPTAR POR EL GRADO DE:}\\[0.15cm]
+        {\Large \textbf{$tesis.grado$}}\\[0.8cm]
+        
+        % Autor
+        {\large PRESENTA:}\\[0.3cm]
+        {\LARGE \textbf{$tesis.nombre$}}\\[0.8cm]
+        
+        % Tutor y comité
+        {\small \textbf{TUTOR PRINCIPAL DE TESIS:}}\\
+        {\small $if(tesis.supervisor.name)$ $tesis.supervisor.name$ $endif$}\\
+        {\small $if(tesis.supervisor.faculty)$ $tesis.supervisor.faculty$ $endif$}\\[0.5cm]
+        
+        {\small \textbf{COMITÉ TUTOR:}}\\
+        {\small $if(tesis.sinodales.uno)$ $tesis.sinodales.uno$ $endif$} {\small $if(tesis.sinodales.unofacultad)$ $tesis.sinodales.unofacultad$ $endif$}\\
+        {\small $if(tesis.sinodales.dos)$ $tesis.sinodales.dos$ $endif$} {\small $if(tesis.sinodales.dosfacultad)$ $tesis.sinodales.dosfacultad$ $endif$}\\
+        
+        \vfill
+        $if(tesis.lugar)$
+        {\small \textbf{{$tesis.lugar$} \hfill {$tesis.fecha$}}}\\
+        $endif$
+        
+    \end{center}
+\end{titlepage}
+
 % Tercera página de \missingfigure
 \newpage
 \begin{center}
@@ -78,11 +127,21 @@ $if(tesis.agradecimientos)$
 \input{"$tesis.agradecimientos$"}
 $endif$
 
+\newpage
+\begin{center}
+    \missingfigure{\MakeUppercase{\LARGE{Página EN BLANCO.}}}
+\end{center}
+
 % agradecimientos personales
 \newpage
 $if(tesis.personales)$
 \input{"$tesis.personales$"}
 $endif$
+
+\newpage
+\begin{center}
+    \missingfigure{\MakeUppercase{\LARGE{Página EN BLANCO.}}}
+\end{center}
 
 % dedicatoria
 \newpage
