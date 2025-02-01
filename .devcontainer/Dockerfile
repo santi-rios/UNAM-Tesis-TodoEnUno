@@ -21,7 +21,7 @@ RUN tlmgr install \
     bookmark
 
 # Install R packages (if needed)
-RUN Rscript -e "install.packages(c('rmarkdown', 'knitr', 'bookdown', 'tidyverse'))"
+RUN Rscript -e "install.packages(c('rmarkdown', 'knitr', 'bookdown', 'tidyverse', 'easystats', 'ggpubr', 'fmri', 'patchwork'))"
 
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
