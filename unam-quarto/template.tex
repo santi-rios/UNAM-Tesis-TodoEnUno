@@ -50,6 +50,46 @@
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -404,7 +444,7 @@ Científico }\\[1cm]
 }
 \subsection{Introducción}\label{sec-intro}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 \begin{enumerate}
 \def\labelenumi{\roman{enumi}.}
@@ -547,7 +587,7 @@ Manipulación pasivo-agresiva & Desinformación pública (ej: Goop, teorías
 sin base). \\
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, arc=.35mm, left=2mm, breakable, colback=white, rightrule=.15mm, bottomrule=.15mm, toprule=.15mm, colframe=quarto-callout-color-frame, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, toprule=.15mm, left=2mm, colframe=quarto-callout-color-frame, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, opacityback=0, colback=white]
 
 \vspace{-3mm}\textbf{Chuck McGill (Better Call Saul), caso de estudio}\vspace{3mm}
 
@@ -589,7 +629,7 @@ obtener validación de otras personas.}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Narcisista Encubierto vs.~Narcisista Evidente}, breakable, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-important-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-important-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Narcisista Encubierto vs.~Narcisista Evidente}, colframe=quarto-callout-important-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 En la Table~\ref{tbl-comparacion}, se presentan las diferencias clave
 entre el narcisista encubierto y el narcisista evidente. Mientras que el
@@ -632,7 +672,7 @@ historia, nadie lo hace mejor que yo' \\
 
 \subsection{Antecedentes}\label{antecedentes}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Contenido: Revisión crítica de estudios previos, identificando vacíos o
 contradicciones que tu trabajo abordará.
@@ -657,7 +697,7 @@ BrainDrama 2023)
 \subsection{Planteamiento del
 problema}\label{planteamiento-del-problema}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Contenido: Formula la pregunta de investigación de manera clara y
 específica. Ejemplo: ``¿Cómo afecta la exposición a estrés crónico a la
@@ -701,7 +741,7 @@ likes. ¿Es esto evolución o un bug cerebral?
 
 \subsection{Justificación}\label{justificaciuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Justificación
 
@@ -743,7 +783,7 @@ Estudiar esto es urgente porque:
 
 \subsection{Objetivos}\label{objetivos}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -791,7 +831,7 @@ Estudiar esto es urgente porque:
 
 \subsection{Hipótesis}\label{hipuxf3tesis}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 \begin{verbatim}
 Contenido: Propuesta verificable que responde al problema. Ejemplo: "La deprivación de sueño reduce la densidad sináptica en la corteza prefrontal".
@@ -1017,7 +1057,7 @@ Los sujetos negaron todos los resultados, diciendo ``Yo solo estoy aquí
 para ayudar a la ciencia'' (clásico).
 \end{quote}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Contenido: Detalla diseño experimental, sujetos/muestras, técnicas (ej.:
 fMRI, PCR), análisis estadístico y ética.
@@ -1030,7 +1070,7 @@ propuesta
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Términos Importantes}, breakable, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-note-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Términos Importantes}, colframe=quarto-callout-note-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 \emph{Metodología}: Este término es más amplio y no solo describe los
 procedimientos específicos utilizados en el experimento, sino también
@@ -1053,7 +1093,7 @@ métodos.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Voz Pasiva en Metodología}, breakable, toptitle=1mm, colbacktitle=quarto-callout-caution-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-caution-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-caution-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Voz Pasiva en Metodología}, colframe=quarto-callout-caution-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Escribir en pasado, con voz pasiva (\emph{Daniel cocinó una tortilla},
 \emph{Una tortilla fue cocinada por Danie}, \emph{Daniel la cocinó},
@@ -1115,7 +1155,7 @@ Han escrito & Han sido escritos \\
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Animales de Laboratorio}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Animales de Laboratorio}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Reportar el uso de animales de laboratorio, incluyendo:
 
@@ -1138,7 +1178,9 @@ Reportar el uso de animales de laboratorio, incluyendo:
 
 \subsection{Resultados}\label{resultados}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\subsubsection{Reporte de Animales}\label{reporte-de-animales}
+
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Contenido: Datos crudos (tablas, gráficos) sin interpretación. Responde
 a cada objetivo.
@@ -1162,10 +1204,29 @@ críticas}\label{scores-de-narcisismo-encubierto-correlacionan-con-rechazo-a-cru
 [1] "Correlación entre Narcisismo y Rechazo a Críticas: 0.69"
 \end{verbatim}
 
-\includegraphics{template_files/figure-pdf/unnamed-chunk-3-1.pdf}
+\includegraphics{template_files/figure-pdf/unnamed-chunk-4-1.pdf}
 
-A mayor narcisismo encubierto, menor citación de colegas en papers
-\texttt{(r\ =\ -0.99,\ p\ \textless{}\ 0.001)}.
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+
+Puedes usar el paquete de R \texttt{report} (incluido en el código) para
+generar automáticamente un informe las pruebas pruebas estadísticas en
+formato APA. A pesar que por el momento solo lo hace en inglés, te
+ahorrará mucho tiempo y asegura calidad y estandarización de tu reporte.
+
+\begin{verbatim}
+Effect sizes were labelled following Funder's (2019) recommendations.
+
+The Pearson's product-moment correlation between datos$Narcisismo and
+datos$Rechazo_Criticas is positive, statistically significant, and very large
+(r = 0.69, 95% CI [0.57, 0.78], t(98) = 9.33, p < .001)
+\end{verbatim}
+
+Y luego puedes incluir el resultado en tu texto:
+
+A mayor narcisismo encubierto, menor citación de colegas en papers r =
+0.69, 95\% CI {[}0.57, 0.78{]}, t(98) = 9.33, p \textless{} .001.
+
+\end{tcolorbox}
 
 Correlación entre Narcisismo y Rechazo a Críticas: 0.69
 
@@ -1178,30 +1239,47 @@ fMRI}\label{activaciuxf3n-cerebral-en-fmri}
 La amígdala se activa un 250\% más al escuchar ``Tu muestra es muy
 pequeña'' vs.~``Tu teoría revolucionó la ciencia''.
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# install.packages("fmri")}
+\NormalTok{devtools}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"muschellij2/fmri"}\NormalTok{)}
+\CommentTok{\# https://johnmuschelli.com/Neuroimaging\_in\_R/fmri\_proc.html\#15}
+\FunctionTok{library}\NormalTok{(fmri)}
+
+\FunctionTok{source}\NormalTok{(}\StringTok{"https://neuroconductor.org/neurocLite.R"}\NormalTok{)}
+\FunctionTok{neuro\_install}\NormalTok{(}\StringTok{"neurobase"}\NormalTok{, }\AttributeTok{release =} \StringTok{"stable"}\NormalTok{)}
+
+\FunctionTok{orthographic}\NormalTok{(data)}
+\end{Highlighting}
+\end{Shaded}
+
 \subsubsection{Análisis de texto}\label{anuxe1lisis-de-texto}
 
 El 90\% de sus emails incluyen ``Con todo respeto\ldots{}'' seguido de
 un ``Pero esto es basura'' disfrazado de citas de Popper.
 
 \begin{verbatim}
-           Grupo Calidad_Cientifica
-1 Con Narcisismo           44.39524
-2 Con Narcisismo           47.69823
-3 Con Narcisismo           65.58708
-4 Con Narcisismo           50.70508
-5 Con Narcisismo           51.29288
-6 Con Narcisismo           67.15065
-\end{verbatim}
-
-\begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)    
-Grupo        1  11151   11151     133 <2e-16 ***
-Residuals   98   8218      84                   
+             Df Sum Sq Mean Sq F value Pr(>F)    
+Grupo         2  14046    7023   97.69 <2e-16 ***
+Residuals   147  10568      72                   
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
 
-\includegraphics{template_files/figure-pdf/unnamed-chunk-4-1.pdf}
+\includegraphics{template_files/figure-pdf/unnamed-chunk-6-1.pdf}
+
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
+
+\begin{verbatim}
+The ANOVA (formula: Calidad_Cientifica ~ Grupo) suggests that:
+
+  - The main effect of Grupo is statistically significant and large (F(2, 147) =
+97.69, p < .001; Eta2 = 0.57, 95% CI [0.49, 1.00])
+
+Effect sizes were labelled following Field's (2013) recommendations.
+\end{verbatim}
+
+\end{tcolorbox}
 
 El ANOVA y el gráfico sugieren que las personas con narcisismo
 encubierto tienden a tener una calidad científica significativamente
@@ -1212,57 +1290,30 @@ mantener estándares rigurosos.
 
 \subsection{Extra}\label{extra}
 
-\begin{verbatim}
-We fitted a linear model (estimated using OLS) to predict Sepal.Length with
-Species (formula: Sepal.Length ~ Species). The model explains a statistically
-significant and substantial proportion of variance (R2 = 0.62, F(2, 147) =
-119.26, p < .001, adj. R2 = 0.61). The model's intercept, corresponding to
-Species = setosa, is at 5.01 (95% CI [4.86, 5.15], t(147) = 68.76, p < .001).
-Within this model:
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p1 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Species, }\AttributeTok{y =}\NormalTok{ Sepal.Length, }\AttributeTok{fill =}\NormalTok{ Species)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme\_modern}\NormalTok{(}\AttributeTok{axis.text.angle =} \DecValTok{45}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_material\_d}\NormalTok{()}
 
-  - The effect of Species [versicolor] is statistically significant and positive
-(beta = 0.93, 95% CI [0.73, 1.13], t(147) = 9.03, p < .001; Std. beta = 1.12,
-95% CI [0.88, 1.37])
-  - The effect of Species [virginica] is statistically significant and positive
-(beta = 1.58, 95% CI [1.38, 1.79], t(147) = 15.37, p < .001; Std. beta = 1.91,
-95% CI [1.66, 2.16])
+\NormalTok{p2 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Species, }\AttributeTok{y =}\NormalTok{ Sepal.Length, }\AttributeTok{fill =}\NormalTok{ Species)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_violin}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme\_modern}\NormalTok{(}\AttributeTok{axis.text.angle =} \DecValTok{45}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_material\_d}\NormalTok{(}\AttributeTok{palette =} \StringTok{"ice"}\NormalTok{)}
 
-Standardized parameters were obtained by fitting the model on a standardized
-version of the dataset. 95% Confidence Intervals (CIs) and p-values were
-computed using a Wald t-distribution approximation.
-\end{verbatim}
+\NormalTok{p3 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(iris, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Petal.Length, }\AttributeTok{y =}\NormalTok{ Petal.Width, }\AttributeTok{color =}\NormalTok{ Sepal.Length)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point2}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme\_modern}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{scale\_color\_material\_c}\NormalTok{(}\AttributeTok{palette =} \StringTok{"rainbow"}\NormalTok{)}
 
-\includegraphics{template_files/figure-pdf/unnamed-chunk-6-1.pdf}
-
-\includegraphics{template_files/figure-pdf/unnamed-chunk-7-1.pdf}
-
-\includegraphics{template_files/figure-pdf/unnamed-chunk-8-1.pdf}
-
-\includegraphics{template_files/figure-pdf/unnamed-chunk-9-1.pdf}
-
-\includegraphics{template_files/figure-pdf/unnamed-chunk-10-1.pdf}
-
-\includegraphics{template_files/figure-pdf/unnamed-chunk-10-2.pdf}
-
-\includegraphics{template_files/figure-pdf/unnamed-chunk-11-1.pdf}
-
-\begin{verbatim}
-Estimated Marginal Means
-
-Species    | Mean |   SE |       95% CI
----------------------------------------
-setosa     | 3.43 | 0.05 | [3.33, 3.52]
-versicolor | 2.77 | 0.05 | [2.68, 2.86]
-virginica  | 2.97 | 0.05 | [2.88, 3.07]
-
-Marginal means estimated at Species
-\end{verbatim}
-
-\includegraphics{template_files/figure-pdf/unnamed-chunk-12-1.pdf}
+\FunctionTok{plots}\NormalTok{(p1, p2, p3, }\AttributeTok{n\_columns =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \subsection{Discusión}\label{discusiuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 \begin{verbatim}
 Contenido: Interpreta resultados, contrasta con antecedentes, explica limitaciones y sugiere futuras investigaciones.
@@ -1276,7 +1327,7 @@ Gramática: Presente para teorías aceptadas (ej.: "Estos datos apoyan la hipót
 
 \subsection{Conclusión}\label{conclusiuxf3n}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, coltitle=black, bottomtitle=1mm, titlerule=0mm, left=2mm, colframe=quarto-callout-tip-color-frame, colback=white, arc=.35mm, bottomrule=.15mm, toprule=.15mm, opacitybacktitle=0.6, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, toprule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, titlerule=0mm, coltitle=black, breakable, toptitle=1mm, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, opacityback=0, colback=white]
 
 Contenido: Síntesis de hallazgos clave y su relevancia. No repitas
 resultados.
@@ -1304,6 +1355,81 @@ sugiere que sus cerebros son máquinas de autoengaño sofisticadas, pero
 con suficiente humor y memes, quizá podamos salvarlos (o al menos
 reírnos en el proceso). Propuesta final: un bot de Twitter que responda
 ``Ok, Sigmund Freud'' a sus hilos existenciales.
+
+\subsection{Apéndices}\label{apuxe9ndices}
+
+\subsubsection{Supuestos Estadísticos}\label{supuestos-estaduxedsticos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"easystats"}\NormalTok{)}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"patchwork"}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(performance)}
+\FunctionTok{library}\NormalTok{(see)}
+
+\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(wt }\SpecialCharTok{\textasciitilde{}}\NormalTok{ mpg, }\AttributeTok{data =}\NormalTok{ mtcars)}
+\NormalTok{check }\OtherTok{\textless{}{-}} \FunctionTok{check\_normality}\NormalTok{(model)}
+
+\FunctionTok{plot}\NormalTok{(check, }\AttributeTok{type =} \StringTok{"qq"}\NormalTok{)}
+
+\NormalTok{m }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt }\SpecialCharTok{+}\NormalTok{ cyl }\SpecialCharTok{+}\NormalTok{ gear }\SpecialCharTok{+}\NormalTok{ disp, }\AttributeTok{data =}\NormalTok{ mtcars)}
+\NormalTok{result }\OtherTok{\textless{}{-}} \FunctionTok{check\_collinearity}\NormalTok{(m)}
+
+\CommentTok{\# result}
+
+\FunctionTok{plot}\NormalTok{(result)}
+
+
+\CommentTok{\# select only mpg and disp (continuous)}
+\NormalTok{mt1 }\OtherTok{\textless{}{-}}\NormalTok{ mtcars[, }\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{)]}
+\CommentTok{\# create some fake outliers and attach outliers to main df}
+\NormalTok{mt2 }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(mt1, }\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{mpg =} \FunctionTok{c}\NormalTok{(}\DecValTok{37}\NormalTok{, }\DecValTok{40}\NormalTok{), }\AttributeTok{disp =} \FunctionTok{c}\NormalTok{(}\DecValTok{300}\NormalTok{, }\DecValTok{400}\NormalTok{), }\AttributeTok{hp =} \FunctionTok{c}\NormalTok{(}\DecValTok{110}\NormalTok{, }\DecValTok{120}\NormalTok{)))}
+\CommentTok{\# fit model with outliers}
+\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(disp }\SpecialCharTok{\textasciitilde{}}\NormalTok{ mpg }\SpecialCharTok{+}\NormalTok{ hp, }\AttributeTok{data =}\NormalTok{ mt2)}
+\NormalTok{result }\OtherTok{\textless{}{-}} \FunctionTok{check\_outliers}\NormalTok{(model)}
+
+\FunctionTok{plot}\NormalTok{(result, }\AttributeTok{type =} \StringTok{"dots"}\NormalTok{)}
+
+\NormalTok{model2 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt }\SpecialCharTok{+}\NormalTok{ cyl }\SpecialCharTok{+}\NormalTok{ gear }\SpecialCharTok{+}\NormalTok{ disp, }\AttributeTok{data =}\NormalTok{ mtcars)}
+\NormalTok{result2 }\OtherTok{\textless{}{-}} \FunctionTok{check\_normality}\NormalTok{(model2)}
+
+\FunctionTok{plot}\NormalTok{(result2, }\AttributeTok{type =} \StringTok{"density"}\NormalTok{)}
+
+\FunctionTok{plot}\NormalTok{(result2, }\AttributeTok{type =} \StringTok{"qq"}\NormalTok{)}
+
+\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt }\SpecialCharTok{+}\NormalTok{ cyl }\SpecialCharTok{+}\NormalTok{ gear }\SpecialCharTok{+}\NormalTok{ disp, }\AttributeTok{data =}\NormalTok{ mtcars)}
+\NormalTok{result }\OtherTok{\textless{}{-}} \FunctionTok{check\_heteroscedasticity}\NormalTok{(model)}
+\FunctionTok{plot}\NormalTok{(result)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Info}\label{info}
+
+\begin{verbatim}
+Analyses were conducted using the R Statistical language (version 4.3.1; R Core
+Team, 2023) on Ubuntu 22.04.4 LTS, using the packages ggpubr (version 0.6.0;
+Kassambara A, 2023), report (version 0.5.7; Makowski D et al., 2023), ggplot2
+(version 3.4.4; Wickham H, 2016) and dplyr (version 1.1.3; Wickham H et al.,
+2023).
+
+References
+----------
+  - Kassambara A (2023). _ggpubr: 'ggplot2' Based Publication Ready Plots_. R
+package version 0.6.0, <https://rpkgs.datanovia.com/ggpubr/>.
+  - Makowski D, Lüdecke D, Patil I, Thériault R, Ben-Shachar M, Wiernik B (2023).
+"Automated Results Reporting as a Practical Tool to Improve Reproducibility and
+Methodological Best Practices Adoption." _CRAN_.
+<https://easystats.github.io/report/>.
+  - R Core Team (2023). _R: A Language and Environment for Statistical
+Computing_. R Foundation for Statistical Computing, Vienna, Austria.
+<https://www.R-project.org/>.
+  - Wickham H (2016). _ggplot2: Elegant Graphics for Data Analysis_.
+Springer-Verlag New York. ISBN 978-3-319-24277-4,
+<https://ggplot2.tidyverse.org>.
+  - Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A Grammar
+of Data Manipulation_. https://dplyr.tidyverse.org,
+https://github.com/tidyverse/dplyr.
+\end{verbatim}
 
 \subsection*{Referencias}\label{referencias}
 \addcontentsline{toc}{subsection}{Referencias}
