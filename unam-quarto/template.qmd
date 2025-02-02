@@ -6,14 +6,14 @@ format:
     keep-tex: true
     toc: false
     lang: es  
-  # docx:
-  #   reference-doc: CDC_Template.docx
-  #   abstract-title: Resumen
-  #   toc: true
-  #   number-sections: true
-  #   link-citations: true
-  #   highlight-style: github
-  #   lang: es 
+  docx:
+    reference-doc: CDC_Template.docx
+    abstract-title: Resumen
+    toc: true
+    number-sections: true
+    link-citations: true
+    highlight-style: github
+    lang: es 
 author: 
   - id: string
     number: number
