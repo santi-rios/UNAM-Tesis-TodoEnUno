@@ -107,3 +107,15 @@ Si tienes problemas o preguntas, no dudes en contactarme o abrir una discusión/
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles. Si usas o modificas esta plantilla, por favor incluye una atribución a Santiago García-Ríos y un enlace a este repositorio.
+
+## Plantillas de revistas científicas
+
+Pueden usar las plantillas oficiales de quarto escribiendo en la terminal el formato deseado:
+
+```bash
+quarto use template quarto-journals/acm
+quarto use template quarto-journals/plos
+quarto use template quarto-journals/elsevier
+quarto use template quarto-journals/acs
+quarto use template quarto-journals/jss
+```
