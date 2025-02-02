@@ -1,0 +1,34 @@
+.title {
+    color: #d8a400 !important;
+  }
+  
+  .quarto-title-author-name {
+    font-size: 80px;
+    color: #d8a400 !important;
+  }
+  
+  .quarto-title-affiliation {
+    font-size: 80px;
+    font-family:unset;
+    font-style:initial;
+    font-weight: 900;
+    background-color: #142961;
+    color: #d8a400 !important;
+  }
+
+  .subtitle {
+    background-color: #142961;
+    color: #d8a400 !important;
+  }
+
+  .date {
+    font-size: 30px;
+    color: #d8a400 !important;
+  }
+
+  .reveal .slide-logo {
+    height: 100px !important;
+    width: 150px !important;
+    max-width: unset !important;
+    max-height: unset !important;
+  }

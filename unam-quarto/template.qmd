@@ -25,9 +25,9 @@ bibliography: bibliography.bib
 csl: apa.csl  
 tesis:
   # version: "2.0" # Revisada por comité tutoral
-  nombre: Santiago García-Rios
+  nombre: Nemesis
   programa: Posgrado en Ciencias Biológicas
-  facultad: Facultad de mCiencias
+  facultad: Facultad de Ciencias
   departmento: Biología Experimental
   grado: MAESTRO EN CIENCIAS BIOLÓGICAS
   lugar: Ciudad Universitaria, CD.MX.
@@ -56,6 +56,9 @@ execute:
   warning: false
   code-overflow: wrap
   cache: false
+knitr:
+  opts_chunk:
+    fig.path: "figuras/resultado-"
 crossref:
   tbl-prefix: "**Tabla**"
   fig-prefix: "**Fig**"
@@ -73,6 +76,14 @@ geometry:
 #  - twoside
 # documentclass: "unam-quarto"
 ---
+
+```{r setup, include=FALSE}
+# Cargar librerías necesarias 
+library(tidyverse)
+library(easystats)
+library(patchwork)
+library(ggpubr)
+```
 
 ## Introducción {#sec-intro}
 
@@ -112,7 +123,7 @@ En general, el narcisismo encubierto se caracteriza por una combinación de vict
 
 **Victimización**: A pesar de ser el victimario, Chuck se presentaba como la víctima. Utilizaba su falsa enfermedad (hipersensibilidad electromagnética) para manipular a los demás y obtener simpatía.
 
-```{r}
+```{r chuckmchill}
 #| label: fig-chuck
 #| fig-cap: "Chuck McGill fingiendo una enfermedad para obtener validación de otras personas."
 
@@ -125,7 +136,7 @@ knitr::include_graphics('figuras/chuck.png')
 
 En la @tbl-comparacion, se presentan las diferencias clave entre el narcisista encubierto y el narcisista evidente. Mientras que el narcisista evidente muestra abiertamente su grandiosidad y necesidad de admiración, el narcisista encubierto lo hace de manera más sutil, a través de la victimización y la manipulación pasiva.
 
-```{r}
+```{r comparacion}
 #| label: tbl-comparacion
 #| tbl-cap: Comparación entre el narcisista encubierto y el narcisista evidente.
 
@@ -290,26 +301,6 @@ Todos los sujetos con personalidad narcisista negaron todos los métodos y resul
 
 ## Resultados
 
-### Reporte de Animales
-
-```{r}
-# install.packages("report")
-library(report)
-library(easystats)
-# easystats::install_latest()
-
-data <- data.frame(
-  "Age" = c(22, 23, 54, 21),
-  "Sex" = c("F", "F", "M", "M")
-)
-
-# paste(
-#   report_participants(data, spell_n = TRUE),
-#   "were recruited in the study by means of torture and coercion."
-# )
-
-# report_sample(iris, by = "Species")
-```
 
 ::: callout-tip
 Contenido: Datos crudos (tablas, gráficos) sin interpretación. Responde a cada objetivo.
@@ -325,7 +316,7 @@ Resultados vs. Discusión: No mezclar descripción de datos con interpretación
 
 \todo{ejemplo de gráfico renderizado con R y Datos Simulados en R.}
 
-```{r}
+```{r correlacion}
 # Cargar librerías necesarias
 # install.packages("ggpubr")
 library(ggpubr)
@@ -378,7 +369,7 @@ ggscatter(datos, x = "Narcisismo",
 ::: callout-tip
 Puedes usar el paquete de R `report` (incluido en la app) para generar automáticamente un informe las pruebas estadísticas en formato APA. A pesar que por el momento solo lo hace en inglés, te ahorrará mucho tiempo y asegura calidad y estandarización de tu reporte.
 
-```{r}
+```{r report}
 install.packages("report")
 library(report)
 
@@ -417,7 +408,7 @@ orthographic(data)
 En la app, se incluyen funciones de fórmulas estadísticas para analizar, graficar y reportar tus datos. Para hacerlo con tus datos, abre el archivo './datos/datos.csv' y reemplaza las variables y nombres de columnas en el código de abajo. Recuerda usar el formato estándar en ciencia de datos (r, python, spss), el cual corresponde a: una fila por observación y una columna por variable.
 :::
 
-```{r}
+```{r pruebat}
 # Cargar librerías necesarias
 library("ggpubr")
 # leer datos
@@ -444,7 +435,7 @@ p + stat_compare_means(method = "t.test", paired = FALSE)
 ::: {.callout}
 ## Funciones Ejemplo para Revisar Supuestos y reportar en formato APA
 
-```{r}
+```{r pruebatsupuestos}
 shapiro.test(datos_df$calidad_cientifica)
 
 ggqqplot(datos_df$calidad_cientifica, ylab = "Calidad Científica", xlab = "Teórico", ggtheme = theme_minimal())
@@ -462,7 +453,7 @@ La prueba de T y el gráfico sugieren que las personas con narcisismo encubierto
 
 Más resultados y funciones interesantes para que te inspires. recuerda que puedes sustituir con tus datos y variables.
 
-``` {r}
+``` {r plots}
 
 p1 <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
   geom_boxplot() +
@@ -515,7 +506,7 @@ Confirmamos que el narcisismo encubierto es como el ajo en las recetas: todos cr
 ::: {.callout}
 Revisar outliers en un modelo de regresión lineal (p.ej., ANOVA).
 
-```{r}
+```{r apendiceuno}
 # install.packages("easystats")
 # install.packages("patchwork")
 library(performance)
@@ -538,7 +529,7 @@ plot(result, type = "dots")
 ::: {.callout}
 Revisar y Citar paquetes de R utilizados en tu análisis.
 
-```{r}
+```{r apendicedos}
 report(sessionInfo())
 ```
 
