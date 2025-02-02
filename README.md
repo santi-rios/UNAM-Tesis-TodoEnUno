@@ -1,5 +1,7 @@
 # UNAM-Tesis-TodoEnUno
 
+Más de mi en [este enlace](https://santi-rios.github.io/). Conoce mis cursos en de estadística en R en [este enlace](https://orcaasesina.com/).
+
 ## ¿Qué es esta plantilla?
 
 Esta plantilla es una solución "todo en uno"para la escritura de tesis de licenciatura, maestría o doctorado en la Facultad de Ciencias de la UNAM. La plantilla utiliza docker para instalar y configurar todos los paquetes necesarios para compilar la tesis SIN necesidad de instalar nada en tu computadora (más allá de docker). La plantilla incluye un ejemplo de tesis de posgrado en la Facultad de Ciencias de la UNAM.
