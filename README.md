@@ -1,5 +1,7 @@
 # UNAM-Tesis-TodoEnUno
 
+Ejemplo del formato final creado en [este enlace](https://github.com/santi-rios/UNAM-Tesis-TodoEnUno/blob/main/unam-quarto/template.pdf)
+
 Más de mi en [este enlace](https://santi-rios.github.io/). Conoce mis cursos en de estadística en R en [este enlace](https://orcaasesina.com/).
 
 ## ¿Qué es esta plantilla?
