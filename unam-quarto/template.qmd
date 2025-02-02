@@ -6,15 +6,14 @@ format:
     keep-tex: true
     toc: false
     lang: es  
-  # unam'-quarto-html: default
-  docx:
-    reference-doc: CDC_Template.docx
-    abstract-title: Resumen
-    toc: true
-    number-sections: true
-    link-citations: true
-    highlight-style: github
-    lang: es 
+  # docx:
+  #   reference-doc: CDC_Template.docx
+  #   abstract-title: Resumen
+  #   toc: true
+  #   number-sections: true
+  #   link-citations: true
+  #   highlight-style: github
+  #   lang: es 
 author: 
   - id: string
     number: number
@@ -24,11 +23,6 @@ author:
       literal: string
 bibliography: bibliography.bib
 csl: apa.csl  
-# fontsize: "9pt"
-# classoption:
-#  - twocolumn
-#  - twoside
-# documentclass: "unam-quarto"
 tesis:
   # version: "2.0" # Revisada por comité tutoral
   nombre: Santiago García-Rios
@@ -73,6 +67,11 @@ geometry:
   - bindingoffset=.5cm
   - top=1.5cm
   - bottom=1.5cm
+# fontsize: "9pt"
+# classoption:
+#  - twocolumn
+#  - twoside
+# documentclass: "unam-quarto"
 ---
 
 ## Introducción {#sec-intro}
@@ -124,7 +123,7 @@ knitr::include_graphics('figuras/chuck.png')
 ::: callout-important
 ### Narcisista Encubierto vs. Narcisista Evidente
 
-En la @tbl-comparacion \todo{ejemplo de tabla renderizada con R}, se presentan las diferencias clave entre el narcisista encubierto y el narcisista evidente. Mientras que el narcisista evidente muestra abiertamente su grandiosidad y necesidad de admiración, el narcisista encubierto lo hace de manera más sutil, a través de la victimización y la manipulación pasiva.
+En la @tbl-comparacion, se presentan las diferencias clave entre el narcisista encubierto y el narcisista evidente. Mientras que el narcisista evidente muestra abiertamente su grandiosidad y necesidad de admiración, el narcisista encubierto lo hace de manera más sutil, a través de la victimización y la manipulación pasiva.
 
 ```{r}
 #| label: tbl-comparacion
@@ -214,14 +213,12 @@ v.  Medir la actividad de la dopamina cuando alguien les dice "Wow, eres tan aut
 -   **Estilo narrativo**: Afirmativo y basado en teoría. Usa condicionales si es exploratorio (ej.: "Se hipotetiza que...").
 
 -   **Gramática**: Presente o futuro simple (ej.: "Los ratones expuestos mostrarán...").
-
-------------------------------------------------------------------------
+:::
 
 ::: callout-tip
 NOTA: No formularla como pregunta ni incluir metodología. Es un error común formular la **hipótesis** como una **pregunta** porque, por definición, una hipótesis es una **afirmación o proposición** que se plantea como una posible respuesta a la pregunta de investigación. La hipótesis no es la pregunta en sí, sino una **predicción fundamentada** que se deriva de la teoría y los antecedentes, y que será sometida a prueba mediante la investigación.
 
 Es muy importante que se formule una hipótesis que pueda ser refutada (ver "[If you say Science is Right, you're wrong](https://www.scientificamerican.com/article/if-you-say-science-is-right-youre-wrong/)" y [Falsacionismo](https://es.wikipedia.org/wiki/Falsacionismo)).
-:::
 :::
 
 Proponemos que el narcisista encubierto:
@@ -253,7 +250,7 @@ Proponemos que el narcisista encubierto:
 ::: callout-caution
 ### Voz Pasiva en Metodología
 
-\todo{ejemplo de tabla renderizada con Markdown}
+*Ejemplo de tabla renderizada con Markdown*.
 
 | **Voz Activa**                             | **Voz Pasiva**                                      |
 |---------------------------------|---------------------------------------|
@@ -392,7 +389,7 @@ cor.test(datos$Narcisismo, datos$Rechazo_Criticas) %>%
 reporte_corr <- report_statistics(cor.test(datos$Narcisismo, datos$Rechazo_Criticas))
 ```
 
-Y luego puedes incluir el resultado en tu texto \todo{Esto se hace de manera automática, por lo que si cambias tus datos, el reporte se actualiza automáticamente.}:
+Y luego puedes incluir el resultado en tu texto. **Esto se hace de manera automática, por lo que si cambias tus datos, el reporte se actualiza automáticamente**:
 
 - A mayor narcisismo encubierto, mayor rechazo a críticas constructivas (`r reporte_corr`).
 - `r correlacion_print`
